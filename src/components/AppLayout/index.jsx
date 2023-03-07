@@ -1,16 +1,22 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { AppShell, useMantineTheme } from '@mantine/core';
 
 import AppNavbar from '../AppNavbar';
 import AppHeader from '../AppHeader';
 import AppFooter from '../AppFooter';
 
+const authRoutes = ['signup', 'login'];
+
 export default function AppLayout(props) {
   const { children } = props;
+  const router = useRouter();
   const theme = useMantineTheme();
   const [opened, setOpened] = useState(false);
 
   const commons = { opened, theme };
+
+  if (authRoutes.find((path) => router.pathname.includes(path))) return children;
 
   return (
     <AppShell
