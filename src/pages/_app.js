@@ -1,12 +1,24 @@
-import AppLayout from '@/components/AppLayout'
-import AuthLayout from '@/components/AuthLayout'
+import { MantineProvider } from '@mantine/core';
 
-import '@/styles/globals.scss'
+import AppLayout from '@/components/AppLayout';
+import AuthLayout from '@/components/AuthLayout';
+
+import '@/styles/index.scss';
 
 export default function App({ Component, pageProps }) {
-  return <AuthLayout>
-    <AppLayout>
-      <Component {...pageProps} />
-    </AppLayout>
-  </AuthLayout>
+  return (
+    <MantineProvider
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{
+        colorScheme: 'light',
+      }}
+    >
+      <AuthLayout>
+        <AppLayout>
+          <Component {...pageProps} />
+        </AppLayout>
+      </AuthLayout>
+    </MantineProvider>
+  );
 }
