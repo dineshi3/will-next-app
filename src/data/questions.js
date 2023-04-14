@@ -51,7 +51,6 @@ export const QUESTION_ID = {
   CHILDREN: 'CHILDREN',
   OWNS_PROPERTY: 'OWNS_PROPERTY',
   ENGLAND_OR_WALES_DOMICILE: 'ENGLAND_OR_WALES_DOMICILE',
-  SCOTLAND_OR_NI_DOMICILE: 'SCOTLAND_OR_NI_DOMICILE',
   FOREIGN_ASSETS: 'FOREIGN_ASSETS',
   BUSINESS: 'BUSINESS',
   BUSINESS_PLAN_OPTIONS: 'BUSINESS_PLAN_OPTIONS',
@@ -144,6 +143,7 @@ export const QUESTIONS = {
         name: 'No',
         value: false,
         branchTo: BRANCH_ID.DOMICILE,
+        action: 'WAITING_LIST',
         tracking: {
           category: 'location',
           label: 'outside-england-wales',
@@ -155,30 +155,6 @@ export const QUESTIONS = {
         tracking: {
           category: 'location',
           label: 'in-england-wales',
-        },
-      },
-    ],
-  },
-  [QUESTION_ID.SCOTLAND_OR_NI_DOMICILE]: {
-    path: PATHS.SCOTLAND_NI,
-    title: 'Do you live in Scotland or Northern Ireland?',
-    illustration: 'globe',
-    options: [
-      {
-        name: 'No',
-        value: false,
-        linkTo: PATHS.WAITING_LIST,
-        tracking: {
-          category: 'location-scotland-ni',
-          label: 'outside-scotland-ni',
-        },
-      },
-      {
-        name: 'Yes',
-        value: true,
-        tracking: {
-          category: 'location-scotland-ni',
-          label: 'in-scotland-ni',
         },
       },
     ],
@@ -372,9 +348,6 @@ export const BRANCHES = {
   },
   [BRANCH_ID.BUSINESS]: {
     questions: [QUESTION_ID.BUSINESS_SOLE_OWNER, QUESTION_ID.BUSINESS_PLAN_OPTIONS],
-  },
-  [BRANCH_ID.DOMICILE]: {
-    questions: [QUESTION_ID.SCOTLAND_OR_NI_DOMICILE],
   },
   [BRANCH_ID.CAPACITY]: {
     questions: [QUESTION_ID.NEEDS_HELP_TO_USE_WEBSITE, QUESTION_ID.MEMORY_ISSUES, QUESTION_ID.FAMILY_CONCERN_MEMORY],

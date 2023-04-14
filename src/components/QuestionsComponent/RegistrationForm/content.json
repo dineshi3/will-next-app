@@ -1,0 +1,34 @@
+{
+  "title": "Let’s start with the basics",
+  "description": "People in your situation usually finish their will in 12 minutes",
+  "form": {
+    "fields": [
+      {
+        "label": "Name",
+        "placeholder": "Preferred Name",
+        "name": "name",
+        "required": true
+      },
+      {
+        "label": "Email",
+        "placeholder": "Email",
+        "name": "email",
+        "required": true,
+        "regex": "^\\S+@\\S+$"
+      },
+      {
+        "label": "Password",
+        "placeholder": "Password",
+        "name": "password",
+        "required": true,
+        "regex": "^\\S+@\\S+$"
+      },
+      {
+        "label": "Email me occasional tips, offers and updates from Farewill",
+        "name": "subscribeEmail",
+        "required": true,
+        "type": "checkbox"
+      }
+    ]
+  }
+}

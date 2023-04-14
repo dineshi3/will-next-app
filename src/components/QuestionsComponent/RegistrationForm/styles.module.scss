@@ -1,0 +1,21 @@
+@import 'src/styles/colors';
+
+.title {
+  margin: auto;
+  max-width: 18.75rem;
+  text-align: center;
+}
+
+.description {
+  margin: 1.5rem auto;
+  max-width: 20rem;
+  font-weight: 600;
+  text-align: center;
+  color: $dark-green;
+}
+
+.primaryButton {
+  margin: 2rem auto;
+  width: 100%;
+  background-color: $primary-color;
+}

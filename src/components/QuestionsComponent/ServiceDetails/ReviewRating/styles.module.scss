@@ -1,0 +1,36 @@
+@import 'src/styles/mixins';
+
+.ratingContainer {
+  margin-bottom: 32px;
+
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .star {
+      width: 18px;
+      height: 18px;
+      background-color: #00b67a;
+
+      @include flexCenter;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .row {
+    @include flexCenter(1rem);
+  }
+
+  .reviews {
+    @include flexCenter(0.5rem);
+    img {
+      width: 80px;
+      height: 20px;
+    }
+  }
+}

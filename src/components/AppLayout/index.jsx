@@ -6,7 +6,7 @@ import AppNavbar from '../AppNavbar';
 import AppHeader from '../AppHeader';
 import AppFooter from '../AppFooter';
 
-const authRoutes = ['signup', 'login', 'start'];
+const authRoutes = ['signup', 'login', 'start', 'waiting-list'];
 
 export default function AppLayout(props) {
   const { children } = props;

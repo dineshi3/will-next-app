@@ -3,22 +3,30 @@ import { Container } from '@mantine/core';
 
 import EligibilityStep from './EligibilityStep';
 import FormSubmit from './FormSubmit';
+import WaitingListForm from './WaitingListForm';
+import RegistrationForm from './RegistrationForm';
+import ServiceDetails from './ServiceDetails';
 
 import { QUESTIONS, QUESTION_ID } from '@/data/questions';
 
-import styles from './styles.module.scss';
-
 const questionIds = Object.values(QUESTION_ID);
+
+const COMPONENT = {
+  ELIGIBILITY_STEP: 'ELIGIBILITY_STEP',
+  FORM_COMPLETE: 'FORM_COMPLETE',
+  WAITING_LIST: 'WAITING_LIST',
+  SERVICE_DETAILS: 'SERVICE_DETAILS',
+  REGISTRATION_FORM: 'REGISTRATION_FORM',
+};
 
 const QuestionsComponent = () => {
   const [questions, setQuestions] = useState(QUESTIONS);
 
   const [step, setStep] = useState({ questionId: QUESTION_ID.RELATIONSHIP, index: 0 });
 
-  const [isComplete, setIsComplete] = useState(false);
+  const [view, setView] = useState(COMPONENT.SERVICE_DETAILS);
 
   const handleBackClick = () => {
-    console.log('Back');
     setStep((prev) => {
       const index = prev.index - 1;
       if (index < 0) return prev;
@@ -29,8 +37,14 @@ const QuestionsComponent = () => {
     });
   };
 
-  const handleNextClick = () => {
+  const handleNextClick = (question) => {
     const prevStep = { ...step };
+    const selectedOption = question.options[question.checkedIndex];
+    if (selectedOption.action) {
+      setView(COMPONENT[selectedOption.action]);
+      return;
+    }
+
     const index = prevStep.index + 1;
 
     if (questionIds[index])
@@ -38,16 +52,39 @@ const QuestionsComponent = () => {
         questionId: questionIds[index],
         index,
       });
-    else setIsComplete(true);
+    else setView(COMPONENT.FORM_COMPLETE);
   };
 
-  const props = { questions, setQuestions, onBackClick: handleBackClick, onNextClick: handleNextClick };
+  const handleOptionClick = async (question) => {
+    await setQuestions((prev) => ({ ...prev, [step.questionId]: question }));
+    handleNextClick(question);
+  };
+
+  const props = {
+    questions,
+    setQuestions,
+    onBackClick: handleBackClick,
+    onNextClick: handleNextClick,
+    onOptionClick: handleOptionClick,
+  };
+
+  const componentMap = {
+    ELIGIBILITY_STEP: <EligibilityStep {...props} question={questions[step.questionId]} />,
+    FORM_COMPLETE: <FormSubmit />,
+    WAITING_LIST: <WaitingListForm onBackClick={() => setView(COMPONENT.ELIGIBILITY_STEP)} />,
+    SERVICE_DETAILS: (
+      <ServiceDetails
+        onBackClick={() => setView(COMPONENT.ELIGIBILITY_STEP)}
+        onConfirm={() => setView(COMPONENT.REGISTRATION_FORM)}
+      />
+    ),
+    REGISTRATION_FORM: <RegistrationForm />,
+  };
 
   return (
-    <div className={styles.mainContainer}>
-      <Container h='100vh' className={'flexCenter'}>
-        {!isComplete && <EligibilityStep {...props} question={questions[step.questionId]} />}
-        {isComplete && <FormSubmit />}
+    <div className={'mainContainer'}>
+      <Container mih='100vh' className={'flexCenter'}>
+        {componentMap[view]}
       </Container>
     </div>
   );

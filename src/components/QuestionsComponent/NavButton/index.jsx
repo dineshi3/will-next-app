@@ -17,7 +17,14 @@ const LeftArrow = () => {
 
 const NavButton = (props) => {
   return (
-    <Button {...props} leftIcon={<LeftArrow />} variant='white' size='xl' color='gray' className={styles.container}>
+    <Button
+      {...props}
+      className={`${styles.container} ${props.className}`}
+      leftIcon={<LeftArrow />}
+      variant='white'
+      size='xl'
+      color='gray'
+    >
       Back
     </Button>
   );
