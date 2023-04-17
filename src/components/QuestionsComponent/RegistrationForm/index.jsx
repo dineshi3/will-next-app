@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useForm } from '@mantine/form';
-import { TextInput, Button, Box, Title, Text, Flex, Checkbox } from '@mantine/core';
+import { TextInput, Button, Box, Title, Text, Checkbox, PasswordInput } from '@mantine/core';
 
 import content from './content.json';
 
@@ -38,9 +38,19 @@ const RegistrationForm = (props) => {
       </Text>
 
       <form onSubmit={form.onSubmit(console.log)}>
-        {content.form.fields.map(({ label, name, placeholder, type }) => {
+        {content.form.fields.map(({ label, name, type, placeholder, description, error }) => {
           if (type == 'checkbox')
             return <Checkbox size='lg' mt='md' label={label} {...form.getInputProps(name, { type })} />;
+          if (type == 'password')
+            return (
+              <PasswordInput
+                placeholder={`Enter ${label}`}
+                label={placeholder}
+                description={description}
+                size='xl'
+                {...form.getInputProps(name, { type })}
+              />
+            );
           return (
             <TextInput
               key={name}
@@ -53,7 +63,7 @@ const RegistrationForm = (props) => {
           );
         })}
 
-        <Button className={styles.primaryButton} color='violet' size='md' onClick={'onConfirm'}>
+        <Button className={styles.primaryButton} color='violet' size='md' type='submit'>
           Register
         </Button>
 

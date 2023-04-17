@@ -6,6 +6,7 @@ import FormSubmit from './FormSubmit';
 import WaitingListForm from './WaitingListForm';
 import RegistrationForm from './RegistrationForm';
 import ServiceDetails from './ServiceDetails';
+import Unsuitable from './Unsuitable';
 
 import { QUESTIONS, QUESTION_ID } from '@/data/questions';
 
@@ -17,6 +18,7 @@ const COMPONENT = {
   WAITING_LIST: 'WAITING_LIST',
   SERVICE_DETAILS: 'SERVICE_DETAILS',
   REGISTRATION_FORM: 'REGISTRATION_FORM',
+  UNSUITABLE: 'UNSUITABLE',
 };
 
 const QuestionsComponent = () => {
@@ -24,7 +26,7 @@ const QuestionsComponent = () => {
 
   const [step, setStep] = useState({ questionId: QUESTION_ID.RELATIONSHIP, index: 0 });
 
-  const [view, setView] = useState(COMPONENT.SERVICE_DETAILS);
+  const [view, setView] = useState(COMPONENT.ELIGIBILITY_STEP);
 
   const handleBackClick = () => {
     setStep((prev) => {
@@ -52,7 +54,7 @@ const QuestionsComponent = () => {
         questionId: questionIds[index],
         index,
       });
-    else setView(COMPONENT.FORM_COMPLETE);
+    else setView(COMPONENT.REGISTRATION_FORM);
   };
 
   const handleOptionClick = async (question) => {
@@ -79,11 +81,12 @@ const QuestionsComponent = () => {
       />
     ),
     REGISTRATION_FORM: <RegistrationForm />,
+    UNSUITABLE: <Unsuitable />
   };
 
   return (
     <div className={'mainContainer'}>
-      <Container mih='100vh' className={'flexCenter'}>
+      <Container mih='80vh' className={'flexCenter'}>
         {componentMap[view]}
       </Container>
     </div>

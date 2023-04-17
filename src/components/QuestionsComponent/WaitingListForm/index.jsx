@@ -48,7 +48,7 @@ const WaitingListForm = (props) => {
         ))}
         <Flex gap='md' justify='space-between' align='center' direction='row' wrap='nowrap' w='100%'>
           <NavButton onClick={onBackClick} />
-          <Button color='yellow' size='xl' type='submit'>
+          <Button color='zolvitBlue' variant='filled' size='xl' type='submit'>
             Done
           </Button>
         </Flex>

@@ -16,7 +16,10 @@ export default function AppLayout(props) {
 
   const commons = { opened, theme };
 
-  if (authRoutes.find((path) => router.pathname.includes(path))) return children;
+  if (authRoutes.find((path) => router.pathname.includes(path))) return <>
+    <AppHeader {...commons} onNavToggle={() => setOpened((prev) => !prev)} />
+    {children}
+  </>;
 
   return (
     <AppShell

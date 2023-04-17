@@ -4,7 +4,6 @@ const PATHS = {
   BASICS: 'basics',
   BENEFITS: 'benefits',
   BUSINESS_OWNER: 'business-owner',
-  BUSINESS_PLAN_OPTIONS: 'business-plan-options',
   BUSINESS_SOLE_OWNER: 'business-sole-owner',
   BUSINESS: 'business',
   CHILDREN: 'children',
@@ -53,11 +52,7 @@ export const QUESTION_ID = {
   ENGLAND_OR_WALES_DOMICILE: 'ENGLAND_OR_WALES_DOMICILE',
   FOREIGN_ASSETS: 'FOREIGN_ASSETS',
   BUSINESS: 'BUSINESS',
-  BUSINESS_PLAN_OPTIONS: 'BUSINESS_PLAN_OPTIONS',
   BUSINESS_SOLE_OWNER: 'BUSINESS_SOLE_OWNER',
-  NEEDS_HELP_TO_USE_WEBSITE: 'NEEDS_HELP_TO_USE_WEBSITE',
-  MEMORY_ISSUES: 'MEMORY_ISSUES',
-  FAMILY_CONCERN_MEMORY: 'FAMILY_CONCERN_MEMORY',
 };
 
 export const QUESTIONS = {
@@ -169,6 +164,7 @@ export const QUESTIONS = {
         value: true,
         description: 'Including bank accounts, property, stocks and shares',
         earlyReturn: true,
+        action: 'UNSUITABLE',
         tracking: {
           category: 'foreign-assets',
           label: 'has-foreign-assets',
@@ -201,6 +197,7 @@ export const QUESTIONS = {
         name: 'Yes',
         value: true,
         description: 'Either as a sole trader, a partnership, limited liability partnership or as a limited company',
+        action: 'UNSUITABLE',
         tracking: {
           category: 'has-business',
           label: 'business-owner',
@@ -232,107 +229,7 @@ export const QUESTIONS = {
         },
       },
     ],
-  },
-  [QUESTION_ID.BUSINESS_PLAN_OPTIONS]: {
-    title: 'What would you like to do with your business in your will?',
-    path: PATHS.BUSINESS_PLAN_OPTIONS,
-    illustration: 'square/what-happens-to-your-business',
-    options: [
-      {
-        name: 'Share it out with the rest of my assets',
-        value: BusinessResult.ShareWithAssets,
-        tracking: {
-          category: 'business-plan-option',
-          label: 'share-with-assets',
-        },
-      },
-      {
-        name: 'Plan for it separately from the rest of my assets',
-        value: BusinessResult.SeparateFromAssets,
-        tracking: {
-          category: 'business-plan-option',
-          label: 'separate-from-assets',
-        },
-      },
-      {
-        name: 'I’m not sure',
-        value: BusinessResult.Undecided,
-        tracking: {
-          category: 'business-plan-option',
-          label: 'unsure',
-        },
-      },
-    ],
-  },
-  [QUESTION_ID.NEEDS_HELP_TO_USE_WEBSITE]: {
-    title: 'Do you need help to read or use our website?',
-    path: PATHS.WEBSITE_HELP,
-    illustration: 'simple-children',
-    options: [
-      {
-        name: 'No',
-        value: false,
-        tracking: {
-          category: 'capacity-check-reading',
-          label: 'no-reading-help',
-        },
-      },
-      {
-        name: 'Yes',
-        value: true,
-        tracking: {
-          category: 'capacity-check-reading',
-          label: 'needs-reading-help',
-        },
-      },
-    ],
-  },
-  [QUESTION_ID.MEMORY_ISSUES]: {
-    title: 'Is anything affecting your memory or ability to make decisions?',
-    path: PATHS.MEMORY,
-    illustration: 'simple-children',
-    options: [
-      {
-        name: 'No',
-        value: false,
-        tracking: {
-          category: 'capacity-check-memory',
-          label: 'no-memory-impairment',
-        },
-      },
-      {
-        name: 'Yes',
-        value: true,
-        tracking: {
-          category: 'capacity-check-memory',
-          label: 'has-memory-impairment',
-        },
-      },
-    ],
-  },
-  [QUESTION_ID.FAMILY_CONCERN_MEMORY]: {
-    title: 'Is anyone close to you worried about your memory or ability to make decisions?',
-    path: PATHS.FAMILY_CONCERN,
-    illustration: 'simple-children',
-    options: [
-      {
-        name: 'No',
-        value: false,
-        tracking: {
-          category: 'capacity-check-family-concern',
-          label: 'no-family-concern',
-        },
-      },
-      {
-        name: 'Yes',
-        value: true,
-        tracking: {
-          category: 'capacity-check-family-concern',
-          label: 'has-family-concern',
-        },
-      },
-    ],
-  },
+  }
 };
 
 export const BRANCHES = {
@@ -345,13 +242,7 @@ export const BRANCHES = {
       QUESTION_ID.FOREIGN_ASSETS,
       QUESTION_ID.BUSINESS,
     ],
-  },
-  [BRANCH_ID.BUSINESS]: {
-    questions: [QUESTION_ID.BUSINESS_SOLE_OWNER, QUESTION_ID.BUSINESS_PLAN_OPTIONS],
-  },
-  [BRANCH_ID.CAPACITY]: {
-    questions: [QUESTION_ID.NEEDS_HELP_TO_USE_WEBSITE, QUESTION_ID.MEMORY_ISSUES, QUESTION_ID.FAMILY_CONCERN_MEMORY],
-  },
+  }
 };
 
 export const CALL_REQUEST_LEAD_SOURCE_IDENTIFIERS = {

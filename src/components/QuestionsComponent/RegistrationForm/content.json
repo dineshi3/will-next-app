@@ -20,13 +20,15 @@
         "label": "Password",
         "placeholder": "Password",
         "name": "password",
+        "type": "password",
         "required": true,
-        "regex": "^\\S+@\\S+$"
+        "description": "Password must include at least one letter, number and special character",
+        "error": "Invalid Password",
+        "regex": "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{3,}$"
       },
       {
         "label": "Email me occasional tips, offers and updates from Farewill",
         "name": "subscribeEmail",
-        "required": true,
         "type": "checkbox"
       }
     ]
