@@ -1,0 +1,134 @@
+/* Similar to the hero section, but these are sections that are below the hero */
+.section-intro {
+    @include make-row();
+    .headlines {
+        text-align: left;
+        @include make-col-ready;
+        @include media-breakpoint-up(md) {
+            @include make-col(6);
+        }
+        & .subheadline {
+            line-height: 1.625rem;
+            margin-bottom: 3rem;
+        }
+        & .kicker {
+            text-transform: uppercase;
+            font-size: var(--kicker); // 1.125rem;
+        }
+    }
+
+    &.center {
+        display: flex;
+        justify-content: center;
+        .headlines {
+            text-align: center;
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(8);
+            }
+            
+            & h2 {
+                // font-size: var(--font-size-h2-center); //2.125rem;
+                // line-height: var(--line-height-h2-center); //2.75rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.action-header {
+    @include make-row();
+    margin-bottom: 4rem;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    & .headline {
+        @include make-col-ready;
+        @include media-breakpoint-up(md) {
+            @include make-col(7);
+        }
+    } 
+    & .headline-cta {
+        @include make-col-ready();
+        @include make-col-auto();
+        margin-top: 3rem;
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+    } 
+    & .subheadline {
+        margin-top: 1.25rem;
+    }
+    & h2 {
+        margin-bottom: 0;
+    }
+}
+
+
+.action-grid-header {
+    @include make-col-ready();
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 1fr;
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 2fr 1fr;
+    }
+    margin-bottom: 4rem;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    & .kicker {
+        grid-row-start: 1;
+    }
+    & .headline {
+        grid-row-start: 2;
+        @include headings() {
+            margin-bottom: 0;
+        }
+    }
+    & .subheadline {
+        grid-row-start: 3;
+        margin-top: 1.25rem;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    & .headline-cta {
+        display: flex;
+        grid-row-start: 4;
+        margin-top: 3rem;
+        @include media-breakpoint-up(md) {
+            justify-content: flex-end;
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+    } 
+    
+}
+
+
+.file-separator {
+
+    position: relative;
+    margin-top: calc(var(--file-radius-size) * -1);
+    border-top-left-radius: var(--file-radius-size);
+    padding: var(--section-file-padding);
+    // @include section-color-theme($theme: light);
+}
+@mixin file-separator {
+
+    position: relative;
+    margin-top: calc(var(--file-radius-size) * -1);
+    border-top-left-radius: var(--file-radius-size);
+    padding: var(--section-file-padding);
+}
+
+header:has(+ section.file-separator), section:has(+ section.file-separator) {
+    padding: var(--section-file-padding);
+}

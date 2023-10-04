@@ -1,0 +1,131 @@
+/* --article-h1: var(--h2);
+    --article-h1-line-height: 3.125rem;
+    --article-h1-font-family: var(--font-display-bold);
+    
+    --article-h2: var(--h3);
+    --article-h2-line-height: 2.625rem;
+    --article-h2-font-family: var(--font-display-bold);
+    
+    --article-h3: var(--h4);
+    --article-h3-line-height: var(--size-175);
+    --article-h3-font-family: var(--font-display-bold);
+    
+    --article-h4: var(--h5);
+    --article-h4-line-height: var(--size-150);
+    --article-h4-font-family: var(--font-display-bold);
+
+    --article-link-color: $cyan-80;
+    --article-link-text-decoration: underline;
+
+    --li-margin-bottom: 0.9375rem;
+    --ul-margin-bottom: 4.6875rem;
+
+     */
+
+
+// For long-form articles/text-based pieces. Exp: blogs, podcast transcriptions, case studies
+.date {
+    color: $gray-60;
+    font-size: var(--p3);
+    line-height: var(--p3-line-height);
+}
+.post {
+    & h1 {
+        font-size: var(--article-h1);
+        line-height: var(--article-h1-line-height);
+    }
+}
+
+
+.article-content {
+    & h1 {
+        font-size: var(--article-h1);
+        line-height: var(--article-h1-line-height);
+    }
+    & h2 {
+        margin-bottom: var(--article-space-sm);
+        font-size: var(--article-h2);
+        line-height: var(--article-h2-line-height); 
+        font-family: var(--article-h2-font-family);
+    }
+    & h3 {
+        margin-top: var(--article-space-lg);
+        margin-bottom: var(--article-space-md);
+        font-size: var(--article-h3);
+        line-height: var(--article-h3-line-height);
+    }
+    & h4 {
+        font-size: var(--article-h4);
+        margin-bottom: var(--article-space-xs);
+    }
+    & a:not(.btn) {
+        text-decoration: var(--article-link-text-decoration);
+        color: var(--article-link-color);
+        font-family: inherit;
+    }
+    hr {
+        margin: 2rem 0;
+        height: initial;
+        background: var(--cool-gray-20);
+    }
+    
+    //If the first element is a header in the article
+    & > h2:first-child, & > h3:first-child {
+        margin-top: 0;
+    }
+    & p + ul, & p + ol, & p + img, & p + iframe {
+        margin-top: var(--article-space-md);
+    }
+    & ul, ol {
+        margin-bottom: var(--article-space-md);
+    }
+    & h2 + h3 {
+        margin-top: var(--article-space-lg);
+    }
+    & p + h2 {
+        margin-top: var(--article-space-xl);
+    }
+    & ol {
+        padding-left: 2.625rem;
+    }
+    & ul {
+        // list-style: none;
+        padding-left: 2.625rem;
+        & li::marker {
+            color: $gray-50;
+        }
+    }
+    & li:not(:last-child) {
+        margin-bottom: var(--article-space-xs);
+    }
+    video, img {
+        margin-bottom: var(--article-space-lg);
+    }
+    p + video, p + picture, p + img {
+        margin-top: var(--article-space-lg);
+    }
+    & p:has( + .btn), & p:has( + video) {
+        margin-bottom: 0;
+    }
+    & p:has( + figure), & p:has( + picture) {
+        margin-bottom: var(--article-space-md);
+    }
+    @supports not (p:has(+ p)) {
+        & p + picture, & p + figure {
+            & img {
+                margin-top: var(--article-space-md);
+            }
+        }
+    }
+    & .btn {
+        margin: var(--article-space-lg) 0;
+    }
+    & iframe + h2, & iframe + p {
+        margin-top: var(--article-space-lg);
+    }
+    & .terms-conditions-list { //Temp fix for legal / policy content
+        ol, ul {
+            padding-left: 0;
+        }
+    }
+}

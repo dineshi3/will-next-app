@@ -1,0 +1,23 @@
+.breadcrumbs-spacer {
+    @include media-breakpoint-up(md) {
+        height: 1rem;
+    }
+    @include media-breakpoint-up(lg) {
+        height: 2rem;
+    }
+}
+.breadcrumbs {
+    font-size: var(--breadcrumb-font-size);
+    font-family: var(--font-regular);
+    a {
+        font-family: var(--font-regular);
+        color: var(--breadcrumb-link-color);
+        text-decoration: none;
+        &:disabled {
+            color: --breadcrumb-link-color-disabled;
+        }
+    }
+    .disabled {
+        color: --breadcrumb-link-color-disabled;
+    }
+}

@@ -1,0 +1,262 @@
+.cta {
+    & .fv-container:not(:has(.cta-banner.thin)) {
+        padding-right: 2.125rem;
+        padding-left: 2.125rem;
+        @include media-breakpoint-up(sm) {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+    & a {
+        text-decoration: none;
+    }
+}
+.cta-banner {
+    display: flex;
+    border-radius: 7px;
+    position: relative;
+    // @include section-color-theme(light);
+    // background-color: var(--white); // Needed for the gradient border on the ::before
+    box-shadow: $shadow-500;
+    gap: 1.25rem;
+    border: 3px solid $teal-60;
+    // &::before { // Gradient border
+    //     content: "";
+    //     background: linear-gradient(45deg, var(--teal-60), var(--teal-50));
+    //     position: absolute;
+    //     top: -3px;
+    //     left: -3px;
+    //     width: calc(100% + 6px);
+    //     height: calc(100% + 6px);
+    //     z-index: -1;
+    //     border-radius: 6px;
+    // }
+
+    & .banner-content {
+        display: flex;
+        flex-basis: 80%;
+        flex-direction: column;   
+        padding: var(--size-125);
+        gap: 1rem;
+        @include media-breakpoint-up(md) {
+            flex-basis: 58%;
+            padding: 1.875rem 4rem;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 3.5rem 4rem;
+        }
+        & h2 {
+            @include media-breakpoint-down(sm) {
+                font-size: 1.25rem;
+            }
+            @supports (gap:1rem) {
+                margin-bottom: 0;
+            }
+        }
+        & .banner-body {
+            margin-bottom: var(--size-050);
+            @supports not (gap:1rem) {
+                margin-bottom: var(--size-150);
+            }
+        }
+    }
+    & .banner-media {
+        display: flex;
+        img.demo-img.person {
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            right:.25rem;
+            box-shadow: none; // In case there is no asset cover, reset all .cta-banner.download styles
+            transform: none; // In case there is no asset cover, reset all .cta-banner.download styles
+            display: none;
+            @include media-breakpoint-up(sm) {
+                display: block;
+                max-width: 140px;
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 350px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 425px;
+                right:2rem;
+            }
+        }
+    }
+}
+
+.cta-banner.download {
+    & .banner-content {
+        display: flex;
+        flex-basis: 80%;
+        gap: 1rem;
+        @include media-breakpoint-up(md) {
+            flex-basis: 66%;
+        }
+    }
+    & .banner-body::before { // This is to do a small bit of text wrapping around the image. Creates a small triangle on the bottom right
+        content: "";
+        @include media-breakpoint-down(md) {
+            shape-outside: polygon(-12px 200px, 26px 60.94%, 107.71% 108.25%);
+            width: 10%;
+            shape-margin: 7%;
+            height: 100%;
+            float: right;
+        }
+    }
+    & .banner-media {
+        display: flex;
+        position: relative;
+        flex-basis: 20%;
+        @include media-breakpoint-up(md) {
+            flex-basis: 33%;
+        }
+        & img {
+            position: absolute;
+            top: unset;
+            bottom: -1rem;
+            right:-.25rem;
+            max-width: 120px;
+            transform: rotate(10deg);
+            box-shadow: $shadow-500;
+            @include media-breakpoint-up(sm) {
+            }
+            @include media-breakpoint-up(md) {
+                max-width: 180px;
+                right:3rem;
+                top:-1rem;
+                bottom: unset;
+            }
+            @include media-breakpoint-up(lg) {
+                right:5rem;
+                max-width: 280px;
+                
+            }
+            @include media-breakpoint-up(xl) {
+                top:-2rem;
+                right:5rem;
+                // max-width: 300px;                
+            }
+        }
+    }
+}
+
+
+.cta-banner.thin {
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+        @include make-col(11);
+    }
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+    }
+
+    &.bg-gradient-br {
+        @include bg-gradient($direction: 180deg, $gradient-theme: br);
+        @include media-breakpoint-up(lg) {
+            @include bg-gradient($direction: 90deg, $gradient-theme: br);
+        }
+        color: white;
+        
+        &::before {
+            background: none;
+        }
+        & .h3 {
+            color: white;
+        }
+    }
+
+    & .banner-content {
+        padding: 2.5rem 1.625rem;
+        @include media-breakpoint-up(lg) {
+            padding: 2.5rem 2rem;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            column-gap: var(--size-250);
+        }
+
+        & h2 {
+            margin: 0;
+            
+            @include media-breakpoint-up(lg) {
+                grid-row: span 2;
+                align-self: center;
+                padding: var(--size-100) var(--size-200) var(--size-100) 0;
+                border-right: 1px solid var(--white);
+            }
+        }
+    }
+    & .banner-button {
+        grid-column: 2;
+    }
+    & .banner-body {
+        margin: 0;
+        
+        @include media-breakpoint-down(md) {
+            margin: 1.25rem 0;
+        }
+        @include media-breakpoint-up(lg) {
+            align-self: flex-end;
+        }
+
+        &::before {
+            content: "";
+            @include media-breakpoint-down(md) {
+            display: block;
+            margin-bottom: 1.25rem;
+            float: none;
+            height: 1px;
+            background-color: var(--white);
+            width: 50px;
+            }
+        }
+    }
+    & .banner-media {
+        position: relative;
+        flex-basis: 10%;
+        @include media-breakpoint-up(md) {
+            padding-bottom: 0;
+        }
+        @include media-breakpoint-up(lg) {
+            flex-basis: 14%;
+        }
+
+        & img {
+            position: absolute;
+            top: unset;
+            left: unset;
+            bottom: -30%;
+            right:-10%;
+            max-width: 110px;
+            transform: rotate(22deg);
+            box-shadow: $shadow-500;
+
+            @media screen and (max-width: 340px) {
+                display: none;
+            }
+
+            @include media-breakpoint-up(md) {
+                bottom: -10%;
+                right:-5%;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 200px;
+                bottom: -10%;
+                right:-30%;
+            }
+            @include media-breakpoint-up(xl) {
+                right:-20%;
+            }
+        }
+    }
+}

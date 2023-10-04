@@ -1,0 +1,48 @@
+section.email-cta {
+    & h2 {
+        // line-height: 2.15rem;
+        // font-family: $font-extra-bold;
+        margin-bottom: 2.5rem;
+        // font-size: 2.0625rem;
+    }
+}
+// section.cta.partner {
+//     & h3 {
+//         font-family: $font-extra-bold;
+//         margin-bottom: 2.5rem;
+//     }
+//     & .btn{
+//         font-family: $font-bold;
+//         font-size: 1.1875rem;
+//     }
+// }
+
+section.cta.plain {
+    padding: var(--section-file-padding);
+    & .headline {
+        display: flex;
+        justify-content: center;
+        h2 {
+            text-align: center;
+            font-size: var(--h2);
+            margin-bottom: var(--heading-margin-bottom);
+        }
+    }
+    & .subheadline {
+        margin-bottom: var(--size-px-30);
+    }
+}
+
+// .partner{
+//     & section + .ridge {
+//         margin-top:-30px;
+//     }
+// }
+
+// @media screen and (min-width:768px){
+//     .partner{
+//         & section + .ridge {
+//             margin-top:-100px;
+//         }
+//     }
+// }

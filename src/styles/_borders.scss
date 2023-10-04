@@ -1,0 +1,24 @@
+:where(html) {
+    --btn-border-radius: 3px;
+    --img-border-radius: 5px;
+    --border-radius-pill: 100vh;
+}
+
+@mixin leaf($radius: 15%, $flip: false) {
+    @if $flip == false {
+        border-radius: $radius 0;
+    }
+    @else {
+        border-radius: 0 $radius;
+    }
+}
+
+.leaf-lg {
+    @include leaf(50px, false);
+}
+.leaf-md {
+    @include leaf(30px, false);
+}
+.leaf-sm {
+    @include leaf(10px, false);
+}

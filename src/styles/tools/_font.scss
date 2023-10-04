@@ -1,0 +1,84 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3926171, 2020-07-15T16:27:30-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed fonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Roboto, HelveticaNowText-Medium by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-medium/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Regular by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-regular/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Blk by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-black/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Bd by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-bold/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Italic by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-italic/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Lt by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-light/
+ * 
+ * Webfont: Roboto, HelveticaNowDisplay-Md by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/display-medium/
+ * 
+ * Webfont: Roboto, HelveticaNowText-Regular by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-regular/
+ * 
+ * Webfont: Roboto, HelveticaNowText-Black by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-black/
+ * 
+ * Webfont: Roboto, HelveticaNowText-Bold by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-bold/
+ * 
+ * Webfont: Roboto, HelveticaNowText-It by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-italic/
+ * 
+ * Webfont: Roboto, HelveticaNowText-Light by Monotype
+ * URL: https://www.myfonts.com/fonts/mti/helvetica-now/text-light/
+ * 
+ * 
+ * fonts copyright: Copyright &amp;#x00A9; 2019 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+$font-italic: Roboto, HelveticaNowText-It;
+$font-light: Roboto, HelveticaNowText-Light;
+$font-regular: Roboto, HelveticaNowText-Regular;
+$font-medium: Roboto, HelveticaNowText-Medium;
+$font-bold: Roboto, HelveticaNowText-Bold;
+$font-bold-italic: Roboto, HelveticaNowText-BdIt;
+$font-extra-bold: Roboto, HelveticaNowText-ExtraBold;
+$font-black: Roboto, HelveticaNowText-Black;
+$font-display-italic: Roboto, HelveticaNowDisplay-Italic;
+$font-display-light: Roboto, HelveticaNowDisplay-Lt;
+$font-display-regular: Roboto, HelveticaNowDisplay-Regular;
+$font-display-medium: Roboto, HelveticaNowDisplay-Md;
+$font-display-bold: Roboto, HelveticaNowDisplay-XBd;
+$font-display-black: Roboto, HelveticaNowDisplay-Blk;
+
+:root {
+  --font-italic: Roboto, HelveticaNowText-It;
+  --font-light: Roboto, HelveticaNowText-Light;
+  --font-regular: Roboto, HelveticaNowText-Regular;
+  --font-medium: Roboto, HelveticaNowText-Medium;
+  --font-bold: Roboto, HelveticaNowText-Bold;
+  --font-bold-italic: Roboto, HelveticaNowText-BdIt;
+  --font-extra-bold: Roboto, HelveticaNowText-ExtraBold;
+  --font-black: Roboto, HelveticaNowText-Black;
+  --font-display-italic: Roboto, HelveticaNowDisplay-Italic;
+  --font-display-light: Roboto, HelveticaNowDisplay-Lt;
+  --font-display-regular: Roboto, HelveticaNowDisplay-Regular;
+  --font-display-medium: Roboto, HelveticaNowDisplay-Md;
+  --font-display-bold: Roboto, HelveticaNowDisplay-Bd;
+  --font-display-extra-bold: Roboto, HelveticaNowDisplay-XBd;
+  --font-display-black: Roboto, HelveticaNowDisplay-Blk;
+}

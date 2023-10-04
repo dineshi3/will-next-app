@@ -1,0 +1,43 @@
+@use "sass:map";
+
+// Background of the pane. Design system lists these themes
+$pane-themes: (
+    white: (
+        bg: linear-gradient(105.36deg, rgba(255, 255, 255, 0.15) 2.15%, rgba(255, 255, 255, 0.05) 103.56%), 
+        border: $cool-gray-60,
+    ),
+    spruce: (
+        bg: radial-gradient(99.02% 196.71% at 4.57% 100%, rgba(0, 125, 121, 0.6) 0%, rgba(0, 65, 68, 0.3) 100%), 
+    ),
+    smoke: (
+        bg: radial-gradient(89.13% 183.04% at 100% 100%, $cool-gray-90 0%, rgba(33, 39, 42, 0.25) 100%), 
+    ),
+);
+// Text color changing depending on the background theme behind the pane. Exp: light background with a white pane requires $black text.
+$pane-bg-themes: (
+    on-light: (white: $black, spruce: $white, smoke: $white),
+    on-dark: (white: $white, spruce: $white, smoke: $white),
+);
+
+
+// Glass effect causing major flashing & problems in Chrome. Removing backdrop-filter until fix is found.
+.pane{
+    border: 1px solid rgba(255, 255, 255, 0.4);  
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+    // backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+// Create pane theme classes. Exp: .pane-spruce-on-light. Spruce comes from the $pane-themes and is the bg of the pane itself. "on-light" or "on-dark" describes the background underneath the pane, since some props change depending on the bg under the pane.
+@each $bg, $bgval in $pane-bg-themes {
+    @each $pane, $panebg in $pane-themes {
+        .pane-#{$pane}-#{$bg} {
+            background: map.get(map.get($pane-themes, $pane), bg);
+            color: map.get(map.get($pane-bg-themes, $bg), $pane);
+            // color: currentColor;
+            @if map.get(map.get($pane-themes, $pane), border) {
+                border-color: map.get(map.get($pane-themes, $pane), border);
+            }
+        }
+    }
+}

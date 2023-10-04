@@ -1,0 +1,18 @@
+.blade {
+    &-yellow {
+        background-color: $yellow;
+    }
+    &-black {
+        background-color: $black;
+        color: $white;
+    }
+    &-tan {
+        background-color: $tan;
+    }
+    &-gray {
+        background-color: $gray-10;
+    }
+    &-white {
+        background-color: $white;
+    }
+}

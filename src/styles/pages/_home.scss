@@ -1,0 +1,682 @@
+// .home {
+//     #header-banner-container.count-1:has(#header-alert-0) ~ .spacer {
+//         @include media-breakpoint-down(md) {
+//             height:10px;
+//         }
+//     }
+//     h2:not(.h6, .fv-h3, .h3) {
+//         font-size: var(--h2);
+//     }
+
+//     .fv-h3 {
+//         font-family: var(--font-display-bold);
+//         font-size: var(--size-px-18);
+//         line-height: var(--size-px-30);
+//         @include media-breakpoint-up(sm) {
+//             font-size: var(--size-150);
+//             line-height: var(--size-200);
+//         }
+//         @include media-breakpoint-up(lg) {
+//             font-size: var(--size-px-30);
+//             line-height: var(--size-250);
+//         }
+//     }
+
+//     .btn-fv-secondary {
+//         background-color: var(--white);
+//         border: 1px solid var(--teal-50);
+//         color: $teal-60;
+//         &:hover, &:active, &:focus{
+//             color: var(--white);
+//             background-color: var(--teal-50);
+//         }
+//     }
+//     // END TODO
+
+//     section.cta.home {
+//         padding-top:0;
+//         @include media-breakpoint-up(md) {
+//             padding-top:3rem;
+//         }
+//         @include media-breakpoint-up(lg) {
+//             padding-top:0;
+//         }
+//         margin-bottom: -10rem;
+//     }
+
+
+//     .triangle {
+//         position:relative;
+//         background-color:var(--brown-10);
+//         height:30px;
+//         width:100%;
+//         &::after{
+//             content:'';
+//             position: absolute;
+//             left: 0;
+//             width: 0;
+//             height: 0;
+//         }
+//         &.down::after {
+//             top: 100%;
+//             border-top: solid 30px var(--brown-10);
+//             @include media-breakpoint-up(md) {
+//                 border-top: solid 60px var(--brown-10);
+//             }
+//             @include media-breakpoint-up(lg) {
+//                 border-top: solid 90px var(--brown-10);
+//             }
+//             border-left: solid 50vw transparent;
+//             border-right: solid 49vw transparent;
+//         }
+//         &.up {
+//             @include media-breakpoint-up(md) {
+//                 margin-bottom: -20px;
+//             }
+
+//             // For a/b test with cta banner
+//             &.cta-banner-on-top {
+//                 z-index: -1;
+//             }
+//         }
+//         &.up::after {
+//             bottom: 100%;
+//             border-bottom: solid 30px var(--brown-10);
+//             @include media-breakpoint-up(md) {
+//                 border-bottom: solid 60px var(--brown-10);
+//             }
+//             @include media-breakpoint-up(lg) {
+//                 border-bottom: solid 90px var(--brown-10);
+//             }
+//             border-left: solid 50vw transparent;
+//             border-right: solid 49vw transparent;
+//         }
+//     }
+    
+//     .kicker {
+//         margin-bottom: var(--size-100);
+//         @include media-breakpoint-down(sm) {
+//             font-size: var(--size-075);
+//         }
+//     }
+
+//     .hero {
+//         & .row.cta {
+//             margin-bottom: 80px;
+//             @include media-breakpoint-up(md) {
+//                 margin-bottom: 100px;
+//             }
+//         }
+//         & h1 {
+//             font-family: var(--font-display-black);
+//             font-size: var(--h1);
+//             margin-bottom: var(--heading-margin-bottom);
+//             @include media-breakpoint-between(md, lg) {
+//                 font-size: var(--size-300);
+//                 line-height: var(--size-300);
+//             }
+//         }
+//         & h2 {
+//             color: var(--teal-50);
+//             font-family: var(--font-display-bold);
+//             margin-bottom: 1.25rem;
+//             font-size: 1.5rem;
+//             line-height: 2rem;
+            
+//             @include media-breakpoint-up(md) {
+//                 font-size: 1.75rem;
+//             }
+//         }
+//         & .body {
+//             font-size: 1rem;
+//             margin-bottom: 1.25rem;
+//         }
+
+//         &.work-platform {
+//             background-image: none;
+//             padding-bottom: 40px;
+
+//             @include media-breakpoint-between(md, lg) {
+//                 padding-bottom: 10px;
+//             }
+
+//             .body {
+//                 margin-bottom: 0;
+//                 @include media-breakpoint-up(lg) {
+//                     margin-bottom: 1rem;
+//                 }
+//             }
+//             & .row.cta {
+//                 margin-bottom: 30px;
+//                 @include media-breakpoint-up(lg) {
+//                     margin-bottom: 80px;
+//                 }
+//             }
+//             & .hero-animation {
+//                 position: absolute;
+//                 top: unset;
+//                 width: 550px;
+
+                
+//                 @include media-breakpoint-up(lg) {
+//                     width: 550px;
+//                 }
+//                 @include media-breakpoint-up(xl) {
+//                     width: 700px;
+//                 }
+
+//                 &.center {
+//                     top: 50%;
+//                     left: 50%;
+//                     transform: translate(-50%, -50%);
+//                 }
+//                 &.right {
+//                     right:0;
+//                     @media screen and (min-width:1400px){
+//                         right:8%;
+//                     }
+//                     @media screen and (min-width:1800px){
+//                         right:14%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     #logos {
+//         & .logos-headline {
+//             font-family: var(--font-display-medium); 
+//             color: var(--gray-70);
+//             @include media-breakpoint-up(md) {
+//                 font-size: 1.45rem; 
+//             }
+//         }
+
+//         & #logo-row {
+//             @include make-row();
+//             padding:0 15px;
+//             display: flex;
+//             align-items: center;
+//             margin-bottom: 0;
+//             justify-content: center;
+//             @include media-breakpoint-up(md) {
+//                 justify-content: start;
+//                 margin-bottom: 1.5rem;
+//             }
+            
+
+//             & .logo {
+//                 display: flex;
+//             }
+//             & img {
+//                 align-self: flex-start;
+//                 width: 100%;
+//                 max-height: 50px;
+//                 max-width: 80px;
+//                 @include media-breakpoint-up(sm) {
+//                     max-width: 100px;
+//                 }
+//                 @include media-breakpoint-up(lg) {
+//                     max-width: 150px;
+//                 }
+//             }
+
+//         }
+
+//     }
+
+//     #platform .fv-encyclopedia, #customers, #security {
+//         h3, .h3 {
+//             margin-bottom: .75em;
+//         }
+//     }
+    
+//     #platform {
+//         // For a/b test with CTA banner
+//         &.cta-banner-on-top {
+//             padding-top: 8rem !important;
+//             @include media-breakpoint-up(md) {
+//                 padding-top: 6.25rem !important;
+//             }
+//         }
+
+//         & .subheadline {
+//             @include media-breakpoint-up(lg) {
+//                 padding: 0 8rem;
+//             }
+//         }
+//     }
+
+//     #solutions {
+//         background-color: var(--blue-90);
+//         color: var(--white);
+//         & .subheadline {
+//             @include media-breakpoint-up(lg) {
+//                 width: 70%;
+//             }
+//         }
+//         & .fv-cards {
+//             @include row-cols(1);
+//             @include media-breakpoint-up(sm) {
+//                 @include row-cols(2);
+//             }
+//             @include media-breakpoint-up(md) {
+//                 @include row-cols(3);
+//             }
+//             @include media-breakpoint-up(lg) {
+//                 @include row-cols(4);
+//             }
+//         }
+//         & .fv-card {
+//             padding: 0;
+//             transition: transform .5s;
+//             &:hover {
+//                 transform: scale(1.015);
+//                 @include media-breakpoint-up(sm) {
+//                     transform: scale(1.03);
+//                 }
+//                 box-shadow: $shadow-900;
+//                 .card-cta {
+//                     opacity: 1;
+//                 }
+//                 .link-arrow {
+//                     transform: translateX(7px);
+//                 }
+//             }
+//             & .card-body-header {
+//                 display: flex;
+//                 gap: 2rem;
+//                 @include media-breakpoint-up(sm) {
+//                     flex-direction: column;
+//                     gap: 1rem;
+//                 }
+
+//                 & .card-image {
+//                     @supports not (gap:1rem) {
+//                         margin-right: var(--size-200);
+
+//                         @include media-breakpoint-up(sm) {
+//                             margin-bottom: var(--size-100);
+//                         }
+//                     }
+//                 }
+//             }
+//             & .card-body {
+//                 padding-bottom:.25rem;
+//                 @include media-breakpoint-between(sm, lg) {
+//                     padding-bottom:0;
+//                 }
+//                 @include media-breakpoint-up(lg) {
+//                     padding-bottom:inherit;
+//                 }
+//             }
+//             .card-cta {
+//                 opacity: 0;
+//                 transition: all .25s;
+//                 color: $green;
+//                 font-family: $font-bold;
+//                 text-align: right;
+//                 transition-delay: .15s;
+//                 display: none;
+//                 @include media-breakpoint-up(sm) {
+//                     display: block;
+//                 }
+//             }
+//             .link-arrow {
+//                 transition: all .35s;
+//                 transition-delay: .35s;
+//             }
+            
+//         }
+//     }
+
+//     #customers {
+//         .fv-card.white {
+//             &:hover {
+//                 background-color: var(--white);
+//             }
+//         }
+//         .card-image {
+//             & img {
+//                 max-width: 70px;
+//                 @include media-breakpoint-up(lg) {
+//                     max-width: 100px;
+//                 }
+//             }
+//         }
+//         .badges {
+//             display: flex;
+//             gap: .5rem;
+//         }
+//         .badge {
+//             @supports not (gap:1rem) {
+//                 margin-right: var(--size-050);
+//             }
+//             & img {
+//                 max-width: 70px;
+//                 @include media-breakpoint-up(lg) {
+//                     max-width: 95px;
+//                 }
+//             }
+//         }
+//         .award-highlight {
+//             margin-bottom: var(--size-075);
+//             @include media-breakpoint-up(md) {
+//                 margin-bottom: var(--size-100);
+//             }
+//         }
+//         .award {
+//             &-title {
+//                 color: var(--blue-70);
+//                 font-family: var(--font-display-regular);
+//                 @include media-breakpoint-down(xs) {
+//                     font-size: var(--size-075);
+//                 }
+//             } 
+//             & .card-body {
+//                 gap: 1.5rem;
+
+//                 & .card-image {
+//                     @supports not (gap:1rem) {
+//                         margin-right: var(--size-150);
+//                     }
+//                 }
+//             }
+//             & .description {
+//                 gap: .5rem;
+//                 @supports not (gap:1rem) {
+//                     margin-bottom: .75rem;
+//                 }
+
+//                 @include media-breakpoint-up(md) {
+//                     gap: .75rem;
+//                 }
+//                 @include media-breakpoint-up(lg) {
+//                     gap: 1rem;
+//                 }
+//             }
+            
+//         }
+//     }
+
+//     #security {
+//         @include media-breakpoint-up(md) {
+//             padding-top: 3rem;
+//             padding-bottom: 0;
+//         }
+
+//         & .badges {
+//             @include make-row();
+//             padding-left: 15px;
+//             padding-right: 15px;
+//             @include row-cols(2);
+//             @include media-breakpoint-up(sm) {
+//                 padding-right: 0;
+//                 @include row-cols(2);
+//             }
+//             @include media-breakpoint-up(md) {
+//                 @include row-cols(3);
+//             }
+//             @include media-breakpoint-up(xl) {
+//                 @include row-cols(4);
+//             }
+//             display: flex;
+//             gap:.25rem;
+//         }
+//         .badge {
+//             background-color: var(--white);
+//             border-radius: 5px;
+//             padding: 1rem 3rem; 
+//             @include make-col-ready;
+//             display: flex;
+//             justify-content: center;
+//             max-width: 100px;
+//             @supports not (gap:1rem) {
+//                 margin-right: var(--size-025);
+//                 margin-bottom: var(--size-025);
+//             }
+
+//             @include media-breakpoint-up(sm) {
+//                 max-width: 120px;
+//             }
+//             @include media-breakpoint-up(md) {
+//                 max-width: 140px;
+//             }
+//             @include media-breakpoint-up(lg) {
+//                 max-width: 180px;
+//             }
+            
+//             & img {
+//                 align-self: center;
+//                 max-height: 40px;
+//                 @include media-breakpoint-up(md) {
+//                     max-height: 80px;
+//                 }
+//             }
+//         }
+//     }
+
+//     #integrations {
+//         h2 {
+//             padding: 0 3rem;
+//             @include media-breakpoint-up(lg) {
+//             }
+//         }
+//         .subheadline {
+
+//             width: 75%;
+//             @include media-breakpoint-up(lg) {
+//                 width: 50%;
+//             }
+//         }
+//         .integrations-row {
+//             @include make-row();
+//             display: flex;
+//             gap:.5rem;
+//             justify-content: center;
+//             margin-bottom: 1rem; // For pyramid layout
+
+//             /* CLOSE */
+//             // display: grid;
+//             // justify-content: center;
+//             // justify-items: center;
+//             // grid-template-columns: repeat(5, auto);
+//             /* / CLOSE */
+
+
+//             // grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+//             // grid-template-rows: repeat(5, auto);
+//             // &:has(.four) {
+//             //     grid-template-columns: repeat(4, auto);
+//             // }
+
+//             // grid-template-areas: 'five five five five five' 'four four four four' 'three' 'two' 'one';
+//             // grid-area: 5/4/3/2/1;
+
+
+//             @include media-breakpoint-up(md) {
+//                 gap:1rem;
+//             }
+//         }
+//         .integration-card {
+//             background-color: var(--white);
+//             border-radius: 5px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             min-height: 40px;
+//             padding: .5rem 1rem;
+//             @supports not (gap:1rem) {
+//                 margin-right: var(--size-075);
+//             }
+//             @include media-breakpoint-up(md) {
+//                 padding: .75rem 1.25rem;
+//             }
+//             @include media-breakpoint-up(lg) {
+//                 padding: 1rem 3rem;
+//             }
+//             &.five {
+//                 grid-column-start: 1;
+//                 // grid-area: five;
+//             }
+//             &.four {
+//                 grid-column-start: 2;
+//             //     grid-area: four;
+//             }
+//             &.three {
+//                 grid-column-start: 2;
+//                 //     grid-area: three;
+//             }
+//             &.two {
+//                 grid-column-start: 2;
+//                 grid-column: 50% span;
+//                 //     grid-area: two;
+//                 & + .integration-card {
+//                     grid-column: 50% span;
+//                 }
+//             }
+//             &.one {
+//                 grid-column-start: 3;
+//                 //     grid-area: one;
+//             }
+//             & img {
+//                 align-self: center;
+//                 max-height: 30px;
+//                 max-width: 100px;
+//                 @include media-breakpoint-up(md) {
+//                     max-width: 160px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media screen and (min-width:768px) {
+    section#encyclopedia {
+        padding: 12.5rem 0;
+    }
+}
+
+.home-refresh {
+    #header-nav.bg-match {
+        background-color: transparent;
+        color: $white;
+        transition: all .15s ease-in;
+        & .navbar-brand img, .arrow-dropdown img {
+            filter: brightness(0) invert(1);
+        }
+    }
+    .dark {
+        transition: none;
+        @include section-theme($theme: dark);
+    }
+
+    #solutions {
+
+
+        & .fv-cards {
+            @include row-cols(1);
+            @include media-breakpoint-up(sm) {
+                @include row-cols(2);
+            }
+            @include media-breakpoint-up(md) {
+                @include row-cols(3);
+            }
+            @include media-breakpoint-up(lg) {
+                @include row-cols(4);
+            }
+        }
+    }
+    .hero {
+        isolation: isolate;
+        background-color: $black;
+        
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            height: 130%; // Needs to have overhang since the file-separator below pulls up.
+            background:
+                radial-gradient(ellipse farthest-corner at top left, $cool-gray-100, transparent),
+                radial-gradient(circle at top right, $teal-60 5%, transparent),
+                radial-gradient(circle at bottom left, $spruce 15%, transparent);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        & .highlight {
+            color: $lake;
+        }
+
+        & .exhibition-media {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: -25px;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(xl) {
+                min-height: 558px;
+            }
+            &::after {
+                content: '';
+                background: linear-gradient(to top, $teal-80 0%, transparent 100%);
+                position: absolute;
+                left:-20%;
+                bottom:-50px;
+                height: 110px;
+                width: 140%;
+                z-index: 1;
+            }
+        }
+    }
+    #top-section {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            background:
+                radial-gradient(circle at center right, rgba($gatorade, .6), transparent 20%);
+            background-repeat: no-repeat;
+        }
+    }
+    #middle-section {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            background:
+                radial-gradient(circle at top left, rgba($gatorade, .6), transparent 20%);
+            background-repeat: no-repeat;
+        } 
+    }
+    #helpful-resources {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            background:
+                radial-gradient(circle at center right, rgba($gatorade, .6), transparent 20%);
+            background-repeat: no-repeat;
+        }
+        .kicker {
+            color: $moss;
+        }
+    }
+    #final-cta {
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            background:
+                radial-gradient(circle at bottom left, rgba($gatorade, .6), transparent 20%);
+            background-repeat: no-repeat;
+        }
+    }
+}

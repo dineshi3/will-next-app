@@ -1,0 +1,13 @@
+.results-container {
+    .fade-out {
+        bottom:0;
+        right:0;
+        left:0;
+        
+        width: 100%;
+        height: 150px;
+        
+        background-image: linear-gradient(to top, white, transparent);
+        position: sticky;
+    }
+}

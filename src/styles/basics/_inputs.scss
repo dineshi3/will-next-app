@@ -1,0 +1,27 @@
+select#lang-select {
+    border:none !important;
+    appearance: none;
+    text-transform: capitalize;
+    &:hover, &:active, &:focus {
+        outline:none;
+    }
+}
+
+.input-group {
+    &.append-with-btn {
+        & input {
+            border-radius: 50px;
+            padding:1.5rem 1rem 1.5rem 1.5rem;
+            border-right: none;
+        }
+        & img {
+            width: 18px;
+        }    
+    }
+}
+
+.btn-append {
+    border: 1px solid $gray-30;
+    border-left: none;
+    padding: .6875rem 1.5rem;
+}

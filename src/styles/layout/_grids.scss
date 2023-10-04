@@ -1,0 +1,21 @@
+// Layout has 3 cols. if 4 items present, it will left-align on next row
+.grid-col-3 {
+    display: grid;
+
+    @supports not (grid-row-gap:1rem) {
+        margin-bottom: 1rem;
+    }
+    @supports not (gap:1rem) {
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+    gap: 1rem;
+
+    grid-template-columns: 1fr;
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

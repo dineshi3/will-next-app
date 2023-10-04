@@ -1,0 +1,92 @@
+.product {
+    // Changed to moss for working better with sand bg
+    --text-highlight: var(--teal-60);
+    --deck-color: var(--teal-60);
+
+    .hero {
+        background-color: var(--brown-10);
+
+        &.hero-standalone {
+            @include section-color-theme(pine);
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                height: 130%;
+                background: radial-gradient(ellipse farthest-corner at bottom left, #121619, transparent),radial-gradient(circle at top right, #007D79 5%, transparent),radial-gradient(circle at top left, #005D5D 15%, transparent);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            & .breadcrumbs {
+                z-index: 9;
+            }
+            & .deck {
+                color: $gatorade;
+            }
+            & #product-token.full-logo {
+                max-width: unset;
+                width: 25rem;
+            }
+            .hero-cta {
+                margin-top: var(--article-space-lg);
+            }
+        }
+
+        & .deck, & p {
+            @include media-breakpoint-up(lg) {
+                padding-right: 5rem;
+            }
+        }
+    }
+
+    section:nth-of-type(even):not(.cta):not(#helpful-resources):not(.dark) {
+        background-color: var(--cool-gray-10);
+    }
+    section.dark a {
+        color: $primary;
+    }
+
+    .token-container {
+        display: flex;
+        align-items: center;
+        margin: 2.125rem 0;
+
+        & .kicker {
+            color: var(--text-highlight);
+            margin:0;
+        }
+        & #product-token {
+            max-width: 2rem;
+            margin-right: .875rem;
+            &.full-logo {
+                max-width: 6rem;
+            }
+        }
+    }
+}
+
+
+.products-list {
+    #products .icon:has(.full-logo) {
+        max-width: 10rem;
+        aspect-ratio: 16 / 7;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero {
+        @include section-color-theme($theme: pine);
+        padding-bottom: 9.375rem;
+
+        & .highlight {
+            color: $teal-20;
+            font-family: inherit;
+        }
+        & .subheadline {
+            font-size: var(--h4);
+        }
+    }
+    section:nth-of-type(even):not(.cta):not(#helpful-resources) {
+        background-color: var(--cool-gray-10);
+    }
+}

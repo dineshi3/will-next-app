@@ -1,0 +1,27 @@
+.thank-you {
+    & .body {
+        margin-bottom: 1.75rem;
+    }
+}
+@media screen and (min-width:768px){
+    .thank-you {
+        & h1 {
+            font-size: 61px;
+            line-height: 70px;
+            margin-bottom: 50px;
+            letter-spacing: -0.1px;
+        }
+        
+        & .body {
+            margin-bottom: 85px;
+            & p {
+                font-size: 21px;
+                line-height: 36px;
+                margin-bottom: 40px;
+            }
+        }
+        & .cta {
+            margin-bottom: 5rem;
+        }
+    }
+}

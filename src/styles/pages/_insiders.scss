@@ -1,0 +1,79 @@
+.insiders{
+    & .hero {
+        background-color: $blue-60;
+
+        background-image: url('/media/images/illustrations/insiders-keyhole.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 250px;
+        padding-bottom: 8rem;
+        padding-top: 4.5rem;
+
+        & h1 {
+            font-size: 3.75rem;
+            color: $white;
+            letter-spacing: -0.1px;
+            line-height: 4.375rem;
+        }
+        & h2 {
+            color: $white;
+        }
+    }
+    & section{
+        &.cta {
+            background-color: $gray-10;
+            & h2 {
+                color: $blue-60;
+            }
+        }
+    }
+    & h3 {
+        color: $blue-60;
+    }
+    & .intro p {
+        font-size: 1.125rem;
+    }
+    & li {
+        line-height: 2.375rem;
+        margin-bottom: .5rem;
+        font-size: 1.125rem;
+
+    }
+    & .kicker {
+        font-family: var(--font-display-extra-bold);
+        line-height: 1.75rem;
+        font-size: .875rem;
+
+    }
+    & .footnote {
+        font-size: var(--fine-print-font-size);
+    }
+}
+@media screen and (min-width: 768px){
+    .insiders {
+        & .hero {
+            padding-bottom: 2.75rem;
+            padding-top: 5rem;
+            background-position: 425px bottom;
+            background-size: 630px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px){
+    .insiders {
+        & .hero {
+            background-position: 500px bottom;
+            background-size: 630px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .insiders {
+        & .hero {
+            background-position: 90% bottom;
+            background-size: 630px;
+        }
+    }
+}

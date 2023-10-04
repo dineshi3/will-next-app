@@ -1,0 +1,176 @@
+.btn {
+    border-radius: var(--btn-border-radius);
+    padding:.625rem 1.25rem;
+    font-family: var(--font-regular);
+}
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--black);
+    border: 1px solid var(--color-primary);
+    &:hover, &:active, &:focus {
+        background-color: var(--yellow-60);
+        color: var(--black);
+        border-color: var(--color-primary); // TO OVERRIDE LEGACY STYLES
+    }
+}
+
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    &:hover, &:active, &:focus {
+        background-color: var(--white);
+        color: var(--color-secondary);
+        border-color: var(--color-secondary); // TO OVERRIDE LEGACY STYLES
+    }
+}
+.btn-tertiary-inverse {
+    color: var(--color-secondary);
+    background-color: var(--white);
+    border: 1px solid var(--white);
+    font-family: var(--font-display-bold);
+    &:hover, &:active, &:focus {
+        background-color: transparent;
+        color: var(--white);
+    }
+}
+
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--white);
+    border: 1px solid var(--color-secondary);
+    &:hover, &:active, &:focus {
+        background-color: var(--white);
+        color: var(--color-secondary);
+        border-color: var(--color-secondary); // TO OVERRIDE LEGACY STYLES
+    }
+}
+
+.btn-primary-outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    &:hover, &:active, &:focus{
+        background-color: var(--yellow-60);
+
+    }
+}
+.btn-fv-secondary {
+    background-color: var(--white);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    &:hover, &:active, &:focus{
+        color: var(--white);
+        background-color: var(--color-secondary);
+    }
+}
+
+.btn-dropdown {
+    border: 1px solid var(--gray-20);
+    color: var(--black);
+    &:hover, &:active, &:focus{
+        color: inherit;
+        background-color: inherit;
+    }
+    & .arrow-dropdown {
+        display: inline-block;
+    }
+}
+
+// Style as though a btn were a text link (mostly for cards or other cases in which the markup needs to be a button, but should look like a text link
+.text-link {
+    padding: 0;
+    margin:0;
+    color: $moss;
+}
+
+
+.sliding-btn {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(sm) {
+        position: relative;
+        border: 2px solid black;
+        flex-direction: row;
+        border-radius: var(--border-radius-pill);
+        align-items: center;
+        background-color: white;
+        margin-bottom: 2rem;
+        transition: all .15s;
+    }
+    @include media-breakpoint-up(md) {
+        width: fit-content;
+    }
+    .link {
+        border: 2px solid black;
+        color:#000;
+        display: flex;
+        margin-bottom: .5rem;
+        transition: all .15s;
+        width: 100%;
+        padding: var(--size-050) var(--size-100);
+        border-radius: var(--border-radius-pill);
+        text-align: center;
+        text-decoration:none;
+        align-items: center;
+        justify-content: center;
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 0;
+            border: 0;
+        }
+        @include media-breakpoint-up(md) {
+            padding: var(--size-075) var(--size-125);
+            // height: 40px;
+        }
+        &.active {
+            background-color: #000;
+            color: white;
+        }
+    }
+}
+
+
+.arrow-button {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    color: $black;
+    background-color: $white;
+    padding: .5rem;
+    max-width: fit-content;
+    transition: all .35s;
+
+    & .action-text {
+        font-size: .625rem;
+        max-width: 0;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        white-space: nowrap;
+        overflow: hidden; // Hides the text until expanded
+    }
+    & .action-icon {
+        line-height: .8; // Keeps the arrow in-line with center of text
+        vertical-align: middle;
+    }
+    &:hover, &:focus {
+        & .action-text {
+            max-width:350px;
+            padding-right: 10px;
+        }
+    }
+}
+// Activate arrow-button on card hovers 
+.card:hover, .card:focus, .fv-card:hover, .fv-card:focus {
+    .arrow-button {
+        & .action-text {
+            padding-right: 10px;
+            max-width:250px;
+        }
+    }
+}
+
+
+

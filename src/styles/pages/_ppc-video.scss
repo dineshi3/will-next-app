@@ -1,0 +1,102 @@
+.ppc-video {
+    .shadow-graphic {
+        box-shadow: 0.5rem 0.5rem 0 0 $black;
+    }
+    .hero {
+        padding-top: 80px;
+        background-color: $gray-10;
+        position: relative;
+        @include media-breakpoint-up(md) {
+            &:not( + footer) {
+                margin-bottom: 8rem;
+
+            }
+        }
+        & h1 {
+            // margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            & + p {
+                text-align: center;
+                margin-bottom: 1rem;            
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+        .phone {
+            font-weight: bold;
+        }
+        & .badges {
+            // position: absolute;
+            @include make-row();
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 2rem;
+            @include media-breakpoint-up(lg) {
+                justify-content: flex-end;
+                height: 140px;
+                &.count-1 {
+                    margin-bottom: -25px;
+                }
+            }
+            &:not(.count-1){
+                & img:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+            & img {
+                display: flex;
+                align-self: center;
+                max-height: 80px;
+                height: fit-content;
+                max-width: 80px;
+                @include media-breakpoint-up(lg) {
+                    max-height: 140px;
+                    height: fit-content;
+                    max-width: 140px;
+                }
+            }
+        }
+        & .form-cta {
+            margin-bottom: 3rem;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+        & .devices-img {
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: flex;
+            }
+            justify-content: center;
+            margin: 7rem 0;
+            & img {
+                max-width: 630px;
+                position: absolute;
+            }
+        }
+        .hs-form {
+            padding:0;
+            // & input[type=submit] {
+            //     background-color: $primary;
+            //     &:hover, &:focus {
+            //         background-color: $blue-90;
+            //         color: $white;
+            //     }
+            // }
+        }
+    }
+    .encyclopedia {
+        & .fv-row {
+            margin-bottom: 50px;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 150px;
+            }
+        }
+    }
+}

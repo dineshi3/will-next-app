@@ -1,0 +1,81 @@
+.partners-list {
+    --h1: 42px;
+    @include media-breakpoint-up(lg) {
+        --h1: 60px;
+    }
+    --h1-font-family: normal;
+    --h2-font-family: normal;
+    --section-file-padding: 9.375rem 0;
+    --partner-color-primary: #{$yellow-60};
+
+    .hero {
+        @include section-color-theme($theme: dark);
+        background: radial-gradient(circle at 33% 33%,$cool-gray-70, $cool-gray-100);
+        padding-bottom: 9.375rem;
+
+        & .highlight {
+            color: $teal-20;
+            font-family: inherit;
+        }
+        & .subheadline {
+            font-size: var(--h4);
+        }
+    }
+    #results, #final-cta {
+        @include section-color-theme($theme: light);
+    }
+    #integrations {
+        @include section-color-theme($theme: dark);
+        background: radial-gradient(circle at 33% 33%,$cool-gray-70, $cool-gray-100);
+        a {
+            color: var(--partner-color-primary);
+        }
+    }
+    .btn-primary.btn-dropdown {
+        padding: .5rem 1.5rem;
+        background-color: var(--partner-color-primary);
+        color: $teal-80;
+        border-radius: 50px;
+    }
+    #final-cta .btn-primary, #resources .btn-primary {
+        color: $black;
+        background-color: var(--partner-color-primary);
+        border-color: var(--partner-color-primary);
+        transition: all .15s;
+        &:hover {
+            background-color: transparent;
+            border-color: $yellow-80;
+        }
+    }
+
+    .fv-card.partner {
+        border-radius: 4px;
+        border: 1px solid var(--cool-gray-20);
+        padding:0;
+        transition: all .35s;
+        & .card-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--cool-gray-20);
+            height: 95px;
+            & img {
+                max-height: 60px;
+                max-width: 180px;
+            }
+        }
+        & .card-title {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-family: var(--font-display-bold);
+        }
+        &:hover, &:active {
+            box-shadow: $shadow-500;
+            text-decoration: none;
+            & .link-arrow img {
+                transform: translateX(7px);
+                opacity: 1;
+            }
+        }
+    }
+}

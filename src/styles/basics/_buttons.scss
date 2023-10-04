@@ -1,0 +1,100 @@
+.btn {
+    border-radius: 50px;
+    padding:.5rem 1rem;
+
+    &.btn-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        border: 2px solid $black;
+        border-radius: 0;
+        background-color: $white;
+        padding: .5rem .875rem;
+        z-index: 10000;
+        & .to-top-arrow {
+            width: 13px;
+            margin-top: -4px;
+            margin-right: 4px;
+        }
+        &.cookie-spacer {
+            bottom: 100px;
+        }
+    }
+}
+
+.btn-primary {
+    @include button-variant($background: $primary, $border: $primary, $hover-background: $yellow-60, $hover-border: $yellow-60, $active-background: $yellow-60, $active-border: $yellow-60)
+}
+
+.btn-sm {
+    padding:.5rem 1rem;
+}
+
+.btn-lg {
+    padding: 1.375rem 2rem;
+    font-size: 1.125rem;
+}
+
+.btn-outline-teal {
+    color: $teal-60;
+    border-color: $teal-60;
+    &:hover, &:active, &:focus{
+        color: $white;
+        background-color: $teal-60;
+    }
+}
+
+.btn-hover-outline-secondary {
+    &:hover, &:active, &:focus{
+        color: $teal-60;
+        border-color: $teal-60;
+        background-color: white;
+    }
+}
+
+
+// TODO: DELETE WHEN BUTTON MIGRATION COMPLETE
+.btn-red {
+    color: $white;
+    background-color: $dark-red-50;
+    &:hover, &:active, &:focus{
+        color: $white;
+        background-color: $dark-red-60;
+    }
+}
+
+
+
+
+
+.btn-hidden-content {
+    color: $white;
+    background-color: $black;
+    border-color: $black;
+    &::after {
+        content:'\203A';
+    }
+    &:hover, &:active {
+        color: $black;
+        background-color: $white;
+        &::after {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+@media screen and (min-width: 992px) {
+    .btn {
+        padding:.6875rem 2rem;
+    }
+
+    .btn-lg {
+        padding: 1.375rem 2.75rem;
+        font-size: 1.125rem;
+    }
+}

@@ -1,0 +1,31 @@
+.product-cards-intro {
+    margin-bottom: 3rem;
+}
+
+.products-showcase {
+    overflow-x: hidden;
+    .tab-content>.active {
+        display: grid;
+    }
+}
+
+.product-card {
+    border-radius: 10px;
+    box-shadow: $shadow-100;
+    .card-header{
+        padding-bottom: 0;
+        & figure {
+            margin:0;
+        }
+        & .token {
+            max-height: 40px;
+        }
+        & .token-logo {
+            max-height: 20px;
+            margin: .5rem 0;
+        }
+    }
+    .card-cta {
+        color: $moss;
+    }
+}

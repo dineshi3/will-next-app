@@ -1,0 +1,49 @@
+.instagram {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .hero {
+        padding: 1rem 0 2rem 0;
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+    .profile {
+        background-color: $black;
+        border-radius: 100px;
+        width:100px;
+        height: 100px;
+        
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        @include media-breakpoint-up(md) {
+            width:160px;
+            height: 160px;
+        }
+        &-img {
+            width:100%;
+            max-width: 60px;
+            @include media-breakpoint-up(md) {
+                max-width: 80px;
+            }
+        }
+    }
+    #links {
+        padding-top: 0;
+    }
+    .link-list {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding:0 15px;
+        z-index: 100;
+    }
+    footer {
+        margin-top: auto;
+    }
+}

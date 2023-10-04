@@ -1,0 +1,52 @@
+@use "sass:map";
+
+// Background of the message. Design system lists these themes
+$message-themes: (
+    pine: (
+        bg: radial-gradient(99.02% 196.71% at 87% 100%, $teal-60 0%, $pine 100%), tricolor: #0e5758,  
+    ),
+    smoke: (
+        bg: radial-gradient(89.13% 183.04% at 10% 100%, $cool-gray-90 0%, rgba(33, 39, 42, 0.8) 100%), tricolor: #474b4e,
+    ),
+);
+
+.message {
+    --triangle-height: 10px;
+    --triangle-color: #0e5758;
+    box-shadow: $shadow-100;
+    border-radius: 5px;
+    position: relative;
+    margin-top: var(--triangle-height);
+}
+
+// Create message theme classes. Exp: .message-pine. Pine comes from the $message-themes and is the bg of the message itself. 
+@each $theme, $messagebg in $message-themes {
+    .message-#{$theme} {
+        // --triangle-color: map.get(map.get($message-themes, $theme), tricolor);
+        background: map.get(map.get($message-themes, $theme), bg);
+        color: white;
+        @if $theme == 'smoke' {
+            --triangle-color: #474b4e;
+        }
+    }
+}
+
+
+.tooltip-triangle {
+
+    position:relative;
+    height:var(--triangle-height);
+    position: absolute;
+    top:calc(-1 * var(--triangle-height));
+    left:50%;
+    transform: translateX(-50%);
+    isolation: isolate;
+    &::before {
+        content: '';
+        background-color: var(--triangle-color);
+        display: block;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        width: 20px;
+        height: var(--triangle-height);
+    }
+}

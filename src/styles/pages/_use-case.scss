@@ -1,0 +1,49 @@
+.use-case {
+    .hero {
+        background-color: var(--cool-gray-10);
+
+        // padding-bottom: 4rem;
+        /* TODO: Delete the .hero styles in favor of the header.has-breadcrumbs styles when all product pages have migrated. */
+        // &.has-breadcrumbs {
+        //     padding-top: 6.5rem;
+        // }
+
+    }
+    // .section-decoration {
+    //     position: relative;
+    //     @include media-breakpoint-down(xs) {
+    //         display: none;
+    //     }
+    //     &:nth-of-type(even) {
+    //         .section-decoration-image {
+    //             left: unset;
+    //             right: -15px;
+    //             @include media-breakpoint-up(lg) {
+    //                 right: 0px;
+    //             }
+    //         }
+    //     }
+    // }
+    // .section-decoration-image {
+    //     position: absolute;
+    //     height: 140px; 
+    //     bottom: -70px;
+    //     left: -15px; 
+    //     @include media-breakpoint-up(lg) {
+    //         left: -10px; 
+    //     }
+        
+    // }
+    // section:not(#final-cta) {
+    //     background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/products/decoration-line.svg');
+    //     background-repeat: no-repeat;
+    //     background-position: left 5vw bottom -50px;
+    //     &:nth-of-type(even) {
+    //         background-position: right 5vw bottom -50px;
+    //     }
+    // }
+
+    section:nth-of-type(even):not(.cta):not(#helpful-resources) {
+        background-color: var(--cool-gray-10);
+    }
+}

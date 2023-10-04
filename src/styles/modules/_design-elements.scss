@@ -1,0 +1,163 @@
+.shadow-graphic {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 3px solid $black;
+    box-shadow: 1.15rem 1rem 0 0 $black;
+    @include media-breakpoint-up(md) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.form-decoration-behind-shadow {
+    position: absolute;
+    z-index: -1;
+    bottom: -50px;
+    &.left{
+        left:-25px;
+    }
+}
+
+hr {
+    &.secondary {
+        height: 10px;
+        background: $secondary;
+        margin-bottom: 2rem;
+    }
+    &.thin {
+        height: 1px;
+        background: $gray-100;
+    }
+    &.thinnest {
+        height: initial;
+        background: var(--cool-gray-20);
+    }
+    &.sm {
+        width:6.25rem;
+    }
+    &.md {
+        width:14.75rem;
+    }
+    &.left {
+        margin-left:0;
+    }
+}
+
+.plane {
+    position: absolute;
+    z-index: -1;
+
+    //Add class for varying sizes if needed
+    width: 475px;
+    height: 660px;
+    
+    &.tan {
+        background-color: $brown-20;
+    }
+    // &.blue {
+    //     background-color: $blue-20;
+    // }
+    // &.yellow {
+    //     background-color: $yellow-20;
+    // }
+    // &.orange {
+    //     background-color: $orange-20;
+    // }
+    // &.red {
+    //     background-color: $red-20;
+    // }
+    // &.green {
+    //     background-color: $green-20;
+    // }
+
+    &.right {
+        right:0;
+    }
+    &.left {
+        left:0;
+    }
+
+    &.sm {
+        height: 220px;
+    }
+
+    // &.product-placeholder {
+    //     width:80%;
+    //     height: 100%;
+    // }
+}
+
+// .plane-outline {
+//     position: absolute;
+//     z-index: 0;
+
+//     //Add class for varying sizes if needed
+//     width: 780px;
+//     height: 100%;
+//     max-height: 439px;
+//     border: 3px solid $black;
+
+//     &.right {
+//         right:0;
+//         // &.product-placeholder {
+//         //     margin-right:-2rem;
+//         // }
+//     }
+//     &.left {
+//         left:0;
+//         // &.product-placeholder {
+//         //     margin-left:-2rem;
+//         // }
+//     }
+
+//     &.sm {
+//         height: 220px;
+//     }
+
+//     // &.product-placeholder {
+//     //     width: 80%;
+//     //     height: 100%;
+//     //     margin-top: 2rem;
+//     // }
+    
+// }
+
+.check-list {
+    padding-left: 0;
+    
+    & li {
+        list-style: none;
+        display: grid; // Allows for hanging indent, keeps text from wrapping below the image and instead lines up with the text when multiple lines.
+        grid-template-columns: 36px 1fr;
+        align-content: center;
+        margin-bottom: 12px;
+        font-size: 1.125rem;
+    }
+    & li:before {
+        content: '';
+        display: inline-block;
+        height: 20px;
+        width: 36px;
+        background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/icon-circle-checkmark.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top:3px;
+    }
+
+}
+.text-center .check-list li {
+    display: block;
+}
+
+// BORDERS
+.bb {
+    border-bottom: 6px solid $black;
+    &-light {
+        border-bottom: 1px solid $gray-20;
+    }
+}
+// .bt {
+//     border-top: 6px solid $black;
+//     &-light {
+//         border-top: 1px solid $gray-20;
+//     }
+// }

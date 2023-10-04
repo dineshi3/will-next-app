@@ -1,0 +1,21 @@
+body.customers {
+    .hero.center {
+        & .intro {
+            & .headlines {
+                @include media-breakpoint-up(lg) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    h2 {
+        font-size: var(--size-px-30);
+        font-family: var(--font-display-bold);
+        line-height: var(--size-250);
+    }
+    a {
+        &:hover, &:active {
+            text-decoration: none;
+        }
+    }
+}

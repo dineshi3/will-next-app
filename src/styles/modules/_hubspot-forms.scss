@@ -1,0 +1,293 @@
+.hs-form {
+    padding: 0;
+    & legend {font-size: 1rem;}
+    & fieldset {
+        max-width: none !important;
+    }
+    & label {
+        font-size: var(--form-label);
+        font-family: var(--form-label-font-family);
+        line-height: var(--form-label-line-height);
+        color: var(--form-label-color);
+        margin-bottom: 0;
+        &.hs-error-msg {
+            color: $warning;
+        }
+        // Get rid of white space if no label on the form. Legacy format (inaccessible form, but to retro-actively fix, must keep)
+        &:has(span:empty) {
+            display: none;
+            & ~ .input {
+                margin-bottom: 13px;
+            }
+        }
+    }
+    & .hs-input {
+        width: 100% !important;
+    }
+    & input {
+        width:100%;
+        border: 1px solid $gray-30;
+        border-radius: 3px;
+        padding: var(--form-input-padding);
+        line-height: 1;
+        margin-bottom: 5px;
+    }
+    & input[type=submit] {
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: var(--black); 
+        padding: 1rem;
+        border-radius: var(--btn-border-radius);
+        transition: all .15s;
+        margin:2rem 0 1rem 0;
+        font-size: var(--size-px-18);
+        @include media-breakpoint-up(xl) {
+            margin:1rem 0;
+        }
+        &:hover {
+            background-color: var(--yellow-60);
+            transition: all .15s;
+        }
+    }
+    & input[type=checkbox] {
+        width: auto !important;
+        margin-right: 10px;
+        padding-top: 2px;
+        margin-bottom: 0;
+    }
+    & ul.inputs-list {
+        padding:0;
+        margin:0 0 .75rem 0;
+        & li.hs-form-booleancheckbox {
+            list-style: none;
+        }
+    }
+    & select {
+        border: 1px solid $gray-30;
+        width: 100%;
+        padding: .65rem;
+        margin-bottom: 1rem;
+    }
+    
+    & .invalid {
+        border-color: $warning;
+        color: $warning;
+    }
+    & ul.hs-error-msgs {
+        transition: all .15s;
+        margin-bottom: 0;
+
+        // TODO: error msg testing. This fixes it right now with legacy forms and the no margin below lg screens
+        padding-top:.5rem;
+        padding-bottom:.5rem;
+        @include media-breakpoint-up(md) {
+            padding-top:.75rem;
+        }
+        & li {
+            list-style: none;
+            font-size: .875rem;
+            color: $warning;
+            margin-top: -10px;
+            transition: all .15s;
+        }
+    }
+    // Fixing alignment when using a form with at least one form-columns-2
+    & .form-columns-1 .input {
+        margin:0 !important;
+    }
+    & .form-columns-2 .field:last-child .input {
+        margin:0 !important;
+    }
+}
+
+.form-container {
+    @include section-color-theme(light);
+    // background-color: $white;
+    border-top: 11px solid $teal-60;
+    border-radius: 4px;
+    padding: var(--form-padding) var(--form-padding) 0 var(--form-padding);
+    box-shadow: $shadow-500;
+    height: fit-content;
+    // color: $black;
+    // h2, h3 {
+    //     color: $black;
+    // }
+}
+
+.insiders {
+    & .hs-form {
+        padding: var(--form-padding);
+        & input[type=submit] {
+            width: 50%;
+        }
+        & div.actions {
+            text-align: center;
+        }
+        & ul[role=checkbox] {
+            padding-left: 0;
+            padding-top: 1.25rem;
+            & li {
+                line-height: 0;
+                margin-bottom: 0;
+            }
+        }
+        & ul.inputs-list {
+            padding-left: 0;
+            & li {
+                line-height: 1rem;
+            }
+        }
+        & .hs-fieldtype-checkbox > label {
+            font-size: 1rem;
+            color: $black;
+        }
+        & input[type=checkbox] {
+            width: unset;
+            &[name=decision_maker] {
+                margin-bottom: 0;
+                & + span {
+                    line-height: 1.5rem;
+                }
+            }
+            & + span {
+                font-size: 1rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+    & fieldset {
+        max-width: none !important;
+        & li {
+            list-style: none;
+        }
+        & .hs_products.field > label {
+            display: inline;
+            & span {
+            }
+        }
+    }
+}
+
+.hubspot.inline {
+    .hs-form {
+        padding: 0;
+        & input {
+            display: inline-block;
+        }
+        & input[type=submit] {
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-primary);
+            color: var(--black);
+            padding: .625rem 1rem;
+            border-radius: var(--btn-border-radius);
+            transition: all .15s;
+            &:hover {
+                background-color: var(--white);
+                // color: var(--color-primary);
+                transition: all .15s;
+            }
+        }
+    }
+}
+
+.hubspot-content-box {
+
+    & .cta_button {
+        box-sizing: content-box !important;
+    }
+}
+
+// Fixing contrast on hubspot embedded form in Wistia videos
+.wistia_embed .hs-submit .hs-button.primary {
+    background-color: $primary !important;
+    color: $black !important;
+    border-radius: 5px;
+}
+
+
+@media screen and (min-width: 992px){
+    .hubspot.inline {
+        & .field {
+            padding-right: 1.25rem;
+            float: left;
+            width:65%;
+        }
+        & .hs-submit {
+            float: left;
+        }
+    }
+}
+
+
+
+/* Exit Intent Popup */
+.leadinModal.leadinModal-theme-default.leadinModal-v3 .leadinModal-content{
+    width: 50em !important; //Width of the pop up
+}
+.leadinModal.leadinModal-theme-default.leadinModal-v3 .leadin-content-body .leadin-preview-wrapper {
+    padding-left:7.5em; // moves text to have room for the image
+}
+.leadinModal, .leadinModal.leadinModal-v3 {
+    & .leadinModal-content {
+        background-color: $tan !important;
+        font-size: 1rem;
+        & h1,h2,h3,h4,p {
+            color: $black;
+        }
+        & p {
+            font-size: 1rem;
+        }
+    }
+    & h1,h2,h3,h4,p {
+        color: $black;
+    }
+    & .leadin-button-primary {
+        background: $secondary !important;
+        color: $white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        transition: all .15s;
+        &:hover {
+            background: $teal-70 !important;
+            transition: all .15s;
+        }
+    }
+    & .leadin-button {
+        width:auto;
+    }
+    .leadin-main-wrapper {
+        min-height: 500px;
+        @include media-breakpoint-up(md) {
+            min-height: unset;
+        }
+    }
+
+    & .dyno-image-inner {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        // ADD BG GRIDLINES IMG HERE
+        @include media-breakpoint-up(md) {
+            width: auto;
+        }
+    }
+    & .dyno-image img {
+        max-width: 100%;
+        max-height: 300px;
+        @include media-breakpoint-up(md) {
+            max-height: fit-content;
+            max-width: 200px;
+        }
+    }
+}
+
+
+
+/* MODAL HUBSPOT DOWNLOAD ASSET */
+.hbspt-form + .delivery {display: none;}
+.hbspt-form:has(.submitted-message) + .delivery {
+        display: block;
+        color: var(--white);
+        margin-bottom: 1rem;
+}

@@ -1,0 +1,431 @@
+.accordion-side-by-side {
+    & .action-header {
+        @include make-row();
+        margin-bottom: 4rem;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        & .headline {
+            margin-bottom: 0;
+        } 
+        & h2 {
+            margin-bottom: 0;
+        }
+    }
+    & .headline {
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(7);
+            }
+        }
+    & .headline-cta {
+        @include make-col-ready;
+        @include make-col-auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+    }
+    & .sbs-layout {
+        display: flex;
+        flex-direction: column;
+        @include make-col-ready;
+
+        @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: .41fr 90px .59fr;
+        }
+        position: relative;
+        margin: 0;
+        
+        & .accordion-card {
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                grid-column: 1;
+            }
+        }
+        & .accordion-media {
+            width: 100%;
+            padding-left: .5rem;
+            margin-bottom: 1rem;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+                padding-left: 0;
+                grid-column: 3;
+                position: absolute;
+            }
+        }
+        & figure {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            @include media-breakpoint-up(lg) {
+                justify-content: end;
+                @include aspect(4, 3);
+            }
+            // Aspect and max-height to prevent significant overflow onto section below for short accordions with tall images...
+            & img {
+                // @include leaf(30px); //Not ready for full-scale commitment
+                @include media-breakpoint-up(lg) {
+                    align-self: flex-start;
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+    & .headline {
+        margin-bottom: 2rem;
+    }
+    & .card {
+        --accordion-card-margin: 1.125rem;
+        --accordion-card-margin-narrow: 1rem;
+
+        border: 0;
+        // border-bottom: 1px solid $gray-50;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        // margin-bottom: var(--size-150);
+        overflow-anchor: none;
+        background-color: unset;
+
+        
+        @include media-breakpoint-down(lg) {
+            &:has( + .accordion-media:not(.show)) { // This is just for mobile/tablet to narrow the gap between card headers that aren't open.
+                margin-bottom: var(--accordion-card-margin-narrow);
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: var(--accordion-card-margin);
+
+            // Show border bottom on desktop of the open card, but not on mobile so the line doesn't sit on top of images
+            &:not(:has(.collapsed)) {
+                border-bottom: 1px solid currentColor;
+            }
+            // margin-bottom: 3rem;
+        }
+        &#card-1 {
+            border-top: 1px solid currentColor;
+            padding-top: var(--accordion-card-margin);
+        }
+    }
+    & .card-header {
+        background: none;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding:0;
+        border-bottom: 1px solid currentColor;
+        &:not(:has(.collapsed)) {
+            border: 0;
+        }
+
+        & button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            text-decoration: none;
+            transition: all .25s;
+            margin-bottom: 1.125rem;
+            img, .accordion-arrow {
+                transition: all .25s;
+            }
+            &:not(.collapsed) {
+                img, .accordion-arrow {
+                    transform: rotate(180deg);
+                }
+                & h2, & h3 {
+                    color: var(--teal-50);
+                }
+            }
+            &:focus{
+                outline: -webkit-focus-ring-color auto 1px;
+                box-shadow: none;
+            }
+            // Turn off outline only for sighted, mouse-users:
+            &:focus:not(:focus-visible) {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    & .card-body {
+        padding: 0 var(--size-200) var(--size-200) 0;
+        background-color: transparent;
+        & .body-content:has(+ a) {
+            margin-bottom: 1rem;
+        }
+        // & a {
+        //     color: currentColor;
+        // }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    & .btn-link {
+        color: inherit;
+        border: none;
+        border-radius: 0;
+        padding: 0 0 0 .5rem;
+        margin-bottom: 0;
+        text-align: left;
+        text-decoration: none;
+
+        & .btn-headline {
+            font-size: var(--h5);
+            font-family: var(--h5-font-family);
+            font-weight: 500;
+        }
+        & .btn-link:not(.show){
+            color: $gray-50;
+        }
+        
+        & .show {
+            color: currentColor;
+        }
+    
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+}
+
+.accordion-large {
+    & .action-header {
+        @include make-row();
+        margin-bottom: 4rem;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        & .headline {
+            margin-bottom: 0;
+        } 
+        & h2 {
+            margin-bottom: 0;
+        }
+    }
+    & .headline {
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(9);
+            }
+        }
+    & .headline-cta {
+        @include make-col-ready;
+        @include make-col-auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+    }
+    & .sbs-layout {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        @include make-col-ready;
+        
+        @include media-breakpoint-up(lg) {
+            display: grid;
+            grid-template-columns: auto 1.875rem 260px;
+            // min-height: 420px;
+        }
+        
+        
+        & .accordion-card {
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                grid-column: 3;
+            }
+        }
+        & .accordion-media {
+            width: 100%;
+            margin-bottom: 2rem;
+            @include media-breakpoint-up(lg) {
+                width: 68%;
+                margin-bottom: 0;
+                padding-left: 0;
+                grid-column: 1;
+                position: absolute;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 73%;
+            }
+        }
+        & figure {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            // Aspect and max-height to prevent significant overflow onto section below for short accordions with tall images...
+            & img {
+                @include media-breakpoint-up(lg) {
+                    align-self: flex-start;
+                    // max-height: 500px;
+                }
+            }
+        }
+    }
+    & .headline {
+        margin-bottom: 2rem;
+    }
+    & .card {
+        --accordion-card-margin: 1.125rem;
+        --accordion-card-margin-narrow: 1rem;
+
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        overflow-anchor: none;
+        background-color: unset;
+        // justify-content: flex-start;
+
+        @include media-breakpoint-down(lg) {
+            &:has( + .accordion-media:not(.show)) { // This is just for mobile/tablet to narrow the gap between card headers that aren't open.
+                margin-bottom: var(--accordion-card-margin-narrow);
+            }
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: var(--accordion-card-margin);
+
+            // Show border bottom on desktop of the open card, but not on mobile so the line doesn't sit on top of images
+            &:not(:has(.collapsed)) {
+                border-bottom: 1px solid currentColor;
+            }
+            // margin-bottom: 3rem;
+        }
+        &#card-1 {
+            border-top: 1px solid currentColor;
+            padding-top: var(--accordion-card-margin);
+        }
+    }
+    & .card-header {
+        background: none;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 0;
+        padding:0;
+        border-bottom: 1px solid currentColor;
+        &:not(:has(.collapsed)) {
+            border: 0;
+        }
+
+        & button {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            text-decoration: none;
+            transition: all .25s;
+            margin-bottom: 1.125rem;
+            img, .accordion-arrow {
+                transition: all .25s;
+            }
+            &:not(.collapsed) {
+                img, .accordion-arrow {
+                    transform: rotate(180deg);
+                }
+                & h2, & h3 {
+                    color: var(--teal-50);
+                }
+            }
+            &:focus{
+                outline: -webkit-focus-ring-color auto 1px;
+                box-shadow: none;
+            }
+            // Turn off outline only for sighted, mouse-users:
+            &:focus:not(:focus-visible) {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    & .card-body {
+        padding: 0 var(--size-200) var(--size-200) 0;
+        background-color: transparent;
+        & .body-content:has(+ a) {
+            margin-bottom: 1rem;
+        }
+        // & a {
+        //     color: currentColor;
+        // }
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    & .btn-link {
+        color: inherit;
+        border: none;
+        border-radius: 0;
+        padding: 0 0 0 .5rem;
+        margin-bottom: 0;
+        text-align: left;
+        text-decoration: none;
+
+        & .btn-headline {
+            font-size: var(--h5);
+            font-family: var(--h5-font-family);
+            font-weight: 500;
+        }
+        & .btn-link:not(.show){
+            color: $gray-50;
+        }
+        
+        & .show {
+            color: currentColor;
+        }
+    
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            text-decoration: none;
+        }
+    }
+}
+
+#faq-accordion {
+    width: 100%;
+    & .card {
+        &-header {
+            & button {
+
+                img {
+                    transition: all .25s;
+                }
+                &:not(.collapsed) {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                    & h2, & h3 {
+                        color: var(--teal-50);
+                    }
+                }
+                & h2, & h3 {
+                    font-family: var(--h2-font-family);
+                    color: $black;
+                    font-size: 1.375rem;
+                    margin-bottom: 0;
+                }
+                &:focus{
+                    outline: -webkit-focus-ring-color auto 1px;
+                    box-shadow: none;
+                }
+                // Turn off outline only for sighted, mouse-users:
+                &:focus:not(:focus-visible) {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        &-body {
+            padding: 0 var(--size-200) var(--size-200) 0;
+            background-color: transparent;
+        }
+
+    }
+}

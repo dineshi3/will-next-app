@@ -1,0 +1,51 @@
+:where(html) {
+    --size-025: .25rem;
+    --size-050: .5rem;
+    --size-075: .75rem;
+    --size-100: 1rem;
+    --size-125: 1.25rem;
+    --size-150: 1.5rem;
+    --size-175: 1.75rem;
+    --size-200: 2rem;
+    --size-225: 2.25rem;
+    --size-250: 2.5rem;
+    --size-275: 2.75rem;
+    --size-300: 3rem;
+    --size-325: 3.25rem;
+    --size-350: 3.5rem;
+    --size-375: 3.75rem;
+    --size-400: 4rem;
+    --size-450: 4.5rem;
+    --size-500: 5rem;
+    --size-550: 5.5rem;
+    --size-600: 6rem;
+    --size-625: 6.25rem;
+    --size-650: 6.5rem;
+
+    --size-lg-10: 10rem;
+    --size-lg-20: 20rem;
+
+    --size-px-11: .6875rem;
+    --size-px-13: .8125rem;
+    --size-px-14: .875rem;
+    --size-px-18: 1.125rem;
+    --size-px-22: 1.375rem;
+    --size-px-25: 1.5625rem;
+    --size-px-30: 1.875rem;
+    --size-px-34: 2.125rem;
+    --size-px-50: 3.125rem;
+    --size-px-70: 4.375rem;
+
+
+    --form-padding: 1.875rem;
+    
+    
+    @include media-breakpoint-up(md) {
+        --form-padding: 2.25rem;
+    }
+    
+    /* TODO: Throw out? */
+    // --size-px-31: 1.9375rem;
+    // --size-: 1.15rem;
+    // --size-: 2.975rem;
+}

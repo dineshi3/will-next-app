@@ -1,0 +1,20 @@
+#logo-ticker {
+    @include make-row();
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    & .logo {
+        min-height: 50px;
+        display: flex;
+        & img {
+            align-self: center;
+            max-width: 90px;
+            padding: 0 var(--size-100);
+            @include media-breakpoint-up(md) {
+                max-width: 130px;
+            }
+        }
+    }
+}

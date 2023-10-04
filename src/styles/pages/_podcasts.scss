@@ -1,0 +1,21 @@
+.podcasts{
+    & .hero {
+        & .series {
+            margin-bottom: 5rem;
+        }
+    }
+    & p.series-summary {
+        padding-left: 2rem;
+        border-left: 3px solid $black;
+        line-height: 1.5625rem;
+    }
+    & .article-date {
+        font-size: .875rem;
+    }
+    & .featured-image-container {
+        & img {
+            border-radius: 5px;
+        }
+    }
+    
+}

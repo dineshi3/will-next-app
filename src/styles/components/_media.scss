@@ -1,0 +1,5 @@
+// For video embeds / other media that requires a width or height setting to show
+.other-media {
+    @include aspect($width: 16, $height: 9);
+    width: 100%;
+}

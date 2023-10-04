@@ -1,0 +1,131 @@
+:where(html) {
+
+    --fine-print-font-size: 12px;
+    --fine-print-line-height: 1.5;
+    --fine-print-margin-bottom: var(--size-px-30);
+
+
+    --breadcrumb-font-size: 12px;
+    --breadcrumb-link-color: var(--teal-50);
+    --breadcrumb-link-color-disabled: var(--gray-50);
+
+    --kicker: .75rem;
+    --kicker-font-family: var(--font-display-bold);
+    --kicker-margin-bottom: 2.25rem;
+
+    --h1: var(--size-275);
+    --h1-font-family: var(--font-display-regular); 
+    --h1-line-height: 110%;
+    
+    --h2: var(--size-150);
+    --h2-font-family: var(--font-display-regular); 
+    --h2-line-height: 120%;
+    
+    --h3: var(--size-200);
+    --h3-font-family: var(--font-display-regular); 
+    --h3-line-height: 1.3em;
+    
+    --h4: 1.375rem;
+    --h4-font-family: var(--font-display-regular); 
+    --h4-line-height: 1.75rem;
+    
+    --h5: 1rem;
+    --h5-font-family: var(--font-display-bold); 
+    --h5-line-height: 1.5;
+
+    --p1: 1.375rem;
+    --p1-font-family: var(--font-regular);
+    --p1-line-height: 1.3;
+
+    --p2: 1rem;
+    --p2-font-family: var(--font-light);
+    --p2-bold: var(--font-bold);
+    --p2-line-height: 1.5;
+    --p2-margin-bottom: 1.5625rem;
+    
+    --p3: .875rem;
+    --p3-font-family: var(--font-light);
+    --p3-line-height: 1.3125rem;
+
+    // ARTICLE TYPOGRAPHY, LONG FORM TYPE: BLOGS, PODCASTS, FEATURES, ETC.
+    --article-h1: var(--h2);
+    --article-h1-line-height: 3.125rem;
+    --article-h1-font-family: var(--font-display-bold);
+    
+    --article-h2: var(--h3);
+    --article-h2-line-height: 2.625rem;
+    --article-h2-font-family: var(--font-display-bold);
+    
+    --article-h3: var(--h4);
+    --article-h3-line-height: var(--size-175);
+    --article-h3-font-family: var(--font-display-bold);
+    
+    --article-h4: var(--h5);
+    --article-h4-line-height: var(--size-150);
+    --article-h4-font-family: var(--font-display-bold);
+
+    --article-link-color: var(--teal-70);
+    --article-link-text-decoration: underline;
+
+    --article-space-xl: 4.6875rem; // 75px
+    --article-space-lg: 3.125rem; // 50px
+    --article-space-md: 1.5625rem; // 25px
+    --article-space-sm: 0.9375rem; // 15px
+    --article-space-xs: 0.625rem; // 10px
+
+    --li-margin-bottom: 0.9375rem;
+    --ul-margin-bottom: 4.6875rem;
+
+    --blockquote-font-size: var(--p1);
+    --blockquote-line-height: var(--size-175);
+    --blockquote-font-family: var(--font-regular);
+    --blockquote-attribution: var(--p3);
+    --blockquote-attribution-font-family: var(--p3-font-family);
+    --blockquote-attribution-line-height: var(--p3-line-height);
+    --blockquote-margin: 3.125rem 0;
+    --blockquote-padding-left: 1.375rem;
+    --blockquote-border: 1px solid var(--teal-70);
+
+    --deck-font-size: 1.375rem;
+    --deck-line-height: var(--size-175);
+    --deck-color: var(--teal-60);
+    --deck-font-family: var(--font-regular);
+
+    --heading-margin-top: 2em;
+    --heading-margin-bottom: 0.5em;
+
+    --text-link-color: var(--teal-60);
+    --text-link-color-hover: var(--black);
+    --text-link-font: var(--font-display-bold);
+
+    --outbound-link-color: var(--teal-50);
+    --outbound-link-transform: uppercase;
+    --outbound-link-font-size: var(--size-075);
+    --outbound-link-font-family: var(--font-display-bold);
+
+    --form-label: 10px;
+    --form-label-font-family: var(--font-regular);
+    --form-label-line-height: 15px;
+    --form-label-color: var(--gray-80);
+    --form-input-padding: .625rem 1rem;
+
+    
+    @include media-breakpoint-up(md) {
+        --h1: var(--size-300);
+        --h2: var(--size-200);
+        --h3: var(--size-200);
+    }
+    @include media-breakpoint-up(lg) {
+        --h1: var(--size-375);
+        --h2: 2.625rem;
+
+    }
+    // @include media-breakpoint-up(xl) {
+        
+    // }
+
+    // THEMES
+    .dark {
+        --deck-color: var(--teal-30);
+    }
+}

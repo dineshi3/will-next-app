@@ -1,0 +1,94 @@
+:where(html) {
+    --section-padding: 4rem 0;
+    --inner-section-padding: 2rem 0;
+    --section-file-padding: 4.25rem 0 6rem 0;
+    --file-radius-size: 50px;
+}
+
+@include media-breakpoint-up(md) {
+    :root {
+        --section-padding: 6.25rem 0;
+        --inner-section-padding: 4rem 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    :root {
+        --section-file-padding: 9.375rem 0;
+        --file-radius-size: 75px;
+    }
+}
+
+// USING NAMES WITH PIXELS, but REM AS THE ACTUAL ( px / 16 = rem )
+// SHOULD HELP TRANSLATING FROM DESIGNS
+.mt {
+    &-10 {
+        margin-top: .625rem;
+    }
+    &-neg10 {
+        margin-top: -.625rem;
+    }
+    &-20 {
+        margin-top: 1.25rem;
+    }
+    &-neg20 {
+        margin-top: -1.25rem;
+    }
+    &-50 {
+        margin-top: 3.125rem;
+    }
+    &-neg50 {
+        margin-top: -3.125rem;
+    }
+    &-100 {
+        margin-top: 6.25rem;
+    }
+    &-neg100 {
+        margin-top: -6.25rem;
+    }
+    &-150 {
+        margin-top: 9.375rem;
+    }
+    &-neg150 {
+        margin-top: -9.375rem;
+    }
+    &-200 {
+        margin-top: 12.5rem;
+    }
+    &-neg200 {
+        margin-top: -12.5rem;
+    }
+}
+
+.mb {
+    &-50 {
+        margin-bottom: 3.125rem;
+    }
+    &-neg50 {
+        margin-bottom: -3.125rem;
+    }
+    &-75 {
+        margin-bottom: 4.6875rem;
+    }
+    &-neg75 {
+        margin-bottom: -4.6875rem;
+    }
+    &-100 {
+        margin-bottom: 6.25rem;
+    }
+    &-neg100 {
+        margin-bottom: -6.25rem;
+    }
+    &-150 {
+        margin-bottom: 9.375rem;
+    }
+    &-neg150 {
+        margin-bottom: -9.375rem;
+    }
+    &-200 {
+        margin-bottom: 12.5rem;
+    }
+    &-neg200 {
+        margin-bottom: -12.5rem;
+    }
+}

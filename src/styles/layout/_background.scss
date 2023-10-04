@@ -1,0 +1,251 @@
+@use "sass:map";
+
+//MOBILE FIRST
+.ridge {
+    background-image: url('/media/images/illustrations/mountain-ridge.svg');
+    background-repeat: repeat-x;
+    height: 56px;
+    margin-top: 6.25rem;
+}
+
+// NEW VERSION of RIDGE
+section + .ridgeline {margin-top: -5px;}  // For when the div.ridgeline is on the bottom of a section
+.ridgeline + section {margin-top: -5px;}  // For when the div.ridgeline is on the top of a section
+.ridgeline {
+    // Choose the color variations
+    &.gray-10-white {
+        background-image: url('/media/images/illustrations/ridge-gray-10-to-white.svg');
+        height: 56px;
+    }
+
+    // To flip the image so the colors match the correct sections
+    &.inverted {
+        transform: rotate(180deg);
+    }
+
+}
+
+// Found on Fertility lps, for exp.
+.header-ridge {
+    @include media-breakpoint-up(sm) {
+        background-image: url('/media/images/illustrations/header-ridge-cool-gray-10.svg');
+        background-repeat: no-repeat;
+        height: 56px;
+        margin-top: -26px;
+        margin-bottom: -40px;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: -26px;
+    }
+}
+
+.dot-grid, .dot-grid-trunc {
+    display: none;
+}
+
+//This sould be overridden when header is over a colored bg. EXP: product pages
+#header-nav.bg-match {
+    background-color: $white;
+}
+
+.hero-animation {
+    position: absolute;
+    top: unset;
+    &.center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &.right {
+        right:0;
+    }
+}
+
+@media screen and (min-width:768px) {
+    // TODO: Remove home.hero styles after Sept 2022 launch
+    .home {
+        .hero {
+            background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/illustrations/core-schematic.png') no-repeat;
+            background-position-x: right;
+            width: 100%;
+            background-size: 350px;
+            background-position-y: 270px;
+        }
+    }
+
+    .platform, .services, .error {
+        & .hero {
+            background: url('/media/images/illustrations/rocket-red.png') no-repeat 350px 200px;
+            background-size: 800px;
+        }
+    }
+    
+    
+    #values {
+        background-position: left 250px;
+        background-repeat: no-repeat;
+    }
+
+    .dot-grid {
+        display: block;
+        position: absolute;
+        left: -500px;
+        width: 621px;
+        margin-top:-250px;
+        &.right {
+            right: -500px;
+            left:initial;
+        }
+        &.bottom {
+            margin-top: 0;
+        }
+    }
+    // For use on Features page, for exp. Uses the short version of the dot-grid (dotgrid-trunc.png)
+    .dot-grid-trunc {
+        display: block;
+        position: absolute;
+        opacity: .25;
+        left: 0;
+        width:120px;
+        margin-top:-250px;
+        &.right {
+            right: 0;
+            left:initial;
+        }
+        &.bottom {
+            margin-top: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width:992px) {
+    .home {
+        .hero {
+            background-image: none;
+            // background-size: 400px;
+            // background-position-y: 170px;
+        }
+        & .hero-animation {
+            top: unset;
+            width: 435px;
+        }
+    }
+    .platform, .services, .error {
+        .hero {
+            background-position: 450px 100px;
+            background-size: 800px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1200px) {
+    .home {
+        // .hero {
+            // background-size: 520px;
+            // background-position-y: 170px;
+        // }
+        & .hero-animation {
+            width: 600px;
+        }
+    }
+
+    .platform, .services, .error {
+        .hero {
+            background-position: 750px 80px;
+            background-size: 800px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1500px){
+    .home {
+        // .hero {
+        //     background-size: 680px;
+        // }
+        & .hero-animation {
+            width: 665px;
+        }
+    }
+    .platform, .services, .error {
+        .hero {
+            background-position: 900px 80px;
+            background-size: 800px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1800px){
+    .home {
+        & .hero-animation {
+            &.right {
+                right:10%;
+            }
+        }
+    }
+}
+
+
+
+
+// REFRESH BG ELEMENTS
+
+
+
+@mixin gradient-spot-variant($value) {
+    width: #{$value}vw;
+    height: #{$value}vh;
+}
+@mixin gradient-spot-variant-position($position, $value) {
+    #{$position}: #{$value};
+}
+ 
+$gradient-spot-position: (
+    sm: ( top: -5vh, bottom: -5vh, right: -25vw, left: -25vw),
+    md: ( top: -5vh, bottom: -15vh, right: -25vw, left: -40vw),
+) !default;
+
+$gradient-spot-size: () !default;
+$gradient-spot-size: map-merge(
+  (
+    "sm": 50,
+    "md": 80
+  ),
+  $gradient-spot-size
+);
+@each $size, $value in $gradient-spot-size {
+    .gradient-spot-#{$size} {
+      @include gradient-spot-variant($value);
+    }
+}
+
+// Creates .gradient-spot-sm-top with all of the iterations of sm, md + top, bottom, left, right
+@each $size, $value in $gradient-spot-position {
+    @each $position, $position-value in map.get($gradient-spot-position, $size) {
+        .gradient-spot-#{$size}-#{$position} {
+            @include gradient-spot-variant-position($position, $position-value);
+        }
+    }
+}
+.gradient-relative {
+    position: relative;
+    isolation: isolate;
+}
+.gradient-spot {
+    position: absolute;
+    filter: blur(50px);
+    opacity: .55;
+    // z-index: -1;
+    &.yellow {
+        background: radial-gradient($yellow-50, transparent 65%);
+    }
+    &.teal {
+        background: radial-gradient($teal-60, transparent 65%);
+    }
+    &.dark {
+        background: radial-gradient($cool-gray-100, transparent 65%);
+    }
+}

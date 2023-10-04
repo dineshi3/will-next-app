@@ -1,0 +1,263 @@
+.webinar {
+    h1 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        letter-spacing: normal;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+            font-size: 3.875rem;
+            line-height: 4.375rem;
+            letter-spacing: -0.1px;
+            margin-bottom: 40px;
+        }
+    }
+    &-type {
+        color: $green-50;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8125rem;
+        letter-spacing: 1.44px;
+    }
+
+    & #header-nav {
+        & .logos {
+            margin-bottom: .75rem;
+            @include media-breakpoint-up(xs) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    & .btn {
+        padding: 1rem 3rem;
+        @include media-breakpoint-up(md) {
+            padding: .6875rem 2rem;
+        }
+    }
+    // & .btn-primary, .hs-form input[type=submit] {
+    //     background-color: $green-50;
+    //     border-color: $green-50;
+    //     font-family: $font-bold;
+    //     letter-spacing: .5px;
+
+    //     &:hover, :focus {
+    //         background-color: transparent;
+    //         color: $green-50;
+    //     }
+    // }
+
+    & .hero {
+        background-color: $gray-10;
+        overflow-x: hidden;
+        position: relative;
+        &-row {
+            @include make-row();
+            display: flex;
+            justify-content: space-between;
+        }
+        &-content {
+            margin-bottom: 3.125rem;
+            @include make-col-ready;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+                @include make-col(6);
+            }
+            &-cta {
+                color: $green-50;
+            }
+        }
+
+        & .registration-form {
+            @include make-col-ready;
+            margin-left: 15px;    
+            margin-right: 15px;    
+            @include media-breakpoint-up(sm) {
+                margin-left: 0;    
+                margin-right: 0;    
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(5);
+            }
+            // background-color: $white;
+            // border-radius: 8.85px;
+            // box-shadow: $shadow-500;
+            position: relative;
+            z-index: 10;
+            height: fit-content;
+            padding: var(--form-padding) var(--form-padding) 0 var(--form-padding);
+
+            & .form-header {
+                // padding: 3.75rem 1rem 0 1rem;
+                & h2 {
+                    // font-family: $font-display-bold;
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+                & h3 {
+                    // font-family: $font-display-medium;
+                    font-size: 0.8125rem;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                }
+                // Should only affect form padding if the headline is present
+                // & + .embed .hs-form {
+                //     padding-top: 2.25rem;
+                // }
+            }
+        }
+        & .form-dot-grid {
+            position: absolute;
+            z-index: 0;
+            bottom: 160px;
+            right:0;
+            
+            @include media-breakpoint-up(md) {
+                bottom: 220px;
+            }
+            @include media-breakpoint-up(lg) {
+                margin-top:25px;
+                right:-100px;
+            }
+        }
+    }
+
+    & #about {
+        background-color: $gray-10;
+        & .about-content-row {
+            @include make-row();
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 10.625rem;
+            }
+        }
+        & .about-content {
+            @include make-col-ready;
+            @include media-breakpoint-up(lg) {
+                @include make-col(4);
+            }
+            margin-bottom: 3.5rem;
+            
+
+            & hr {
+                margin-bottom: 3.5rem;
+            }
+        }
+        & .about-illustration {
+            @include make-col-ready;
+            @include media-breakpoint-up(lg) {
+                @include make-col(6);
+            }
+            display: flex;
+            justify-content: flex-end;
+        }
+        & .about-body {
+            margin-bottom: 3.5rem;
+            & ul {
+                list-style: none;
+                padding-left: 0;
+                & li::before {
+                    content: "";
+                    position: absolute;
+                    height: 38px;
+                    width: 38px;
+                    background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/webinars/webinar-li-checkmark.svg') no-repeat;
+                    text-align: center;
+                    margin-right: 1rem;
+                    line-height: 80px;
+                    margin-left: -4rem;
+                }
+                & li {
+                    list-style: none;
+                    margin: 0 0 2rem 4rem;
+                    position: relative;
+
+                }
+
+            }
+        }
+        & .about-companies {
+            @include make-row();
+            justify-content: center;
+
+            @include media-breakpoint-up(lg) {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+        & .company {
+            @include make-col-ready;
+            background-color: $white;
+            border-radius: 11.64px;
+            box-shadow: $shadow-500;
+            margin: 1rem;
+            padding: 60px 50px;
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(5);
+            }
+
+            & .host-company-logo, .guest-company-logo {
+                margin-bottom: 3rem;
+                img {
+                    max-width: 190px;
+                }
+            }
+            & .host-company-header, .guest-company-header {
+                margin-bottom: 2rem;
+            }
+            & .host-company-bio, .guest-company-bio {
+                font-size: 1rem;
+                line-height: 1.625rem;
+                margin-bottom: 2rem;
+            }
+            & .host-company-cta a, .guest-company-cta a {
+                color: inherit;
+            }
+        }
+    }
+
+    .speaker {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        margin-bottom: 3.5rem;
+
+        background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/webinars/webinar-green-bg.svg') no-repeat 45% top;
+        background-size: 280px;
+
+        &-headshot{
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 3rem;
+            }
+        }
+        &-name {
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        &-info {
+            & p {
+                margin:0;
+            }
+        }
+        & img {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 250px;
+            margin-left: 30px;
+            margin-top: 30px;
+            @include media-breakpoint-up(lg) {
+                max-width: 250px;
+                margin-left: 30px;
+                margin-top: 30px;
+            }
+        }
+    }
+}

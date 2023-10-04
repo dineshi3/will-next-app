@@ -1,0 +1,94 @@
+#faq {
+    &.cool-gray-10 {
+        background-color: var(--cool-gray-10);
+    }
+    .faq-row {
+        @include make-row();
+        &.side-by-side {
+            flex-direction: column;
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+        }
+    }
+    .intro {
+        @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+            @include make-col(4);
+        }
+        align-items: flex-start;
+        margin-bottom: var(--size-100);
+    }
+    .faq-content {
+        @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+            @include make-col-offset(1);
+            @include make-col(7);
+        }
+    }
+    
+}
+#faq-accordion {
+    width: 100%;
+    & .card {
+        border: 0;
+        border-bottom: 1px solid $gray-50;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        margin-bottom: var(--size-150);
+
+        // &:not(:last-child){
+        //     border-bottom: none;
+        // }
+        &-header {
+            padding: 0;
+            background-color: transparent;
+            border-bottom: none;
+            & button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                text-decoration: none;
+                transition: all .25s;
+                margin-bottom: var(--size-150);
+
+                img {
+                    transition: all .25s;
+                }
+                &:not(.collapsed) {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                    & h2, & h3 {
+                        color: var(--teal-50);
+                    }
+                }
+                & h2, & h3 {
+                    font-family: var(--h2-font-family);
+                    color: $black;
+                    font-size: 1.375rem;
+                    margin-bottom: 0;
+                }
+                &:focus{
+                    outline: -webkit-focus-ring-color auto 1px;
+                    box-shadow: none;
+                }
+                // Turn off outline only for sighted, mouse-users:
+                &:focus:not(:focus-visible) {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+        &-body {
+            padding: 0 var(--size-200) var(--size-200) 0;
+            background-color: transparent;
+        }
+
+    }
+}

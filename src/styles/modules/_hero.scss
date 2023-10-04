@@ -1,0 +1,98 @@
+/* Structure: */
+/* OPTIONS: Centered headlines (.hero.center) OR Left-aligned headlines + image (.hero) */
+/* <section class="hero center">
+    <div class="container">
+        <div class="intro">
+            <div class="headlines">
+                <h1>{{ content.headline|safe }}</h1>
+
+                {% if content.subheadline %}
+                <div class="subheadline">
+                    <p>{{ content.subheadline|safe }}</p>
+                </div>
+                {% endif %}
+            </div>{# <!-- /.col --> #}
+        </div>{# <!-- /.row --> #}
+    </div>{# <!-- /.container --> #}
+</section> */
+
+.hero {
+    min-height: 370px;
+    & h1 {
+        margin-bottom: 40px;
+    }
+    & h2 {
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: none;
+    }   
+    .intro {
+        @include make-row();
+        & .headlines {
+            text-align: left;
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            .subheadline {
+                line-height: 1.625rem;
+                margin-bottom: 3rem;
+            }
+        }
+        & .images, & .media {
+            position: relative;
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+        }
+    }
+
+    &.center {
+        .intro {
+            display: flex;
+            justify-content: center;
+            & .headlines {
+                text-align: center;
+                @include make-col-ready;
+                padding: 0 .5rem;
+                @include media-breakpoint-up(md) {
+                    @include make-col(8);
+                    padding: 0 2.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+// FOR Large hero display, like the home page
+.hero.exhibition {
+    .intro {
+        display: flex;
+        justify-content: center;
+        & .headlines {
+            padding: 1.5rem 0 4.75rem 0;
+            text-align: center;
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                padding: 4rem 0 4.75rem 0;
+                @include make-col(10);
+            }
+            & .cta {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    }
+    .exhibition-media {
+        @include make-row();
+        align-items: flex-end;
+
+        // Push small screens' media to the right side of screen, adds space on the left
+        @include media-breakpoint-down(sm) {
+            margin-left:0;
+        }
+    }
+}

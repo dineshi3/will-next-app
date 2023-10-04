@@ -1,0 +1,91 @@
+.resources {
+    /* Added section here so that footer color doesn't get changed. Every other p tag inside of a section tag */
+    & section p {
+        // line-height: 25px;
+        &.article-date {
+            font-size: .875rem;
+            margin-bottom: .25rem;
+        }
+    }
+    & .sidebar {
+        & h3 {
+            font-size: var(--h4);
+            line-height: var(--h4-line-height);
+        }
+    }
+    & .blog-featured-image img {
+        border-radius: var(--img-border-radius);
+    }
+    & .featured {
+        & h3 {
+            @include media-breakpoint-up(md) {
+                font-size: 2.25rem;
+                line-height: 1.35;
+            }
+        }
+    }
+    .post {
+        & img {
+            border-radius: var(--img-border-radius);
+            margin-bottom: 1rem;
+        }
+    }
+    .post h2 {
+        font-size: var(--h4);
+        line-height: var(--h4-line-height);
+    }
+    & a > h3 {
+        color: initial;
+    }
+    & .fireside > a > img, .stand > a > img {
+        transition: all .15s;
+        &:hover {
+            opacity: .6;
+        }
+    }
+    & .read-more {
+        @include make-col-ready;
+    }
+
+    & .email-cta {
+        &-form {
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(6);
+            }
+            @include media-breakpoint-up(md) {
+                @include make-col-offset(1); 
+            }
+        }
+        &-description {
+            @include make-col-ready;
+            @include media-breakpoint-up(md) {
+                @include make-col(5);
+            }
+            
+        }
+    }
+    & .white-papers {
+        & .fv-row {
+            @include row-no-gutters;
+        }
+    }
+    & .wp{
+        &-image {
+            @include make-col-ready;
+            @include make-col(4);
+            @include media-breakpoint-up(md) {
+                @include make-col(2);
+            }
+            @include media-breakpoint-up(lg) {
+                @include make-col(4);
+            }
+            @include col-no-gutters;
+            
+            & img {
+                border-radius: var(--img-border-radius);
+            }    
+        }
+    }
+
+}

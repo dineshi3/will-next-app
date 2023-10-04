@@ -1,0 +1,162 @@
+.fv-cards {
+    @include make-row();
+}
+
+.fv-card {
+    @include make-col-ready;
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    transition: all .15s;
+    height: 100%;
+    &.center {
+        text-align: center;
+        & .image {
+            justify-content: center;
+        }
+    }
+    &.white {
+        background-color: var(--white);
+        color: $black;
+        &:hover {
+            background-color: $blue-10;
+        }
+    }
+    & span.link-arrow {
+        opacity: 1;
+        display: inline-block;
+    }
+    &:hover, &:active {
+        box-shadow: $shadow-500;
+        text-decoration: none;
+        & .link-arrow img, & span.link-arrow {
+            transform: translateX(7px);
+            opacity: 1;
+        }
+    }
+    & .headline {
+        margin-bottom: 1rem;
+        h3, .h3 {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+    & .image {
+        margin-bottom: 1rem;
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    & .card-header {
+        border: none;
+        background: none;
+    }
+    & .card-footer {
+        border: none;
+        background: none;
+    }
+    &.cs {
+        border: 0;
+        border-radius: 4px;
+        transition: all .35s;
+        padding: 0;
+        --card-padding: var(--size-100) var(--size-250);
+
+
+        &:hover, &:active {
+            box-shadow: $shadow-500;
+            text-decoration: none;
+            & .link-arrow img, & .link-arrow span {
+                transform: translateX(7px);
+                opacity: 1;
+            }
+        }
+        & .card-title {
+            font-size: var(--size-18-px);
+            line-height: var(--size-150);
+            margin-bottom: var(--size-150);
+        }
+        & .logo {
+            padding: var(--size-100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85px;
+            background-color: var(--white);
+            img {
+                max-width: 200px;
+                max-height: 80px;
+                align-self: center;
+                padding:.15rem 0;
+            }
+        }
+        & .card-header {
+            background-color: #FDFDFD;
+        }
+        & .card-body {
+            background-color: #F6F9FC;
+            padding: var(--card-padding);
+        }
+        & .card-footer {
+            background-color: #F6F9FC;
+            padding: var(--size-125);
+        }
+        & .link-arrow img, & .link-arrow span {
+            transition: all .25s;
+        }
+        & .link-text {
+            color: var(--color-secondary);
+            font-family: var(--font-medium);
+        }
+    }
+}
+
+.fv-card.feature {
+    --card-padding: 1.375rem;
+    background-color: $brown-10;
+    border-radius: 4px;
+    padding:0;
+    transition: all .35s;
+    &:hover {
+        box-shadow: $shadow-500;
+    }
+    & .card-header {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+        padding-left: var(--card-padding);
+        padding-right: var(--card-padding);
+        & .icon {
+            @include aspect(1, 1);
+            display: flex;
+            width: 50px; 
+            height: 50px; 
+            object-fit: contain;
+            align-items: center;
+            & img {
+                max-height: 40px;
+            }
+        }
+    }
+    & .card-body {
+        font-size: var(--p3);
+        line-height: var(--p3-line-height);
+        color: $gray-70;
+        padding-left: var(--card-padding);
+        padding-right: var(--card-padding);
+    }
+    & .card-title {
+        font-size: var(--size-100);
+        line-height: var(--size-150);
+    }
+    & .card-footer {
+        font-size: var(--p3);
+        color: $gray-70;
+        padding-left: var(--card-padding);
+        padding-right: var(--card-padding);
+        padding-bottom: var(--size-175);
+    }
+}
+
+.fv-card.pane {
+    padding: 0;
+}

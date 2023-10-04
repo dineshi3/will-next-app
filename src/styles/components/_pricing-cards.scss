@@ -1,0 +1,238 @@
+.pricing {
+    --branded-product-color-base: var(--blue-70);
+    --branded-product-color-leaddocket: var(--teal-60);
+    --branded-product-color-vinesign: var(--red-60);
+    --branded-product-color-outlaw: #854AD3;
+    --branded-product-color-add-on: var(--black);
+    --pricing-card-subheadline-color-default: var(--teal-50);
+    
+    .card {
+        padding: var(--size-200);
+        margin-bottom: var(--size-150);
+        // border:0;
+        box-shadow: $shadow-500;
+
+        &-header, &-footer {
+            background-color: unset;
+            padding: 0;
+        }
+        &-footer {
+            border: 0;
+        }
+        .subheadline {
+            margin-bottom: var(--p2-margin-bottom);
+        }
+        &.product.card-line {
+            border-top: var(--size-075) solid var(--branded-product-color-base);
+            transition: all .15s;
+            @include media-breakpoint-up(lg) {
+                min-height: 665px;
+            }
+            & .card-body {
+                padding-left:0;
+                padding-right:0;
+            }
+            & .included-list ul {
+                margin-bottom: 0;
+            }
+        }
+        &.product-ld{
+            
+            &.card-line {
+                border-top: var(--size-075) solid var(--branded-product-color-leaddocket);
+            }
+            .kicker {
+                color: var(--branded-product-color-leaddocket);
+            }
+        }
+        &.product-vs{
+            
+            &.card-line {
+                border-top: var(--size-075) solid var(--branded-product-color-vinesign);
+            }
+            .kicker {
+                color: var(--branded-product-color-vinesign);
+            }
+        }
+        &.product-ol{
+            
+            &.card-line {
+                border-top: var(--size-075) solid var(--branded-product-color-outlaw);
+            }
+            .kicker {
+                color: var(--branded-product-color-outlaw);
+            }
+        }
+
+        &.base {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-columns: 67% 30%;
+                gap: 3%;
+                grid-column-gap: 3%;
+            }
+            & .card-main {
+                border-bottom: $card-border-width solid $card-border-color;
+                margin-bottom: 3rem;
+                @include media-breakpoint-up(md) {
+                    padding-bottom: 3rem;
+                }
+                @include media-breakpoint-up(lg) {
+                    border-right: $card-border-width solid $card-border-color;
+                    padding-right: 2.5rem;
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+                & .subheadline {
+                    @include media-breakpoint-up(lg) {
+                        width: 46ch;
+                    }
+                }
+            }
+            & .card-body {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .included-list {
+                & ul {
+                    display: grid; grid-template-columns: repeat(1, auto);
+                    column-gap: 1rem;
+                    @include media-breakpoint-up(md) {
+                        display: grid; grid-template-columns: repeat(2, auto);
+                    }    
+                    @include media-breakpoint-up(lg) {
+                        display: grid; grid-template-columns: repeat(3, auto);
+                    }
+                }
+            }
+            & .card-included {
+                .included-list {
+                    ul {
+                        display: grid; grid-template-columns: repeat(1, auto);
+                    }
+                }
+                .kicker {
+                    color: var(--pricing-card-subheadline-color-default);
+                }
+            }
+
+            & .kicker {
+                color: var(--branded-product-color-base);
+            }
+            
+
+            &.card-line {
+                border-top: var(--size-075) solid var(--branded-product-color-base);
+                @include media-breakpoint-up(md) {
+                    border-top: 0;
+                    border-left: var(--size-075) solid var(--branded-product-color-base);
+                }
+            }
+            .badges {
+                @include media-breakpoint-up(lg) {
+                    grid-column: span 2;
+                }
+                display: flex;
+                justify-content: flex-end;
+            }
+            .badge {
+                & img {
+                    max-height: 34px;
+                    align-self: center;
+                }
+            }
+        }
+        &.card-horizontal {
+            border:0;
+            border-top: var(--size-075) solid var(--branded-product-color-add-on);
+            display: flex;
+            flex-direction: column;
+            @include media-breakpoint-up(md) {
+                border-top: 0;
+                border-left: var(--size-075) solid var(--branded-product-color-add-on);
+                flex-direction: row;
+            }
+            & .card-header {
+                padding: 0 0 var(--size-200) 0;
+                margin-bottom: var(--size-150);
+                @include media-breakpoint-up(md) {
+                    padding: 0 var(--size-200) var(--size-200) var(--size-200);
+                }
+                @include media-breakpoint-up(md) {
+                    max-width: 350px;
+                    border-bottom: 0;
+                    padding: 0 var(--size-250);
+                    border-right: $card-border-width solid $card-border-color;
+                    padding-left: 0;
+                }
+            }
+            & .card-body {
+                padding: 0;
+                @include media-breakpoint-up(md) {
+                    padding: 0 var(--size-250);
+                }
+            }
+            .included-list {
+                & ul {
+                    display: grid; 
+                    grid-template-columns: repeat(1, auto);
+                    @include media-breakpoint-up(md) {
+                        display: grid; 
+                        grid-template-columns: repeat(2, auto);
+                        column-gap: var(--size-125);
+                    }
+                }
+            }
+            & .card-footer {
+                @include media-breakpoint-up(lg) {
+                    min-width: 148px;
+                }
+            }
+        }
+        .kicker {
+            font-size: var(--size-075);
+            font-family: var(--font-display-bold);
+            margin-bottom: var(--size-075);
+        }
+        h2 {
+            font-size: var(--size-px-22);
+            line-height: var(--size-150);
+            margin-bottom: var(--size-125);
+        }
+        h3 {
+            font-size: var(--size-100);
+            color: var(--teal-50);
+            margin-bottom: var(--size-100);
+        }
+        .check-list {
+            ul {
+                padding-left: 0;
+                align-items: flex-start;
+            }
+            li {
+                font-size: var(--size-px-14);
+                display: flex;
+                &::before {
+                    margin-top: 6px;
+                    margin-right: .5rem;
+                    width: 10px;
+                    height: 10px;
+                    min-width:10px;
+                }
+            }
+        }
+        & .btn.maintain-width {
+            width: fit-content;
+        }
+        &.short-check-list.card-horizontal .included-list {
+                & ul {
+                    grid-template-columns: repeat(1, auto);
+                }
+        }
+    }
+}

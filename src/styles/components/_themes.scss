@@ -1,0 +1,143 @@
+@use "sass:map";
+
+// h1, h2, h3,
+// h4, h5, h6 {
+//     @extend %headings !optional;
+// }
+
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
+
+$noise-3: url("data:image/svg+xml,%3Csvg viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.25' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+$noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");;
+
+$themes: (
+    pine: $teal-70,
+    light: $white,
+    dark: $cool-gray-90,
+) !default;
+    
+$grain-themes: (
+    dark-radial: radial-gradient(circle at 33% 33%,$cool-gray-80, $cool-gray-100),
+) !default;
+
+// $dark-gradient: background-image: radial-gradient(circle at 33% 33%, rgba(53,60,63,1), rgba(33,39,42,1));
+
+
+@mixin section-grain-theme($theme: dark, $bg: null, $text: null) {
+    @if $theme {
+        // background-image: radial-gradient(circle at center center, hsl(330deg 100% 71%), hsl(330deg 100% 0% / 50%)), $noise;
+        background-image: radial-gradient(circle at 33% 33%, rgba(53,60,63,1), rgba(33,39,42,1));
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 30%;
+        }
+        &::before {
+            filter: url(#noiseFilter);
+        }
+    }
+    @else {
+        background-color: $bg;
+        color: $text;
+        @include headings {
+            color: $text;
+        }
+    }
+}
+
+@mixin section-color-theme($theme: light, $bg: null, $text: null) {
+    @if $theme {
+        background-color: map.get($themes, $theme);
+        @if $theme == light {
+            color: $black;
+            @include headings {
+                color: $black;
+            }
+        }
+        @if $theme == pine or $theme == dark {
+            color: $white;
+            .breadcrumbs a {
+                color: $white;
+            }
+            @include headings {
+                color: $white;
+            }
+
+            // @if $theme == dark {
+            //     .btn-primary:hover {
+            //         color: $white;
+            //     }
+            // }
+            
+        }
+    }
+    @else {
+        background-color: $bg;
+        color: $text;
+        @include headings {
+            color: $text;
+        }
+    }
+}
+
+
+
+
+// REFRESH THEMES
+$tree-themes: (
+    light: (bg: $white, fg: $black, cta: $green, highlight-primary: $lake, highlight-secondary: $lake),
+    dark: (bg: $cool-gray-90, fg: $white, cta: $margarine, highlight-primary: $gatorade, highlight-secondary: $margarine),
+    pine: (bg: $teal-80, fg: $white, cta: $margarine, highlight-primary: $gatorade, highlight-secondary: $margarine),
+    spruce: (bg: $teal-70, fg: $white, cta: $margarine, highlight-secondary: $gatorade, highlight-primary: $margarine),
+    tan: (bg: $brown-10, fg: $black, cta: $green, highlight-primary: $lake, highlight-secondary: $lake),
+);
+
+@mixin section-theme($theme: light) {
+    background: map.get(map.get($tree-themes, $theme), bg);
+    color: map.get(map.get($tree-themes, $theme), fg);
+    border-color: map.get(map.get($tree-themes, $theme), fg);
+    
+    @if $theme == 'dark' or $theme == 'pine' {    
+        --breadcrumb-link-color: var(--teal-20);
+    }
+
+    @include headings {
+        color: map.get(map.get($tree-themes, $theme), fg);
+    }
+
+    a.fv-text-cta, a.link-arrow {
+        color: map.get(map.get($tree-themes, $theme), cta);
+    }
+
+    // hr is a foreground element, so use the fg value
+    :where(hr) {
+        background-color: map.get(map.get($tree-themes, $theme), fg);
+    }
+    :where(.kicker), :where(.highlight) {
+        color: map.get(map.get($tree-themes, $theme), highlight-secondary);
+    }
+    
+}
+
+@each $bg, $bg-val in $tree-themes {
+    .#{$bg} {
+        @include section-theme($bg);
+    }
+}
+
+
+// TODO: Create a typography theme based on same themes as the section, but without background colors for custom cases like the home page
+.type-theme-dark {
+    a.link-arrow { //just a changes the .btn-primary...
+        color: $sunflower;
+    }
+}

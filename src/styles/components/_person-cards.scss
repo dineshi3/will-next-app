@@ -1,0 +1,30 @@
+.person-card {
+    --bio-offset: 3rem;
+    position: relative;
+    margin-bottom: calc(var(--bio-offset) + 2rem);
+    & .headshot {
+        & img {
+            @include leaf(25px);
+            width: 100%;
+            object-fit: cover;
+            @include aspect($width: 15, $height: 18);
+            max-height: 26rem;
+        }
+    }
+    & .bio {
+        position: absolute;
+        bottom: calc(var(--bio-offset) * -1);
+        left: 1.8rem;
+        padding: 1.3rem;
+        width:fit-content;
+        min-width: 10rem;
+        max-width: 20rem;
+        & .name {
+            font-size: var(--h4);
+        }
+        & .job-title {
+            font-size: var(--p3);
+            color: var(--cool-gray-30);
+        }
+    }
+}

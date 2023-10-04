@@ -1,0 +1,217 @@
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+a{
+	color: $teal-60;
+}
+a:hover {
+	color: $teal-70;
+	text-decoration: none;
+}
+
+// Keep text colors if there's an <a> around a <div>
+a > div {
+	color: initial;
+	text-decoration: none;
+}
+
+
+a.link-arrow {
+	transition: all .15s;
+	&:hover img {
+		transition: all .15s;
+		transform: translateX(7px);
+	}
+	&:hover span {
+		transition: all .15s;
+		transform: translateX(7px);
+	}
+}
+a.link-arrow span {
+	// Allows the text / rsaquo to move
+	display: inline-block;
+}
+a.link-arrow, a.link-arrow img, a.link-arrow span {
+	transition: all .15s;
+}
+
+a.fv-text-cta {
+	transition: all .15s;
+	transition-delay: .15s;
+	color: $green;
+	text-decoration: none;
+	font-family: var(--font-medium);
+	margin-top: var(--article-space-md);
+	&:hover {
+		// font-weight: 900; // Not supported transition in FF and Safari
+		.link-arrow {
+			transform: translateX(7px);
+			opacity: 1;
+		}
+	}
+
+	& .link-arrow {
+		opacity: 0;
+		transition: all .35s;
+		transition-delay: transform .15s;
+	}
+}
+
+
+/* Arrow animations to trigger even if surrounding container is hovered (rather than just the link or button itself. See resource cards for example */
+a > div {
+	transition: all .15s;
+	transition-delay: .15s;
+	&:hover {
+		.link-arrow {
+			transform: translateX(7px);
+			opacity: 1;
+		}
+	}
+	& .link-arrow {
+		opacity: 0;
+		transition: all .35s;
+		transition-delay: transform .15s;
+	}
+} 
+
+.highlight {
+	font-family: inherit;
+}
+
+.container, .fv-container {
+	&.outer {
+		max-width: 768px;
+		margin: 0;
+	}
+}
+
+header {
+	&.hero {
+		padding: 6.5rem 0 4rem 0;
+		@include media-breakpoint-up(md) {
+			padding: 7.25rem 0 4rem 0;
+		}
+	}
+}
+section {
+	position: relative;
+    --section-padding: 4rem 0;
+	@include media-breakpoint-up(md) {
+		--section-padding: 6.25rem 0;
+	}
+
+    padding: 4rem 0;
+
+    &.slide{
+        padding: 0;
+		height: 100vh;
+
+		& .container, & .fv-container {
+			margin-left: 3.125rem;
+			padding: 0;
+		}
+	}
+	&.inner {
+		padding: var(--inner-section-padding);
+	}
+}
+.wistia_embed section { //Fixing CSS clash with Wistia embeds that have a form
+    padding: initial;
+}
+
+.content {
+	width: 100%;
+	min-height: 100vh;
+	min-width: 0;
+	transition: all .15s;
+	
+    & .container, & .fv-container {
+        padding:0 9.375rem;
+    }
+}
+
+.shadow {
+    box-shadow: 0 0 2.5rem rgba(35, 31, 32, 0.25) !important;
+}
+
+.word-break {
+	word-break: break-all;
+}
+
+img {
+	align-self: center; // Generic fix for squished images when container is flex
+}
+
+img.fit-proportions {
+	object-fit: unset;
+	max-width: 100%;
+    height: auto;
+}
+
+/* Use these instead of Bootstrap classes to reduce CSS output */
+.fv-container {
+    @include make-container();
+	@media screen and (min-width:576px) {
+		max-width: 540px;
+	}
+}
+.fv-row {
+    @include make-row();
+	&.no-gutters {
+		@include row-no-gutters;
+	}
+	
+}
+
+
+// @media screen and (min-width:576px) {
+// 	.fv-container {
+// 		max-width: 540px;
+// 	}
+// }
+
+@media screen and (min-width:768px) {
+	section {
+		padding: 6.25rem 0;
+	}
+
+	.container, .fv-container {
+		max-width: 720px;
+		&.outer {
+			max-width: 992px;
+			margin: 0;
+		}
+	}
+	img.fit-proportions {
+		object-fit: scale-down;
+	}
+}
+
+@media screen and (min-width:992px) {
+
+	.container, .fv-container {
+		max-width: 960px;
+		&.outer {
+			max-width: 1400px;
+		}
+	}
+}
+
+@media screen and (min-width:1200px) {
+
+	.container, .fv-container {
+		max-width: 1200px;
+		&.outer {
+			max-width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,29 @@
+.callout {
+    padding: 2rem;
+    &.purple {
+        background-color: $purple-90;
+        color: $white;
+        & a {
+            color: $purple-30;
+        }
+    }
+
+    & .headline {
+        color: $red-50;
+        margin-bottom: 1rem;
+    }
+    & .body {
+        & p { 
+            line-height: 1.75rem;
+        }
+    }
+}
+
+.hidden-content-bar {
+    background-color: $black;
+    color: $white;
+    
+    & .row {
+        padding: 6.25rem 0;
+    }
+}

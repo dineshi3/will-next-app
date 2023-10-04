@@ -1,0 +1,59 @@
+// #################
+// FOR SVGS, make sure the ID is changed in the code to match the selector here. See Platform page.
+// #################
+#nav-icon-intake {
+    stroke: $white;
+    transition: .5s;
+}
+#nav-icon-case {
+    stroke: $white;
+    transition: .5s;
+}
+#nav-icon-document {
+    stroke: $white;
+    transition: .5s;
+}
+#nav-icon-billing {
+    stroke: $white;
+    transition: .5s;
+}
+#nav-icon-advanced {
+    stroke: $white;
+    transition: .5s;
+}
+
+.active {
+    
+    & #nav-icon-intake {
+        stroke: $yellow;
+        transition: .5s;
+    }
+    & #nav-icon-case {
+        stroke: $orange;
+        transition: .5s;
+    }
+    & #nav-icon-document {
+        stroke: $red-40;
+        transition: .5s;
+    }
+    & #nav-icon-billing {
+        stroke: $blue-30;
+        transition: .5s;
+    }
+    & #nav-icon-advanced {
+        stroke: $teal-20;
+        transition: .5s;
+    }
+    
+}
+
+
+.product-icon svg{
+    margin: 0 auto;
+}
+
+.social {
+    & img {
+        width: 48px;
+    }
+}

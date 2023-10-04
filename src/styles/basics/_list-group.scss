@@ -1,0 +1,18 @@
+.list-group {
+    // .info list such as on the community page, product updates
+    &.info {
+        & .list-group-item {
+            border-left: none;
+            border-right: none;
+
+            padding: 1.75rem 1rem 1.75rem 0;
+
+            &:first-child {
+                border-top: none;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

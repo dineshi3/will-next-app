@@ -1,9 +1,5 @@
+import Features from '@/components/HomePage/Features';
 import Head from 'next/head';
-import { Text } from '@mantine/core';
-
-import { Roboto } from '@next/font/google';
-
-const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] });
 
 export default function Home() {
   return (
@@ -14,8 +10,1424 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={roboto.className}>
-        <Text>Resize app to see responsive navbar in</Text>
+      <main id='main' className='home-refresh'>
+        <header className='hero exhibition pine'>
+          <div className='fv-container'>
+            <div className='intro'>
+              <div className='headlines'>
+                <h1>
+                  Your Complete Legal Tech Stack, <span className='highlight'>Supercharged</span> by AI
+                </h1>
+                <div className='cta'>
+                  <a href='/demo-request/' id='home-cta-demo' className='btn btn-primary'>
+                    Get a Demo
+                  </a>
+                  <a href='/pricing/' id='home-cta-pricing' className='btn btn-primary-outline'>
+                    See Our Pricing
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='exhibition-media'>
+              <div
+                id='exhibition-carousel'
+                className='carousel slide carousel-fade'
+                data-ride='carousel'
+                data-interval='3000'
+              >
+                <div className='carousel-inner'>
+                  <div className='carousel-item'>
+                    <picture>
+                      <source
+                        media='(max-width: 575px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/sm/exhibit-activity.webp
+                        '
+                      />
+                      <source
+                        media='(max-width: 768px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/md/exhibit-activity.webp
+                        '
+                      />
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-activity.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-activity.png'
+                        className='d-block w-100'
+                        alt='App Screen: Activity Tab with project updates and vitals'
+                      />
+                    </picture>
+                  </div>
+                  <div className='carousel-item active'>
+                    <picture>
+                      <source
+                        media='(max-width: 575px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/sm/exhibit-demands.webp
+                        '
+                      />
+                      <source
+                        media='(max-width: 768px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/md/exhibit-demands.webp
+                        '
+                      />
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-demands.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-demands.png'
+                        className='d-block w-100'
+                        alt=''
+                      />
+                    </picture>
+                  </div>
+                  <div className='carousel-item'>
+                    <picture>
+                      <source
+                        media='(max-width: 575px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/sm/exhibit-documents.webp
+                        '
+                      />
+                      <source
+                        media='(max-width: 768px)'
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/md/exhibit-documents.webp
+                        '
+                      />
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-documents.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/home/hero/exhibition/exhibit-documents.png'
+                        className='d-block w-100'
+                        alt=''
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id='top-section' className='light file-separator'>
+          <section id='section-1' className='accordion-side-by-side pt-0 null'>
+            <div className='fv-container'>
+              <div className='action-header'>
+                <div className='headline'>
+                  <div className='kicker mb-4'>How it works</div>
+                  <h2>
+                    AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>
+                  </h2>
+                </div>
+                <div className='headline-cta'>
+                  <a href='/demo-request/' className='btn btn-primary'>
+                    Schedule a Free Demo
+                  </a>
+                </div>
+              </div>
+              <Features />
+            </div>
+          </section>
+          <section id='products-showcase' className='products-showcase'>
+            <div className='fv-container'>
+              <div className='product-cards-intro'>
+                <div className='product-cards-intro-col'>
+                  <div className='kicker text-center'>Products</div>
+                  <h2 className='text-center'>
+                    Our full suite of AI-powered solutions built for <span className='highlight'>you</span>
+                  </h2>
+                </div>
+              </div>
+              <ul className='nav card-group-nav nav-pills' id='product-groups' role='tablist'>
+                <li className='nav-item' role='presentation'>
+                  <a
+                    className='nav-link active'
+                    id='product-category-tab-1'
+                    data-toggle='tab'
+                    href='#case'
+                    role='tab'
+                    aria-controls='case'
+                    aria-selected='true'
+                  >
+                    Case &amp; Matter Management
+                  </a>
+                </li>
+                <li className='nav-item' role='presentation'>
+                  <a
+                    className='nav-link'
+                    id='product-category-tab-2'
+                    data-toggle='tab'
+                    href='#documents'
+                    role='tab'
+                    aria-controls='documents'
+                    aria-selected='false'
+                  >
+                    Documents
+                  </a>
+                </li>
+                <li className='nav-item' role='presentation'>
+                  <a
+                    className='nav-link'
+                    id='product-category-tab-3'
+                    data-toggle='tab'
+                    href='#revops'
+                    role='tab'
+                    aria-controls='revops'
+                    aria-selected='false'
+                  >
+                    Revenue &amp; Operations
+                  </a>
+                </li>
+              </ul>
+              <div className='tab-content'>
+                <div
+                  id='case'
+                  className='cards grid-col-3 tab-pane fade show active'
+                  role='tabpanel'
+                  aria-labelledby='home-tab'
+                >
+                  <a href='/platform/case-management-software/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/case-management.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Case Management'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Legal Case Management Software</h3>
+                        <div className='body'>
+                          One centralized workspace for everything you need to power your business.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href='/platform/intake-and-lead-tracking/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-leadmgmt.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Lead Management'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Intake and Lead Management</h3>
+                        <div className='body'>
+                          Turn more leads into clients, optimize your marketing efforts, and boost your ROI.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href='/platform/esignature/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-esignatures.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='eSignature'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>eSignature Software for Legal Firms</h3>
+                        <div className='body'>Create, manage, and e-Sign docs easily with Filevine.</div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div id='documents' className='cards grid-col-3 tab-pane fade' role='tabpanel' aria-labelledby='home-tab'>
+                  <a href='/platform/document-management/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/document-management.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Document Management'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Legal Document Management</h3>
+                        <div className='body'>Access your documents for better context, collaboration, and security.</div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href='/platform/document-assembly/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/document-assembly.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Document Assembly'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Legal Document Assembly</h3>
+                        <div className='body'>
+                          Legal document assembly software built for firms that streamline workflow.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href='/platform/contract-lifecycle-management/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-contractmgmt.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Contract Lifecycle Management'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Contract Lifecycle Management</h3>
+                        <div className='body'>Contract management that can be set up quickly and effortlessly!</div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div id='revops' className='cards grid-col-3 tab-pane fade' role='tabpanel' aria-labelledby='home-tab'>
+                  <a href='/platform/billing-and-time-keeping/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/time-billing-payments.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Time, Billing, and Payments'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Time Tracking, Billing, and Payments</h3>
+                        <div className='body'>Time tracking and billing that turns hours into invoices.</div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href='/platform/business-analytics/'>
+                    <div className='fv-card product-card'>
+                      <div className='card-header icon'>
+                        <figure className='card-image icon'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/business-insights.svg'
+                            className='img-fluid token'
+                            loading='lazy'
+                            alt='Business Insights'
+                          />
+                        </figure>
+                      </div>
+                      <div className='card-body'>
+                        <h3 className='h5'>Business Analytics for Legal</h3>
+                        <div className='body'>Operational insight that provides actionable data to help your firm.</div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta'>
+                          <p>
+                            Learn More&nbsp;<span className='link-arrow'>›</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div id='middle-section' className='dark file-separator grain-relative'>
+          <div className='gradient-spot gradient-spot-md gradient-spot-md-left gradient-spot-md-bottom teal'></div>
+          <section id='section-ai' className='accordion-large pt-0 type-theme-dark'>
+            <div className='fv-container'>
+              <div className='action-header'>
+                <div className='headline'>
+                  <div className='kicker mb-4'>Our Newest Features</div>
+                  <h2>
+                    Add <span className='highlight'>artificial intelligence</span> into your legal toolkit
+                  </h2>
+                </div>
+                <div className='headline-cta'>
+                  <a href='/demo-request/' className='btn btn-primary'>
+                    Get a Demo
+                  </a>
+                </div>
+              </div>
+              <div className='fv-row'>
+                <div className='sbs-layout' id='FdB-add-accordion'>
+                  <div id='card-1' className='card accordion-card'>
+                    <div className='card-header' id='heading-1'>
+                      <button
+                        className='btn btn-link'
+                        data-toggle='collapse'
+                        data-target='#FdB-add-1'
+                        aria-expanded='true'
+                        aria-controls='#FdB-add-1'
+                      >
+                        <div className='btn-headline'>DemandsAI</div>
+                        <div className='accordion-arrow'>
+                          <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                            <path
+                              fillRule='evenodd'
+                              clipRule='evenodd'
+                              d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                              fill='currentColor'
+                            ></path>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      id='FdB-add-1'
+                      className='accordion-content collapse show'
+                      aria-labelledby='heading-1'
+                      data-parent='#FdB-add-accordion'
+                    >
+                      <div className='card-body FdB-add'>
+                        <div className='body-content'>
+                          Generate demand letters easily and safely with our newest tool leveraging generative AI.
+                        </div>
+                        <a href='/platform/ai-prepared-demands/' className='link-arrow'>
+                          Learn more&nbsp;<span>›</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id='media-body-1' className='accordion-media show collapse' data-parent='#card-2'>
+                    <figure>
+                      <picture>
+                        <source
+                          srcSet='
+                            https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-demandsai.webp
+                          '
+                          type='image/webp'
+                        />
+                        <img
+                          className='img-fluid'
+                          src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-demandsai.png'
+                          alt=''
+                        />
+                      </picture>
+                    </figure>
+                  </div>
+                  <div id='card-2' className='card accordion-card'>
+                    <div className='card-header' id='heading-2'>
+                      <button
+                        className='btn btn-link collapsed'
+                        data-toggle='collapse'
+                        data-target='#FdB-add-2'
+                        aria-expanded='false'
+                        aria-controls='#FdB-add-2'
+                      >
+                        <div className='btn-headline'>AIFields</div>
+                        <div className='accordion-arrow'>
+                          <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                            <path
+                              fillRule='evenodd'
+                              clipRule='evenodd'
+                              d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                              fill='currentColor'
+                            ></path>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      id='FdB-add-2'
+                      className='accordion-content collapse'
+                      aria-labelledby='heading-2'
+                      data-parent='#FdB-add-accordion'
+                    >
+                      <div className='card-body FdB-add'>
+                        <div className='body-content'>
+                          Scan documents to generate real-time insights, summaries, and more within the security of
+                          Filevine.
+                        </div>
+                        <a href='/features/ai-fields/' className='link-arrow'>
+                          Learn more&nbsp;<span>›</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id='media-body-2' className='accordion-media collapse' data-parent='#card-2'>
+                    <figure>
+                      <picture>
+                        <source
+                          srcSet='
+                            https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-aifields.webp
+                          '
+                          type='image/webp'
+                        />
+                        <img
+                          className='img-fluid'
+                          src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-aifields.png'
+                          alt=''
+                        />
+                      </picture>
+                    </figure>
+                  </div>
+                  <div id='card-3' className='card accordion-card'>
+                    <div className='card-header' id='heading-3'>
+                      <button
+                        className='btn btn-link collapsed'
+                        data-toggle='collapse'
+                        data-target='#FdB-add-3'
+                        aria-expanded='false'
+                        aria-controls='#FdB-add-3'
+                      >
+                        <div className='btn-headline'>ImmigrationAI</div>
+                        <div className='accordion-arrow'>
+                          <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                            <path
+                              fillRule='evenodd'
+                              clipRule='evenodd'
+                              d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                              fill='currentColor'
+                            ></path>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      id='FdB-add-3'
+                      className='accordion-content collapse'
+                      aria-labelledby='heading-3'
+                      data-parent='#FdB-add-accordion'
+                    >
+                      <div className='card-body FdB-add'>
+                        <div className='body-content'>
+                          Automate tasks, reduce errors, and streamline the immigration application process.
+                        </div>
+                        <a href='/platform/immigrationai/' className='link-arrow'>
+                          Learn more&nbsp;<span>›</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id='media-body-3' className='accordion-media collapse' data-parent='#card-2'>
+                    <figure>
+                      <picture>
+                        <source
+                          srcSet='
+                            https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-immigration-ai.webp
+                          '
+                          type='image/webp'
+                        />
+                        <img
+                          className='img-fluid'
+                          src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/acc-immigration-ai.png'
+                          alt=''
+                        />
+                      </picture>
+                    </figure>
+                  </div>
+                  <div id='card-4' className='card accordion-card'>
+                    <div className='card-header' id='heading-4'>
+                      <button
+                        className='btn btn-link collapsed'
+                        data-toggle='collapse'
+                        data-target='#FdB-add-4'
+                        aria-expanded='false'
+                        aria-controls='#FdB-add-4'
+                      >
+                        <div className='btn-headline'>AIBlocks</div>
+                        <div className='accordion-arrow'>
+                          <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                            <path
+                              fillRule='evenodd'
+                              clipRule='evenodd'
+                              d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                              fill='currentColor'
+                            ></path>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                    <div
+                      id='FdB-add-4'
+                      className='accordion-content collapse'
+                      aria-labelledby='heading-4'
+                      data-parent='#FdB-add-accordion'
+                    >
+                      <div className='card-body FdB-add'>
+                        <div className='body-content'>
+                          This Document Assembly tool generates summaries, charts, descriptions, and more in your
+                          documents.
+                        </div>
+                        <a href='/platform/document-assembly/' className='link-arrow'>
+                          Learn more&nbsp;<span>›</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id='media-body-4' className='accordion-media collapse' data-parent='#card-2'>
+                    <figure>
+                      <picture>
+                        <source
+                          srcSet='
+                            https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-aiblocks.webp
+                          '
+                          type='image/webp'
+                        />
+                        <img
+                          className='img-fluid'
+                          src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/acc-aiblocks.png'
+                          alt=''
+                        />
+                      </picture>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id='solutions'>
+            <div className='gradient-spot gradient-spot-sm gradient-spot-sm-right gradient-spot-sm-top yellow'></div>
+            <div className='fv-container'>
+              <div className='action-header'>
+                <div className='headline'>
+                  <div className='kicker'>Who we work with</div>
+                  <h2>
+                    Solutions built for <span className='highlight'>all</span> practice types
+                  </h2>
+                  <div className='subheadline'>
+                    Empower your business to make legal work manageable from start to finish. Explore your practice type
+                    to find out what Filevine can do for you.
+                  </div>
+                </div>
+                <div className='headline-cta'>
+                  <a href='/customers/' className='btn btn-primary'>
+                    Customer Successes
+                  </a>
+                </div>
+              </div>
+              <div className='fv-cards justify-content-center'>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/personal-injury/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Personal Injury</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Convert more leads, create automated task flows, and communicate with clients and colleagues.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/mass-torts/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Mass Torts</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Automate intake, generate and store unlimited documents, and track case progress.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/immigration/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Immigration Law</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Communicate with clients via text or email, track deadlines, and create and send invoices
+                          directly from Filevine.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/big-law/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Big Law</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Oversee cases and client communication, and gain more transparency into your firm’s
+                          performance.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/insurance-defense/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Insurance Defense</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Track your time accurately as you move from case to case, manage tasks, and assemble documents
+                          quickly and easily.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/criminal-defense/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Criminal Defense</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Manage deadlines and court dates, create and store documents, and communicate with law
+                          enforcement.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/corporate-legal-departments/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Corporate Counsel</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Handle more work, balance your team’s workloads, and deliver legal services and expertise
+                          faster.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className='col mb-3 mb-sm-4'>
+                  <a href='/practice-types/prosecutors-and-public-defenders/' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>Government</h3>
+                          </div>
+                        </div>
+                        <div className='body'>
+                          Track case info for trial prep, create reports for budget negotiations, and take on more cases
+                          with fewer staff.
+                        </div>
+                      </div>
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img
+                              src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
+                              alt=''
+                              loading='lazy'
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id='quote' className=''>
+            <div className='fv-container'>
+              <div className='panel-carousel-row justify-content-center'>
+                <div
+                  id='testimonial-quotes-one'
+                  className='carousel slide carousel-fade panel-carousel'
+                  data-ride='carousel'
+                  data-interval='false'
+                >
+                  <div className='carousel-inner'>
+                    <div className='panel-testimonials'>
+                      <div className='carousel-item active'>
+                        <div className='panel-body'>
+                          <div className='panel-content'>
+                            <div className='kicker'>Testimonials</div>
+                            <div className='quote mb-4'>
+                              “My team always says that having Filevine is just like having three other people working
+                              for you in the background at all times.”
+                            </div>
+                            <div className='customer-by-line'>
+                              <div className='customer-name'>Jason Brooks,</div>
+                              <div className='customer-company-info'>Partner—Leopold &amp; Associates, PLLC</div>
+                            </div>
+                          </div>
+                          <div className='panel-headshot'>
+                            <picture>
+                              <source
+                                srcSet='
+                                  https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-jason-brooks.webp
+                                '
+                                type='image/webp'
+                              />
+                              <img
+                                src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-jason-brooks.png'
+                                alt=''
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <div className='pane pane-white-on-dark pane-logo'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/leopold-associates-gray.svg'
+                            alt=''
+                            loading='lazy'
+                          />
+                        </div>
+                      </div>
+                      <div className='carousel-item'>
+                        <div className='panel-body'>
+                          <div className='panel-content'>
+                            <div className='kicker'>Testimonials</div>
+                            <div className='quote mb-4'>
+                              “Filevine is pioneering a more sustainable and efficient way to practice law by providing
+                              an all-encompassing case management software.”
+                            </div>
+                            <div className='customer-by-line'>
+                              <div className='customer-name'>Wendy Mejia,</div>
+                              <div className='customer-company-info'>Director of Operations—LyfeLaw</div>
+                            </div>
+                          </div>
+                          <div className='panel-headshot'>
+                            <picture>
+                              <source
+                                srcSet='
+                                  https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-wendy-mejia.webp
+                                '
+                                type='image/webp'
+                              />
+                              <img
+                                src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-wendy-mejia.png'
+                                alt=''
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <div className='pane pane-white-on-dark pane-logo'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/lyfelaw-gray.svg'
+                            alt=''
+                            loading='lazy'
+                          />
+                        </div>
+                      </div>
+                      <div className='carousel-item'>
+                        <div className='panel-body'>
+                          <div className='panel-content'>
+                            <div className='kicker'>Testimonials</div>
+                            <div className='quote mb-4'>
+                              “Filevine is the central nervous system of our law firm. We not only use it for case
+                              management but also for human resources and marketing.”
+                            </div>
+                            <div className='customer-by-line'>
+                              <div className='customer-name'>Bill Colarulo,</div>
+                              <div className='customer-company-info'>Founding Attorney—Grungo Colarulo</div>
+                            </div>
+                          </div>
+                          <div className='panel-headshot'>
+                            <picture>
+                              <source
+                                srcSet='
+                                  https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-bill-colarulo.webp
+                                '
+                                type='image/webp'
+                              />
+                              <img
+                                src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-bill-colarulo.png'
+                                alt=''
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <div className='pane pane-white-on-dark pane-logo'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/grungo-colarulo-gray.svg'
+                            alt=''
+                            loading='lazy'
+                          />
+                        </div>
+                      </div>
+                      <div className='carousel-item'>
+                        <div className='panel-body'>
+                          <div className='panel-content'>
+                            <div className='kicker'>Testimonials</div>
+                            <div className='quote mb-4'>
+                              “We can handle more cases with less staff and have shorter case lifecycles than ever
+                              before! Our clients are happy, and so are we!”
+                            </div>
+                            <div className='customer-by-line'>
+                              <div className='customer-name'>Season Atkinson,</div>
+                              <div className='customer-company-info'>Founding Attorney—Tatum &amp; Atkinson</div>
+                            </div>
+                          </div>
+                          <div className='panel-headshot'>
+                            <picture>
+                              <source
+                                srcSet='
+                                  https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-season-atkinson.webp
+                                '
+                                type='image/webp'
+                              />
+                              <img
+                                src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-season-atkinson.png'
+                                alt=''
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        <div className='pane pane-white-on-dark pane-logo'>
+                          <img
+                            src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/tatum-and-atkinson-gray.svg'
+                            alt=''
+                            loading='lazy'
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='panel-footer'>
+                    <a className='carousel-control-prev' href='#testimonial-quotes-one' role='button' data-slide='prev'>
+                      <span className='carousel-control-prev-icon' aria-hidden='true'></span>
+                      <span className='sr-only'>Previous</span>
+                    </a>
+                    <a className='carousel-control-next' href='#testimonial-quotes-one' role='button' data-slide='next'>
+                      <span className='carousel-control-next-icon' aria-hidden='true'></span>
+                      <span className='sr-only'>Next</span>
+                    </a>
+                    <ol className='carousel-indicators'>
+                      <li data-target='#testimonial-quotes-one' data-slide-to='0' className='active'></li>
+                      <li data-target='#testimonial-quotes-one' data-slide-to='1'></li>
+                      <li data-target='#testimonial-quotes-one' data-slide-to='2'></li>
+                      <li data-target='#testimonial-quotes-one' data-slide-to='3'></li>
+                    </ol>
+                  </div>
+                  <div className='panel-section-cta'>
+                    <a href='/customers/' className='link-arrow'>
+                      More Testimonials &amp; Case Studies&nbsp;<span>›</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section id='brag-tab-' className='brag-tabs file-separator light'>
+          <div className='fv-container'>
+            <div className='fv-row'>
+              <div className='headline'>
+                <h2></h2>
+              </div>
+            </div>
+            <div className='fv-row'>
+              <div id='brag-accordion' className='sbs-layout'>
+                <div id='card-1' className='card accordion-card'>
+                  <div className='card-header' id='heading-1'>
+                    <button
+                      className='btn btn-link'
+                      data-toggle='collapse'
+                      data-target='#brag-1'
+                      aria-expanded='true'
+                      aria-controls='#brag-1'
+                    >
+                      <div className='btn-headline'>Integrations</div>
+                      <div className='accordion-arrow'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                            fill='currentColor'
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id='brag-1'
+                    className='accordion-content collapse show'
+                    aria-labelledby='heading-1'
+                    data-parent='#brag-accordion'
+                  >
+                    <div className='card-body brag'>
+                      <div className='body-content'>
+                        Filevine integrates with all of your favorite apps and existing technology.
+                      </div>
+                      <a href='/integrations/' className='link-arrow'>
+                        Learn more about Integrations&nbsp;<span>›</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id='media-body-1' className='accordion-media show collapse' data-parent='#card-3'>
+                  <figure>
+                    <picture>
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-integrations.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-integrations.png'
+                        alt=''
+                        className='img-fluid'
+                      />
+                    </picture>
+                  </figure>
+                </div>
+                <div id='card-2' className='card accordion-card'>
+                  <div className='card-header' id='heading-2'>
+                    <button
+                      className='btn btn-link collapsed'
+                      data-toggle='collapse'
+                      data-target='#brag-2'
+                      aria-expanded='false'
+                      aria-controls='#brag-2'
+                    >
+                      <div className='btn-headline'>Security</div>
+                      <div className='accordion-arrow'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                            fill='currentColor'
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id='brag-2'
+                    className='accordion-content collapse'
+                    aria-labelledby='heading-2'
+                    data-parent='#brag-accordion'
+                  >
+                    <div className='card-body brag'>
+                      <div className='body-content'>
+                        We use best-in-class information security tools to safeguard your data.
+                      </div>
+                      <a href='/security/' className='link-arrow'>
+                        Learn more about Security&nbsp;<span>›</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id='media-body-2' className='accordion-media collapse' data-parent='#card-3'>
+                  <figure>
+                    <picture>
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-security.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-security.png'
+                        alt=''
+                        className='img-fluid'
+                      />
+                    </picture>
+                  </figure>
+                </div>
+                <div id='card-3' className='card accordion-card'>
+                  <div className='card-header' id='heading-3'>
+                    <button
+                      className='btn btn-link collapsed'
+                      data-toggle='collapse'
+                      data-target='#brag-3'
+                      aria-expanded='false'
+                      aria-controls='#brag-3'
+                    >
+                      <div className='btn-headline'>Awards and Reviews</div>
+                      <div className='accordion-arrow'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                            fill='currentColor'
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id='brag-3'
+                    className='accordion-content collapse'
+                    aria-labelledby='heading-3'
+                    data-parent='#brag-accordion'
+                  >
+                    <div className='card-body brag'>
+                      <div className='body-content'>
+                        Thousands of attorneys, administrators, and paralegals trust Filevine to manage their legal work
+                        from start to finish.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id='media-body-3' className='accordion-media collapse' data-parent='#card-3'>
+                  <figure>
+                    <picture>
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-best-in-class.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-best-in-class.png'
+                        alt=''
+                        className='img-fluid'
+                      />
+                    </picture>
+                  </figure>
+                </div>
+                <div id='card-4' className='card accordion-card'>
+                  <div className='card-header' id='heading-4'>
+                    <button
+                      className='btn btn-link collapsed'
+                      data-toggle='collapse'
+                      data-target='#brag-4'
+                      aria-expanded='false'
+                      aria-controls='#brag-4'
+                    >
+                      <div className='btn-headline'>Partners</div>
+                      <div className='accordion-arrow'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
+                          <path
+                            fillRule='evenodd'
+                            clipRule='evenodd'
+                            d='M13.7071 8.20711C13.3166 8.59763 12.6834 8.59763 12.2929 8.20711L7 2.91421L1.70711 8.20711C1.31658 8.59763 0.683417 8.59763 0.292894 8.20711C-0.0976314 7.81658 -0.0976314 7.18342 0.292893 6.79289L6.29289 0.792893C6.68342 0.402369 7.31658 0.402369 7.70711 0.792893L13.7071 6.79289C14.0976 7.18342 14.0976 7.81658 13.7071 8.20711Z'
+                            fill='currentColor'
+                          ></path>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                  <div
+                    id='brag-4'
+                    className='accordion-content collapse'
+                    aria-labelledby='heading-4'
+                    data-parent='#brag-accordion'
+                  >
+                    <div className='card-body brag'>
+                      <div className='body-content'>
+                        Our robust partner network can enable your team to make the most out of your legal technology.
+                      </div>
+                      <a href='/partners/' className='link-arrow'>
+                        Learn more about partners&nbsp;<span>›</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id='media-body-4' className='accordion-media collapse' data-parent='#card-3'>
+                  <figure>
+                    <picture>
+                      <source
+                        srcSet='
+                          https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-partners.webp
+                        '
+                        type='image/webp'
+                      />
+                      <img
+                        src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-partners.png'
+                        alt=''
+                        className='img-fluid'
+                      />
+                    </picture>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id='helpful-resources' className='  '>
+          <div className='fv-container'>
+            <div className='fv-row intro d-flex justify-content-center'>
+              <div className='col-md-8'>
+                <div className='kicker text-center'>Resources</div>
+                <h2 className='text-center mb-5'>Check out what’s been going on</h2>
+              </div>
+            </div>
+            <div className='fv-cards justify-content-center row-cols-1 row-cols-md-2 row-cols-lg-3'>
+              <a href='/blog/will-legal-ai-make-you-irrelevant-or-unstoppable/'>
+                <div className='fv-card resource-card'>
+                  <div className='card-header'>
+                    <img
+                      src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/blogs/2023/06/artificial-intelligence-irrelevant-or-unstoppable.jpg'
+                      className='img-fluid'
+                      loading='lazy'
+                      alt=''
+                    />
+                  </div>
+                  <div className='card-body'>
+                    <div className='chip chip-black chip-tag'>
+                      <div className='chip-title'>BLOG POST</div>
+                    </div>
+                    <h3 className='h4'>Will Legal AI Make You Irrelevant — or Unstoppable?</h3>
+                  </div>
+                  <div className='card-footer'>
+                    <button href='/blog/will-legal-ai-make-you-irrelevant-or-unstoppable/' className='btn text-link'>
+                      Read Post&nbsp;<span className='link-arrow'>›</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href='/blog/secure-and-reliable-the-future-of-legal-payment-processing/'>
+                <div className='fv-card resource-card'>
+                  <div className='card-header'>
+                    <img
+                      src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/blogs/2023/08/10_cover.png'
+                      className='img-fluid'
+                      loading='lazy'
+                      alt=''
+                    />
+                  </div>
+                  <div className='card-body'>
+                    <div className='chip chip-black chip-tag'>
+                      <div className='chip-title'>BLOG POST</div>
+                    </div>
+                    <h3 className='h4'>Secure and Reliable: The Future of Legal Payment Processing</h3>
+                  </div>
+                  <div className='card-footer'>
+                    <button
+                      href='/blog/secure-and-reliable-the-future-of-legal-payment-processing/'
+                      className='btn text-link'
+                    >
+                      Read Post&nbsp;<span className='link-arrow'>›</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+              <a href='/customers/case-studies/hacking-immigration-law-filevine-growth/'>
+                <div className='fv-card resource-card'>
+                  <div className='card-header'>
+                    <img
+                      src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/social/case-studies/2022/12/hacking-immigration-law-case-study.png'
+                      className='img-fluid'
+                      loading='lazy'
+                      alt=''
+                    />
+                  </div>
+                  <div className='card-body'>
+                    <div className='chip chip-black chip-tag'>
+                      <div className='chip-title'>CASE STUDY</div>
+                    </div>
+                    <h3 className='h4'>Hacking Immigration Law + Filevine = Growth</h3>
+                  </div>
+                  <div className='card-footer'>
+                    <button
+                      href='/customers/case-studies/hacking-immigration-law-filevine-growth/'
+                      className='btn text-link'
+                    >
+                      Read the Case Study&nbsp;<span className='link-arrow'>›</span>
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id='final-cta' className='cta plain'>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-md-8 text-center'>
+                <div className='headline'>
+                  <h2 className='mb-5'>See all that Filevine can do with a customized demonstration from our team</h2>
+                </div>
+                <a href='/demo-request/' className='btn btn-primary'>
+                  Schedule a Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

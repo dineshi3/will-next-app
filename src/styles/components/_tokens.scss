@@ -1,0 +1,17 @@
+.token-container {
+    display: flex;
+    align-items: center;
+    margin: 2.125rem 0;
+
+    & .kicker {
+        color: var(--text-highlight);
+        margin:0;
+    }
+    & .product-token {
+        max-width: 2rem;
+        margin-right: .875rem;
+        &.full-logo {
+            max-width: 6rem;
+        }
+    }
+}

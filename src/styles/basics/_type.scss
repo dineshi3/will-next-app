@@ -1,0 +1,157 @@
+body {
+}
+
+em, i {
+}
+
+strong, b {
+    & em, i {
+    }
+}
+
+// TODO: How to handle attribution? These tokens are pulled from design system, but no standard on the HTML / if we ever actually put their names in the blockquote container.
+//     --blockquote-attribution: var(--p3);
+//     --blockquote-attribution-font-family: var(--p3-font-family);
+//     --blockquote-attribution-line-height: var(--p3-line-height);
+blockquote {
+    padding-left: var(--blockquote-padding-left);
+    border-left: var(--blockquote-border);
+    margin: var(--blockquote-margin);
+    font-size: var(--blockquote-font-size);
+    line-height: var(--blockquote-line-height);
+    font-family: var(--blockquote-font-family);
+    position: relative;
+    &::before {
+        content: "";
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgOUg0Ljk1MTgxVjQuOTIzOTFMMi4zNDk0IDQuOTg5MTNWMy42ODQ3OEMyLjM0OTQgMi40NzgyNiAzLjAzNjE0IDEuODU4NyA0LjM3MzQ5IDEuODU4N0g0LjkxNTY2VjBINC4zNzM0OUMxLjQ0NTc4IDAgMCAxLjMwNDM1IDAgMy44ODA0NFY5Wk03LjA0ODE5IDlIMTJWNC45MjM5MUw5LjM2MTQ1IDQuOTg5MTNWMy42ODQ3OEM5LjM2MTQ1IDIuNDc4MjYgMTAuMDQ4MiAxLjg1ODcgMTEuNDIxNyAxLjg1ODdIMTEuOTYzOVYwSDExLjQyMTdDOC40OTM5OCAwIDcuMDQ4MTkgMS4zMDQzNSA3LjA0ODE5IDMuODgwNDRWOVoiIGZpbGw9IiMwMDVENUQiLz48L3N2Zz4=");
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -1rem;
+        left: -.40rem;
+    }
+}
+
+// ############
+// MOBILE FIRST
+// ############
+
+h1 {
+    font-size: var(--h1);
+    line-height: var(--h1-line-height);
+    font-family: var(--h1-font-family);
+}
+
+h2 {
+    font-family: var(--h2-font-family);
+    font-size: var(--h2);
+    line-height: var(--h2-line-height);
+    // margin-bottom: 20px;
+
+    &.cta-headline {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+h3, .h3 {
+    font-family: var(--h3-font-family);
+    font-size: var(--h3);
+    line-height: var(--h3-line-height);
+}
+
+h4, .h4 {
+    font-family: var(--h4-font-family);
+    line-height: var(--h4-line-height);
+    font-size: var(--h4);
+}
+
+h5, .h5 {
+    font-size: var(--h5);
+    line-height: var(--h5-line-height);
+    font-family: var(--h5-font-family);
+}
+
+p {
+    font-family: var(--p2-font-family);
+    line-height: var(--p2-line-height);
+    margin-bottom: 0;
+    &:has(+ p), &:has(+ a), &:has(+ script) {
+        margin-bottom: var(--p2-margin-bottom);
+    }
+    @supports not (p:has(+ p)) {
+        & + p, & + a, & + script {
+            margin-top: var(--p2-margin-bottom);
+        }
+    }
+    
+    &.stat-callout {
+        font-family: $font-display-bold;
+        font-size: var(--h2);
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    &.stat-label {
+        line-height: 20px;
+    }
+
+    &.primary {
+        color: $primary;
+    }
+    &.footnote {
+        font-size: .75rem;
+    }
+}
+.p1 {
+    font-size: var(--p1);
+    font-family: var(--p1-font-family);
+    line-height: var(--p1-line-height);
+}
+
+.customer-by-line {
+    font-size: var(--p3);
+}
+
+.fine-print {
+    font-size: var(--fine-print-font-size);
+    line-height: var(--fine-print-line-height);
+    margin-bottom: 0;
+    // margin-bottom: var(--fine-print-margin-bottom);
+    padding-bottom: var(--fine-print-margin-bottom);
+    &:has(+ .fine-print) {
+        padding-bottom: var(--article-space-sm);
+        // margin-bottom: var(--article-space-sm);
+    }
+    & + .fine-print {
+        margin-top: 0;
+    }
+    & a {
+        color: $teal-60;
+        transition: all .15s ease-in;
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: .35rem;
+        }
+    }
+}
+.terms-conditions-list {
+    margin: var(--article-space-md) 0;
+}
+.kicker {
+    text-transform: uppercase;
+    font-size: var(--kicker);
+    font-family: var(--kicker-font-family);
+    margin-bottom: var(--kicker-margin-bottom);
+
+    &:has(+ h1) {
+        margin-bottom: var(--size-175);
+    }
+}
+
+.deck {
+    font-family: var(--deck-font-family);
+    font-size: var(--deck-font-size);
+    line-height: var(--deck-line-height);
+    color: var(--deck-color);
+}

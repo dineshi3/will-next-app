@@ -1,0 +1,124 @@
+body.pricing{
+    .table {
+        & td {
+            font-size: 1.125rem;
+        }
+        & th, td {
+            border-top: none;
+            border-right: 1px solid $black;
+            &:first-child{
+                border-right: none;
+                & + td, & + th {
+                    border-width: 7px;
+                }
+            }
+            &:last-child  {
+                border-right: none;
+            }
+        }
+        & thead {
+            & th {
+                border-bottom: none;
+                & .package {
+                    text-align: center;
+                    font-size: 1.35rem;
+                    line-height: 1.5rem;
+                    margin: 1.25rem 0 1.75rem 0;
+                }
+            }
+        }
+        &.pricing {
+            margin-bottom: 8rem;
+            & td {
+                text-align: center;
+                padding-left: 0;
+                &:first-child {
+                    padding-left: 2.15rem;
+                }
+                &.module-divider {
+                    background-color: $black;       
+                    color: $white;
+                    font-size: 0.8125rem;
+                }
+            }
+            & th {
+
+                &.module-divider {
+                    background-color: $black;       
+                    color: $white;
+                    text-align: center;
+                    font-size: 0.8125rem;
+                }
+            }
+        }
+    }
+
+    tr {
+        &.table-section {
+            border-top: 4px solid $black;
+            &:first-child {
+                border-top: none;
+                & th {
+                    padding-top: 10px;
+                }
+            }
+            & th {
+                padding-left: 0;
+                padding-top: 65px;
+                font-size: 1.5rem;
+                border: none;
+            }
+        }
+
+    }
+
+
+
+    @media screen and (min-width:768px) {
+        tr{ 
+            &.table-section {
+                & th {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        .table {
+            & thead {
+                & th {
+                    font-size: 1rem;            
+                }
+                & tr:nth-child(1) th {
+                    position: sticky;
+                    top: 85px;
+                    z-index: 1000;
+                } 
+                & tr:nth-child(2) th {
+                    background: $white; 
+                    position: sticky;
+                    top: 140px;
+                    z-index: 1000;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        .table {
+            & thead {
+                & th {
+                    font-size: 1.3125rem;            
+                }
+                & tr:nth-child(1) th {
+                    top: 85px;
+                } 
+                & tr:nth-child(2) th {
+                    top: 128px;
+                }
+            }
+        }
+
+    }
+}
+
+// GENERAL TABLE STYLES

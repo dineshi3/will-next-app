@@ -1,0 +1,197 @@
+$spotlight-color-primary: $yellow-60;
+// .side-blur {
+//     position: absolute;
+//     top:0;
+//     // background: linear-gradient(to right, rgba( 255, 255, 255, 0 ), transparent);
+
+//     // background: rgba( 255, 255, 255, 0 );
+//     backdrop-filter: blur( 11.5px );
+//     -webkit-backdrop-filter: blur( 11.5px );
+//     width: 20px;
+//     height: 100%;
+//     z-index: 11;
+//         filter: blur(3px);
+    
+//     // &::before {
+//     //     content: '';
+//     //     filter: blur(13px);
+//     //     position: absolute;
+//     //     top: 0;
+//     //     bottom: 0;
+//     //     left: 0;
+//     //     right: 0;
+//     //     width: 20px;
+//     // }
+//     &.left {
+//         left:-10px;
+//     }
+//     &.right {
+//         right: -10px;
+//     }
+// }
+.spotlight-scroll-container {
+    // filter: blur(3px);
+    position: relative;
+    // isolation: isolate;
+    // &::before {
+    //     content: '';
+    //     display: flex;
+    //     width: 20px;
+    //     height: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: -3px;
+    //     background: linear-gradient(to right, $cool-gray-80, transparent);
+    //     z-index: 11;
+    //     filter: blur(3px);
+    // }
+    &::after {
+        content: 'Swipe \2194';
+        @include media-breakpoint-up(md) {
+            content: 'Scroll to see more';
+        }
+        color: $white;
+        font-size: var(--size-075);
+        display: flex;
+        justify-content: center;
+        margin-top: 1.25rem;
+    }
+    & ::-webkit-scrollbar {
+        width: .5rem;
+    }
+    & ::-webkit-scrollbar-track {
+        background: linear-gradient(to bottom, transparent 0% 45%, $spotlight-color-primary 45%, $spotlight-color-primary 55%, transparent 55% 100%);
+        // margin: 15px; // Full width scroll bar--add variant if needed.
+        margin: 15vw;
+
+        &::before {
+            content: '&#9654;';
+            color: $spotlight-color-primary;
+        }
+    }
+    & ::-webkit-scrollbar-thumb {
+        background: $spotlight-color-primary;
+        border-radius: 10px;
+    }
+}
+.spotlight-cards {
+    @include make-row();
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    
+    & > div {
+        scroll-snap-align: start;
+    }
+}
+
+.gradient-transition {
+    position: relative;
+    @include bg-gradient($direction: 180deg, $color1: $teal-80, $color2: #002E30);
+    z-index: 1;
+    &::before {
+        @include leaf(20px);
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include bg-gradient($direction: 180deg, $color1: #002E30, $color2: $teal-80);
+        z-index: -1;
+        transition: all .35s;
+        opacity: 0;
+    }
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.fv-card.spotlight {
+    --card-padding: 2.1875rem;
+
+    @include leaf(20px);
+    padding:0;
+    color: $white;
+    
+    & .tag {
+        font-size: var(--size-075);
+        background-color: $teal-70;
+        border-radius: 20px;
+        padding: 2.5px .5rem;
+        @supports not (gap: 1rem) {
+            margin-right: .5rem;
+        }
+    }
+    & .card-header {
+        display: flex;
+        gap: .5rem;
+        padding: 2.5rem var(--card-padding) .5rem var(--card-padding);
+    }
+    & .tagline {
+        color: $brown-40;
+        font-size: var(--h5);
+        font-family: var(--h5-font-family);
+        margin-bottom: .25rem;
+    }
+    & .card-body {
+        padding: .5rem var(--card-padding) var(--card-padding) var(--card-padding);
+        font-size: var(--size-125);
+        & .name {
+            margin-bottom:.5rem;
+        }
+        & .card-text {
+            font-size: var(--p3);
+            font-family: var(--p3-font-family);
+            line-height: var(--p3-line-height);
+        }
+    }
+    & .featured-image {
+        padding-left: var(--card-padding);
+        padding-bottom: var(--card-padding);
+
+        & img {
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+   
+    }
+    & .featured-logo {
+        display: flex;
+        margin-bottom: var(--card-padding);
+        background-color: $white;
+        width: calc(100% - var(--card-padding));
+        @include aspect($width: 16, $height: 9);
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+
+        & img {
+            justify-self: center;
+            align-self: center;
+            max-height: 160px;
+            padding: var(--card-padding);
+        }
+    }
+    & .card-footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--p3);
+        color: $yellow-40;
+        border-top: 1px solid $teal-70;
+        padding: 1.5rem var(--card-padding);
+        & .read-time {
+            font-size: var(--size-075);
+            color: $teal-60;
+            text-transform: uppercase;
+            & svg {
+                vertical-align: baseline;
+            }
+        }
+    }
+}

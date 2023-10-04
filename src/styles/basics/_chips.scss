@@ -1,0 +1,72 @@
+.chips {
+    gap: 1rem;
+}
+
+.chip {
+    display: flex;
+    width: fit-content;
+    border-radius: 3px;
+    gap: var(--size-050);
+    @supports not (gap:1rem) {
+        margin-right: var(--size-050);
+    }
+    padding: 6px 5px;
+    @include media-breakpoint-up(sm) {
+        gap: var(--size-075);
+        padding: 7px .875rem;
+    }
+    align-content: center;
+
+    &.primary {
+        background-color: $spruce;
+        color: $white;
+        border-radius: 50px;
+        padding: 3px 10px;
+        font-size: 14px;
+    }
+    &.secondary {
+        background-color: $sunflower;
+        color: $cool-gray-80;
+        border-radius: 50px;
+        padding: 3px 10px;
+        font-size: 14px;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        
+        @include media-breakpoint-up(md) {
+            transform: scale(1.35);
+        }
+    }
+    &-title {
+        font-size: var(--size-050);
+        @include media-breakpoint-up(md) {
+            font-size: var(--size-075);
+        }
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    &-green {
+        background-color: var(--green-10);
+        .chip-title {
+            color: var(--green-60)
+        }
+    }
+    &-black {
+        background-color: var(--black);
+        .chip-title {
+            color: var(--white)
+        }
+    }
+
+    &-shadow {
+        box-shadow: $shadow-100;
+    }
+
+    &-tag {
+        border-radius: 50px;
+        padding: 0 9px;
+    }
+}

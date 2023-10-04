@@ -1,0 +1,60 @@
+.bf-cards-intro { 
+    display: flex;
+    justify-content: center;
+    @include make-row;
+    margin-bottom: 2.875rem;
+    @include media-breakpoint-up(md) {
+        margin-bottom: 3.875rem;
+    }
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 6.25rem;
+    }
+    & h2 {
+        margin-bottom: 0;
+    }
+    & .bf-cards-intro-col {
+        @include make-col-ready;
+        @include make-col(12);
+        @include media-breakpoint-up(lg) {
+            @include make-col(8);
+        }
+    }
+}
+.bf-card {
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 4rem;
+    }
+    & .card-header {
+        background-color: unset;
+        border: 0;
+        &.icon {
+            padding-top:0;
+            padding-bottom:0;
+        }
+
+        & figure {
+            &.icon {
+                max-width: 62px;
+                aspect-ratio: 1 / 1;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    & .card-footer {
+        background-color: unset;
+        border: 0;
+    }
+
+    & a, .card-cta {
+        transition: all .15s;
+        color: var(--text-link-color);
+        font-family: var(--text-link-font);
+        &:hover {
+            text-decoration: none;
+            color: var(--text-link-color-hover);
+        }
+    }
+}
