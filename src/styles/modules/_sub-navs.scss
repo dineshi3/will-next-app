@@ -1,9 +1,11 @@
 
+.products-showcase .nav-pills,
 .nav-pills {
     gap: 1rem;
     margin-bottom: 4.75rem;
     justify-content: center;
     .nav-link {
+        background-color: #fff;
         color: $gray-50;
         border: 1px solid $gray-50;
         border-radius: 50px;
@@ -14,9 +16,9 @@
         font-size: 0.75rem;
     }
   
-    .nav-link.active,
-    .show > .nav-link {
-        color: $nav-pills-link-active-color;
-        background-color: $nav-pills-link-active-bg;
+    .nav-link.active {
+        color: $black;
+        background-color: $primary;
+        border-color: $primary;
     }
 }

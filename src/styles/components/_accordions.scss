@@ -132,7 +132,7 @@
             img, .accordion-arrow {
                 transition: all .25s;
             }
-            &:not(.collapsed) {
+            &:not(.expanded) {
                 img, .accordion-arrow {
                     transform: rotate(180deg);
                 }
@@ -326,7 +326,7 @@
             img, .accordion-arrow {
                 transition: all .25s;
             }
-            &:not(.collapsed) {
+            &:not(.expanded) {
                 img, .accordion-arrow {
                     transform: rotate(180deg);
                 }

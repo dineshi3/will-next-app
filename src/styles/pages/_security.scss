@@ -1,6 +1,6 @@
 @use "sass:map";
 $bu-theme-colors: (
-    "filevine": $blue-60,
+    "legalfile": $blue-60,
     "outlaw": #6232BC,
     "leaddocket": #3D8681,
 );
@@ -76,8 +76,8 @@ $bu-theme-colors: (
         & .svg-one-color {
             fill: $white;
         }
-        &-filevine {
-            background-color: map.get($bu-theme-colors, "filevine");
+        &-legalfile {
+            background-color: map.get($bu-theme-colors, "legalfile");
             & svg {
                 margin: 1.75rem 4.5rem 2.25rem 3.5rem;
             }
@@ -206,7 +206,7 @@ $bu-theme-colors: (
             }
         }
     }
-    #why-filevine {
+    #why-legalfile {
         .info { 
             margin-bottom: 0;
         }
