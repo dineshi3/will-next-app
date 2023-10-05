@@ -25,7 +25,7 @@ const products = [
       },
       {
         title: 'eSignature Software for Legal Firms',
-        description: 'Create, manage, and e-Sign docs easily with Filevine.',
+        description: 'Create, manage, and e-Sign docs easily with LegalFile.',
         href: '/platform/esignature/',
         img: {
           src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-esignatures.svg',

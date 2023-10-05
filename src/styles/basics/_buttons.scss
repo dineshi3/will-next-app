@@ -23,7 +23,8 @@
 }
 
 .btn-primary {
-    @include button-variant($background: $primary, $border: $primary, $hover-background: $yellow-60, $hover-border: $yellow-60, $active-background: $yellow-60, $active-border: $yellow-60)
+    @include button-variant($background: $primary, $border: $primary, $hover-background: $yellow-60, $hover-border: $yellow-60, $active-background: $yellow-60, $active-border: $yellow-60);
+    font-weight: 500;
 }
 
 .btn-sm {

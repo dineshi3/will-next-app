@@ -101,14 +101,14 @@
     }
     & .letterhead-logo {
         width: 124px;
-        margin-left: -18px; // Offset for the logo mark. F of Filevine should be lined with the body content
+        margin-left: -18px; // Offset for the logo mark. F of LegalFile should be lined with the body content
         @include media-breakpoint-up(md) {
             width: 250px;
-            margin-left: -40px; // Offset for the logo mark. F of Filevine should be lined with the body content
+            margin-left: -40px; // Offset for the logo mark. F of LegalFile should be lined with the body content
         }
         @include media-breakpoint-up(lg) {
             width: 344px;
-            margin-left: -50px; // Offset for the logo mark. F of Filevine should be lined with the body content
+            margin-left: -50px; // Offset for the logo mark. F of LegalFile should be lined with the body content
         }
         padding-left: var(--modal-body-padding-x);
     }

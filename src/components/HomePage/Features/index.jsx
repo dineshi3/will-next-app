@@ -11,7 +11,7 @@ const features = [
     ],
     href: '/platform/case-management-software/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/keep-cases-on-track.png',
+      'https://vakilsearch.com/products/libra/hearings-web.svg',
   },
   {
     title: 'Document management built specifically for legal',
@@ -23,7 +23,7 @@ const features = [
     ],
     href: '/platform/document-management/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/doc-management-for-legal.png',
+      'https://vakilsearch.com/products/libra/display-board-web.svg',
   },
   {
     title: 'Time and billing software that captures every minute',
@@ -35,7 +35,7 @@ const features = [
     ],
     href: '/platform/billing-and-time-keeping/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/time-and-billing-captures-every-minute.png',
+      'https://vakilsearch.com/products/libra/alerts-web.svg',
   },
   {
     title: 'Find and convert more leads',
@@ -47,7 +47,7 @@ const features = [
     ],
     href: '/platform/intake-and-lead-tracking/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/find-and-convert-leads.png',
+      'https://vakilsearch.com/products/libra/judgements-web.svg',
   },
 ];
 

@@ -162,7 +162,7 @@
             img, .accordion-arrow {
                 transition: all .25s;
             }
-            &:not(.collapsed) {
+            &:not(.expanded) {
                 img, .accordion-arrow {
                     transform: rotate(180deg);
                 }
@@ -206,6 +206,7 @@
         & .btn-headline {
             font-size: var(--h5);
             font-family: var(--h5-font-family);
+            font-weight: 600;
         }
         & .btn-link:not(.show){
             color: $gray-50;

@@ -11,7 +11,7 @@ const features = [
   },
   {
     title: 'AIFields',
-    description: 'Scan documents to generate real-time insights, summaries, and more within the security of Filevine.',
+    description: 'Scan documents to generate real-time insights, summaries, and more within the security of LegalFile.',
     href: '/features/ai-fields/',
     image:
       'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-aifields.png',
@@ -80,31 +80,31 @@ const AIFeatures = () => {
                         </div>
                       </button>
                     </div>
-                    {activeTab == index && (
-                      <div
-                        id='FdB-add-1'
-                        className='accordion-content collapse show'
-                        aria-labelledby='heading-1'
-                        data-parent='#FdB-add-accordion'
-                      >
-                        <div className='card-body FdB-add'>
-                          <div className='body-content'>{feature.description}</div>
-                          <a href={feature.href} className='link-arrow'>
-                            Learn more&nbsp;<span>›</span>
-                          </a>
-                        </div>
+                    <div
+                      id='FdB-add-1'
+                      className={`accordion-content ${activeTab == index ? 'show' : 'collapse'}`}
+                      aria-labelledby='heading-1'
+                      data-parent='#FdB-add-accordion'
+                    >
+                      <div className='card-body FdB-add'>
+                        <div className='body-content'>{feature.description}</div>
+                        <a href={feature.href} className='link-arrow'>
+                          Learn more&nbsp;<span>›</span>
+                        </a>
                       </div>
-                    )}
-                  </div>
-                  {activeTab == index && (
-                    <div id='media-body-1' className='accordion-media show collapse' data-parent='#card-2'>
-                      <figure>
-                        <picture>
-                          <img className='img-fluid' src={feature.image} alt='' />
-                        </picture>
-                      </figure>
                     </div>
-                  )}
+                  </div>
+                  <div
+                    id={`media-body-${index + 1}`}
+                    className={`accordion-media ${activeTab == index ? 'show' : 'collapse'}`}
+                    data-parent='#card-2'
+                  >
+                    <figure>
+                      <picture>
+                        <img className='img-fluid' src={feature.image} alt='' />
+                      </picture>
+                    </figure>
+                  </div>
                 </>
               ))}
             </div>
@@ -122,7 +122,7 @@ const AIFeatures = () => {
               </h2>
               <div className='subheadline'>
                 Empower your business to make legal work manageable from start to finish. Explore your practice type to
-                find out what Filevine can do for you.
+                find out what LegalFile can do for you.
               </div>
             </div>
             <div className='headline-cta'>
@@ -199,7 +199,7 @@ const AIFeatures = () => {
                     </div>
                     <div className='body'>
                       Communicate with clients via text or email, track deadlines, and create and send invoices directly
-                      from Filevine.
+                      from LegalFile.
                     </div>
                   </div>
                   <div className='card-footer'>

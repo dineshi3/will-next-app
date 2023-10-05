@@ -87,9 +87,6 @@
         }
     }
     .exhibition-media {
-        @include make-row();
-        align-items: flex-end;
-
         // Push small screens' media to the right side of screen, adds space on the left
         @include media-breakpoint-down(sm) {
             margin-left:0;
