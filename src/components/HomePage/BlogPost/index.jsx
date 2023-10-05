@@ -13,7 +13,7 @@ const BlogPost = () => {
             <div className='fv-card resource-card'>
               <div className='card-header'>
                 <img
-                  src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/blogs/2023/06/artificial-intelligence-irrelevant-or-unstoppable.jpg'
+                  src='/assets/artificial-intelligence-irrelevant-or-unstoppable.jpg'
                   className='img-fluid'
                   loading='lazy'
                   alt=''
@@ -36,7 +36,7 @@ const BlogPost = () => {
             <div className='fv-card resource-card'>
               <div className='card-header'>
                 <img
-                  src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/blogs/2023/08/10_cover.png'
+                  src='/assets/10_cover.png'
                   className='img-fluid'
                   loading='lazy'
                   alt=''
@@ -58,11 +58,11 @@ const BlogPost = () => {
               </div>
             </div>
           </a>
-          <a href='/customers/case-studies/hacking-immigration-law-legalfile-growth/'>
+          <a href='/customers/case-studies/hacking-immigration-law-Libra-growth/'>
             <div className='fv-card resource-card'>
               <div className='card-header'>
                 <img
-                  src='https://filevine-marketing-production-media.s3.amazonaws.com/media/images/social/case-studies/2022/12/hacking-immigration-law-case-study.png'
+                  src='/assets/hacking-immigration-law-case-study.png'
                   className='img-fluid'
                   loading='lazy'
                   alt=''
@@ -72,11 +72,11 @@ const BlogPost = () => {
                 <div className='chip chip-black chip-tag'>
                   <div className='chip-title'>CASE STUDY</div>
                 </div>
-                <h3 className='h4'>Hacking Immigration Law + LegalFile = Growth</h3>
+                <h3 className='h4'>Hacking Immigration Law + Libra = Growth</h3>
               </div>
               <div className='card-footer'>
                 <button
-                  href='/customers/case-studies/hacking-immigration-law-legalfile-growth/'
+                  href='/customers/case-studies/hacking-immigration-law-Libra-growth/'
                   className='btn text-link'
                 >
                   Read the Case Study&nbsp;<span className='link-arrow'>›</span>

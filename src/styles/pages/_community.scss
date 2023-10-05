@@ -159,7 +159,7 @@
         background-color: $blue-60;
         min-height: 500px;
         @include media-breakpoint-up(lg) {
-            background-image: url('https://filevine-marketing-production-media.s3-us-west-2.amazonaws.com/media/images/illustrations/community-header.png');
+            background-image: url('/assets/illustrations/community-header.png');
             background-repeat: no-repeat;
             padding: 9rem 0 7.5rem 0;
             background-position: 145% -50px;

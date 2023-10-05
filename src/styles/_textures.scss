@@ -41,7 +41,7 @@
     // isolation: isolate;
     overflow: hidden;
     @supports (mix-blend-mode: multiply) {
-        background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/textures/grain.png');
+        background-image: url('/assets/textures/grain.png');
         background-repeat: repeat;
         mix-blend-mode: multiply;
     }

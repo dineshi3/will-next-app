@@ -153,6 +153,15 @@
         }
     }
 }
+@media (max-width: 768px) {
+    .panel-testimonials .panel-content {
+        padding: 0.5rem;
+    }
+
+    .carousel .panel-footer {
+        padding: 0.5rem;
+    }
+}
 .panel-footer {
     padding: 0 var(--panel-side-padding);
     min-height: 4.75rem;
@@ -200,7 +209,7 @@
     }
 
     .carousel-control-prev-icon, .carousel-control-next-icon {
-        background-image: url("https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg");
+        background-image: url("/assets/icons/right-arrow.svg");
         width: 12px;
     }
     .carousel-control-prev-icon {

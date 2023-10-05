@@ -1,13 +1,8 @@
 import Head from 'next/head';
-
-import AIFeatures from '@/components/HomePage/AIFeatures';
-import Accessibility from '@/components/HomePage/Accessibility';
-import Banner from '@/components/HomePage/Banner';
-import BlogPost from '@/components/HomePage/BlogPost';
-import ScheduleDemo from '@/components/HomePage/ScheduleDemo';
-import HowItWorks from '@/components/HomePage/HowItWorks';
+import HomePage from '@/components/HomePage';
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -16,14 +11,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main id='main' className='home-refresh'>
-        <Banner />
-        <HowItWorks />
-        <AIFeatures />
-        <Accessibility />
-        {/* <BlogPost /> */}
-        <ScheduleDemo />
-      </main>
+      <HomePage />
     </>
   );
 }

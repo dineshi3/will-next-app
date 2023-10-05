@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 const features = [
   {
@@ -58,7 +58,7 @@ const Features = () => {
     <div className='fv-row'>
       <div className='sbs-layout' id='kGN-ai-accordion'>
         {features.map((feature, index) => (
-          <>
+          <Fragment key={index}>
             <div id={`card-${index + 1}`} className='card accordion-card'>
               <div className='card-header' id={`heading-${index + 1}`} onClick={() => setOpenTab(index)}>
                 <button
@@ -108,7 +108,7 @@ const Features = () => {
                 </picture>
               </figure>
             </div>
-          </>
+          </Fragment>
         ))}
       </div>
     </div>

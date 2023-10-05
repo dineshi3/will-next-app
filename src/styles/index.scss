@@ -4,12 +4,6 @@
 @import 'colors';
 @import '/node_modules/bootstrap-scss/bootstrap.scss';
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .mainContainer {
   padding: 32px 0px;
   background-color: $bg-gray;

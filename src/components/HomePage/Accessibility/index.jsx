@@ -1,33 +1,33 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 const items = [
   {
     title: 'Integrations',
-    description: 'LegalFile integrates with all of your favorite apps and existing technology.',
+    description: 'Libra integrates with all of your favorite apps and existing technology.',
     href: '/integrations/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-integrations.png',
+      '/assets/brag-integrations.png',
   },
   {
     title: 'Security',
     description: 'We use best-in-class information security tools to safeguard your data.',
     href: '/security/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-security.png',
+      '/assets/brag-security.png',
   },
   {
     title: 'Awards and Reviews',
     description:
-      'Thousands of attorneys, administrators, and paralegals trust LegalFile to manage their legal work from start to finish.',
+      'Thousands of attorneys, administrators, and paralegals trust Libra to manage their legal work from start to finish.',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/brag-best-in-class.png',
+      '/assets/brag-best-in-class.png',
   },
   {
     title: 'Partners',
     description: 'Our robust partner network can enable your team to make the most out of your legal technology.',
     href: '/partners/',
     image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/brag-partners.png',
+      '/assets/brag-partners.png',
   },
 ];
 
@@ -45,7 +45,7 @@ const Accessibility = () => {
         <div className='fv-row'>
           <div id='brag-accordion' className='sbs-layout'>
             {items.map((item, index) => (
-              <>
+              <Fragment key={index}>
                 <div id={`card-${index + 1}`} className='card accordion-card'>
                   <div className='card-header' id={`heading-${index + 1}`}>
                     <button
@@ -92,7 +92,7 @@ const Accessibility = () => {
                     </picture>
                   </figure>
                 </div>
-              </>
+              </Fragment>
             ))}
           </div>
         </div>

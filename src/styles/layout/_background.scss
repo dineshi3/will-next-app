@@ -65,7 +65,7 @@ section + .ridgeline {margin-top: -5px;}  // For when the div.ridgeline is on th
     // TODO: Remove home.hero styles after Sept 2022 launch
     .home {
         .hero {
-            background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/illustrations/core-schematic.png') no-repeat;
+            background: url('/assets/illustrations/core-schematic.png') no-repeat;
             background-position-x: right;
             width: 100%;
             background-size: 350px;

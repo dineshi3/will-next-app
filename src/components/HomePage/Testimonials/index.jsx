@@ -3,32 +3,32 @@ import { useState } from "react";
 const testimonials = [
   {
     description:
-      'My team always says that having LegalFile is just like having three other people working for you in the background at all times.',
+      'My team always says that having Libra is just like having three other people working for you in the background at all times.',
     customerName: 'Jason Brooks',
     companyInfo: 'Partner—Leopold & Associates, PLLC',
     profileImage:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-jason-brooks.png',
+      '/assets/customers/headshot-jason-brooks.png',
     companyLogo:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/leopold-associates-gray.svg',
+      '/assets/customers/leopold-associates-gray.svg',
   },
   {
     description:
-      'LegalFile is pioneering a more sustainable and efficient way to practice law by providing an all-encompassing case management software.',
+      'Libra is pioneering a more sustainable and efficient way to practice law by providing an all-encompassing case management software.',
     customerName: 'Wendy Mejia',
     companyInfo: 'Director of Operations—LyfeLaw',
     profileImage:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-wendy-mejia.png',
-    companyLogo: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/lyfelaw-gray.svg',
+      '/assets/customers/headshot-wendy-mejia.png',
+    companyLogo: '/assets/customers/lyfelaw-gray.svg',
   },
   {
     description:
-      'LegalFile is the central nervous system of our law firm. We not only use it for case management but also for human resources and marketing.',
+      'Libra is the central nervous system of our law firm. We not only use it for case management but also for human resources and marketing.',
     customerName: 'Bill Colarulo',
     companyInfo: 'Founding Attorney—Grungo Colarulo',
     profileImage:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-bill-colarulo.png',
+      '/assets/customers/headshot-bill-colarulo.png',
     companyLogo:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/grungo-colarulo-gray.svg',
+      '/assets/customers/grungo-colarulo-gray.svg',
   },
   {
     description:
@@ -36,9 +36,9 @@ const testimonials = [
     customerName: 'Season Atkinson',
     companyInfo: 'Founding Attorney—Tatum & Atkinson',
     profileImage:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/headshots/2023/headshot-season-atkinson.png',
+      '/assets/customers/headshot-season-atkinson.png',
     companyLogo:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/customers/tatum-and-atkinson-gray.svg',
+      '/assets/customers/tatum-and-atkinson-gray.svg',
   },
 ];
 const Testimonials = () => {
@@ -77,7 +77,7 @@ const Testimonials = () => {
               <div className='panel-testimonials'>
                 {testimonials.map((testimonial, index) => (
                     activeTab == index &&
-                  <div className={`carousel-item ${activeTab == index ? 'active' : 'inactive'}`}>
+                  <div key={index} className={`carousel-item ${activeTab == index ? 'active' : 'inactive'}`}>
                     <div className='panel-body'>
                       <div className='panel-content'>
                         <div className='kicker'>Testimonials</div>
@@ -112,7 +112,7 @@ const Testimonials = () => {
               <ol className='carousel-indicators'>
                 {
                     [0, 1, 2, 3].map(quote => (
-                        <li data-slide-to={quote} className={activeTab == quote ? 'active' : 'inactive'} onClick={() => setActiveTab(quote)}></li>
+                        <li key={quote} data-slide-to={quote} className={activeTab == quote ? 'active' : 'inactive'} onClick={() => setActiveTab(quote)}></li>
                     ))
                 }
               </ol>

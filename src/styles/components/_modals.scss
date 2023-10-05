@@ -54,7 +54,7 @@
         & .modal-media {
             display: none;
             background-color: var(--teal-50);
-            background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/brand/logo-mark-white.svg');
+            background-image: url('/assets/brand/logo-mark-white.svg');
             background-repeat: no-repeat;
             background-size: 34px;
             background-position: 24px 24px;
@@ -101,14 +101,14 @@
     }
     & .letterhead-logo {
         width: 124px;
-        margin-left: -18px; // Offset for the logo mark. F of LegalFile should be lined with the body content
+        margin-left: -18px; // Offset for the logo mark. F of Libra should be lined with the body content
         @include media-breakpoint-up(md) {
             width: 250px;
-            margin-left: -40px; // Offset for the logo mark. F of LegalFile should be lined with the body content
+            margin-left: -40px; // Offset for the logo mark. F of Libra should be lined with the body content
         }
         @include media-breakpoint-up(lg) {
             width: 344px;
-            margin-left: -50px; // Offset for the logo mark. F of LegalFile should be lined with the body content
+            margin-left: -50px; // Offset for the logo mark. F of Libra should be lined with the body content
         }
         padding-left: var(--modal-body-padding-x);
     }

@@ -1,6 +1,6 @@
 @use "sass:map";
 $bu-theme-colors: (
-    "legalfile": $blue-60,
+    "Libra": $blue-60,
     "outlaw": #6232BC,
     "leaddocket": #3D8681,
 );
@@ -20,7 +20,7 @@ $bu-theme-colors: (
     .hero {
         background-color: $brown-10;
         @include media-breakpoint-up(md) {
-            background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/security/security-banner.png');
+            background-image: url('/assets/security/security-banner.png');
             background-repeat: no-repeat;
             padding: 9rem 0 7.5rem 0;
             background-position: 145% 70px;
@@ -76,8 +76,8 @@ $bu-theme-colors: (
         & .svg-one-color {
             fill: $white;
         }
-        &-legalfile {
-            background-color: map.get($bu-theme-colors, "legalfile");
+        &-Libra {
+            background-color: map.get($bu-theme-colors, "Libra");
             & svg {
                 margin: 1.75rem 4.5rem 2.25rem 3.5rem;
             }
@@ -206,7 +206,7 @@ $bu-theme-colors: (
             }
         }
     }
-    #why-legalfile {
+    #why-Libra {
         .info { 
             margin-bottom: 0;
         }

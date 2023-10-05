@@ -1,34 +1,78 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import Testimonials from '../Testimonials';
+
+import rightArrow from '@/assets/rightArrow.svg';
 
 const features = [
   {
     title: 'DemandsAI',
     description: 'Generate demand letters easily and safely with our newest tool leveraging generative AI.',
     href: '/platform/ai-prepared-demands/',
-    image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-demandsai.png',
+    image: '/assets/acc-demandsai.png',
   },
   {
     title: 'AIFields',
-    description: 'Scan documents to generate real-time insights, summaries, and more within the security of LegalFile.',
+    description: 'Scan documents to generate real-time insights, summaries, and more within the security of Libra.',
     href: '/features/ai-fields/',
-    image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/09/acc-aifields.png',
+    image: '/assets/acc-aifields.png',
   },
   {
     title: 'ImmigrationAI',
     description: 'Automate tasks, reduce errors, and streamline the immigration application process.',
     href: '/platform/immigrationai/',
-    image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/acc-immigration-ai.png',
+    image: '/assets/acc-immigration-ai.png',
   },
   {
     title: 'AIBlocks',
     description: 'This Document Assembly tool generates summaries, charts, descriptions, and more in your documents.',
     href: '/platform/document-assembly/',
-    image:
-      'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/flex/section/2023/08/acc-aiblocks.png',
+    image: '/assets/acc-aiblocks.png',
+  },
+];
+
+const problemTypes = [
+  {
+    href: '/practice-types/personal-injury/',
+    title: 'Personal Injury',
+    description: 'Convert more leads, create automated task flows, and communicate with clients and colleagues.',
+  },
+  {
+    href: '/practice-types/mass-torts/',
+    title: 'Mass Torts',
+    description: 'Automate intake, generate and store unlimited documents, and track case progress.',
+  },
+  {
+    href: '/practice-types/immigration/',
+    title: 'Immigration Law',
+    description:
+      'Communicate with clients via text or email, track deadlines, and create and send invoices directly from Libra.',
+  },
+  {
+    href: '/practice-types/big-law/',
+    title: 'Big Law',
+    description: 'Oversee cases and client communication, and gain more transparency into your firm’s performance.',
+  },
+  {
+    href: '/practice-types/insurance-defense/',
+    title: 'Insurance Defense',
+    description:
+      'Track your time accurately as you move from case to case, manage tasks, and assemble documents quickly and easily.',
+  },
+  {
+    href: '/practice-types/criminal-defense/',
+    title: 'Criminal Defense',
+    description: 'Manage deadlines and court dates, create and store documents, and communicate with law enforcement.',
+  },
+  {
+    href: '/practice-types/corporate-legal-departments/',
+    title: 'Corporate Counsel',
+    description: 'Handle more work, balance your team’s workloads, and deliver legal services and expertise faster.',
+  },
+  {
+    href: '/practice-types/prosecutors-and-public-defenders/',
+    title: 'Government',
+    description:
+      'Track case info for trial prep, create reports for budget negotiations, and take on more cases with fewer staff.',
   },
 ];
 
@@ -37,6 +81,7 @@ const AIFeatures = () => {
 
   return (
     <div id='middle-section' className='dark file-separator grain-relative'>
+      <div class='bg-grain'></div>
       <div className='gradient-spot gradient-spot-md gradient-spot-md-left gradient-spot-md-bottom teal'></div>
       <section id='section-ai' className='accordion-large pt-0 type-theme-dark'>
         <div className='fv-container'>
@@ -56,7 +101,7 @@ const AIFeatures = () => {
           <div className='fv-row'>
             <div className='sbs-layout' id='FdB-add-accordion'>
               {features.map((feature, index) => (
-                <>
+                <Fragment key={index}>
                   <div id={`card-${index + 1}`} className='card accordion-card'>
                     <div className='card-header' id='heading-1'>
                       <button
@@ -105,7 +150,7 @@ const AIFeatures = () => {
                       </picture>
                     </figure>
                   </div>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
@@ -122,7 +167,7 @@ const AIFeatures = () => {
               </h2>
               <div className='subheadline'>
                 Empower your business to make legal work manageable from start to finish. Explore your practice type to
-                find out what LegalFile can do for you.
+                find out what Libra can do for you.
               </div>
             </div>
             <div className='headline-cta'>
@@ -132,234 +177,30 @@ const AIFeatures = () => {
             </div>
           </div>
           <div className='fv-cards justify-content-center'>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/personal-injury/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Personal Injury</h3>
+            {problemTypes.map((problemType) => (
+              <div className='col mb-3 mb-sm-4'>
+                <a href={problemType.href} className='card-link'>
+                  <div className='fv-card pane pane-white-on-dark'>
+                    <div className='card-body'>
+                      <div className='card-body-header'>
+                        <div className='headline'>
+                          <h3>{problemType.title}</h3>
+                        </div>
                       </div>
+                      <div className='body'>{problemType.description}</div>
                     </div>
-                    <div className='body'>
-                      Convert more leads, create automated task flows, and communicate with clients and colleagues.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
+                    <div className='card-footer'>
+                      <div className='card-cta arrow-button'>
+                        <div className='action-text'>Learn more</div>
+                        <div className='action-icon'>
+                          <img {...rightArrow} loading='lazy' />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/mass-torts/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Mass Torts</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Automate intake, generate and store unlimited documents, and track case progress.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/immigration/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Immigration Law</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Communicate with clients via text or email, track deadlines, and create and send invoices directly
-                      from LegalFile.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/big-law/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Big Law</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Oversee cases and client communication, and gain more transparency into your firm’s performance.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/insurance-defense/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Insurance Defense</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Track your time accurately as you move from case to case, manage tasks, and assemble documents
-                      quickly and easily.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/criminal-defense/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Criminal Defense</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Manage deadlines and court dates, create and store documents, and communicate with law
-                      enforcement.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/corporate-legal-departments/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Corporate Counsel</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Handle more work, balance your team’s workloads, and deliver legal services and expertise faster.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className='col mb-3 mb-sm-4'>
-              <a href='/practice-types/prosecutors-and-public-defenders/' className='card-link'>
-                <div className='fv-card pane pane-white-on-dark'>
-                  <div className='card-body'>
-                    <div className='card-body-header'>
-                      <div className='headline'>
-                        <h3>Government</h3>
-                      </div>
-                    </div>
-                    <div className='body'>
-                      Track case info for trial prep, create reports for budget negotiations, and take on more cases
-                      with fewer staff.
-                    </div>
-                  </div>
-                  <div className='card-footer'>
-                    <div className='card-cta arrow-button'>
-                      <div className='action-text'>Learn more</div>
-                      <div className='action-icon'>
-                        <img
-                          src='https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/design-elements/cards/action-arrow.svg'
-                          alt=''
-                          loading='lazy'
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>

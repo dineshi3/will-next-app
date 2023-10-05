@@ -1,6 +1,11 @@
-const Banner = () => {
+import NavBar from '../NavBar';
+
+const Banner = (props) => {
+  const { onClick } = props;
+
   return (
     <header className='hero exhibition pine'>
+      <NavBar {...props} />
       <div className='fv-container'>
         <div className='intro'>
           <div className='headlines'>
@@ -8,7 +13,7 @@ const Banner = () => {
               Your Complete Legal Tech Stack, <span className='highlight'>Supercharged</span> by AI
             </h1>
             <div className='cta'>
-              <a href='/demo-request/' id='home-cta-demo' className='btn btn-primary'>
+              <a href='#' id='home-cta-demo' className='btn btn-primary' onClick={onClick}>
                 Get a Demo
               </a>
               <a href='/pricing/' id='home-cta-pricing' className='btn btn-primary-outline'>

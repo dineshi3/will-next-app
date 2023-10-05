@@ -163,7 +163,7 @@
                     position: absolute;
                     height: 38px;
                     width: 38px;
-                    background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/webinars/webinar-li-checkmark.svg') no-repeat;
+                    background: url('/assets/icons/round-green-checkmark.svg') no-repeat;
                     text-align: center;
                     margin-right: 1rem;
                     line-height: 80px;
@@ -227,7 +227,7 @@
         align-content: center;
         margin-bottom: 3.5rem;
 
-        background: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/webinars/webinar-green-bg.svg') no-repeat 45% top;
+        background: url('/assets/webinars/webinar-green-bg.svg') no-repeat 45% top;
         background-size: 280px;
 
         &-headshot{

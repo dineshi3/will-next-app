@@ -1,7 +1,8 @@
 import Features from '../Features';
 import ProductShowcase from '../ProductShowcase';
 
-const HowItWorks = () => {
+const HowItWorks = (props) => {
+  const { onClick } = props;
   return (
     <div id='top-section' className='light file-separator'>
       <section id='section-1' className='accordion-side-by-side pt-0 null'>
@@ -14,7 +15,7 @@ const HowItWorks = () => {
               </h2>
             </div>
             <div className='headline-cta'>
-              <a href='/demo-request/' className='btn btn-primary'>
+              <a className='btn btn-primary' onClick={onClick}>
                 Schedule a Free Demo
               </a>
             </div>

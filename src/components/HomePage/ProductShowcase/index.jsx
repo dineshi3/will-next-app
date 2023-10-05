@@ -10,7 +10,7 @@ const products = [
         description: 'One centralized workspace for everything you need to power your business.',
         href: '/platform/case-management-software/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/case-management.svg',
+          src: '/assets/case-management.svg',
           alt: 'Case Management',
         },
       },
@@ -19,16 +19,16 @@ const products = [
         description: 'Turn more leads into clients, optimize your marketing efforts, and boost your ROI.',
         href: '/platform/intake-and-lead-tracking/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-leadmgmt.svg',
+          src: '/assets/120-leadmgmt.svg',
           alt: 'Lead Management',
         },
       },
       {
         title: 'eSignature Software for Legal Firms',
-        description: 'Create, manage, and e-Sign docs easily with LegalFile.',
+        description: 'Create, manage, and e-Sign docs easily with Libra.',
         href: '/platform/esignature/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-esignatures.svg',
+          src: '/assets/120-esignatures.svg',
           alt: 'eSignature',
         },
       },
@@ -43,7 +43,7 @@ const products = [
         description: 'Access your documents for better context, collaboration, and security.',
         href: '/platform/document-management/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/document-management.svg',
+          src: '/assets/document-management.svg',
           alt: 'Document Management',
         },
       },
@@ -52,7 +52,7 @@ const products = [
         description: 'Legal document assembly software built for firms that streamline workflow.',
         href: '/platform/contract-lifecycle-management/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/document-assembly.svg',
+          src: '/assets/document-assembly.svg',
           alt: 'Document Assembly',
         },
       },
@@ -61,7 +61,7 @@ const products = [
         description: 'Contract management that can be set up quickly and effortlessly!',
         href: '/platform/contract-lifecycle-management/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/120-contractmgmt.svg',
+          src: '/assets/120-contractmgmt.svg',
           alt: 'Contract Lifecycle Management',
         },
       },
@@ -76,7 +76,7 @@ const products = [
         description: 'Time tracking and billing that turns hours into invoices.',
         href: '/platform/billing-and-time-keeping/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/time-billing-payments.svg',
+          src: '/assets/time-billing-payments.svg',
           alt: 'Time, Billing, and Payments',
         },
       },
@@ -85,7 +85,7 @@ const products = [
         description: 'Operational insight that provides actionable data to help your firm.',
         href: '/platform/business-analytics/',
         img: {
-          src: 'https://filevine-marketing-production-media.s3.amazonaws.com/media/images/brand/products/tokens/business-insights.svg',
+          src: '/assets/business-insights.svg',
           alt: 'Business Insights',
         },
       },

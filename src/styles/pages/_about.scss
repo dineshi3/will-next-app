@@ -1,11 +1,11 @@
 .about {
     & .hero {
-        background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/about/hero-sm.jpg');
+        background-image: url('/assets/about/hero-sm.jpg');
         @include media-breakpoint-up(sm) {
-            background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/about/hero-md.jpg');
+            background-image: url('/assets/about/hero-md.jpg');
         }
         @include media-breakpoint-up(lg) {
-            background-image: url('https://filevine-marketing-production-media.s3.us-west-2.amazonaws.com/media/images/about/hero.jpg');
+            background-image: url('/assets/about/hero.jpg');
             min-height: 700px;
         }
         background-repeat: no-repeat;
