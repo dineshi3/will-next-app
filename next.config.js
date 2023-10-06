@@ -16,6 +16,8 @@ const nextConfig = {
     VAKILSEARCH_LIBRA_URL: 'https://vakilsearch.com/products/libra/',
     ELASTICSEARCH_HOST: 'http://172.104.175.56:20149',
     ELASTICSEARCH_AUTH: 'elastic:96iaVvXeiFEcutsY',
+    BOLDSIGN_API_HOST: 'https://api.boldsign.com',
+    BOLDSIGN_API_KEY: 'YTcyZWYwM2ItMzFlNS00ZjY5LTllMzgtYzlhNzRhZjI3ZGEy',
   },
 };
 
