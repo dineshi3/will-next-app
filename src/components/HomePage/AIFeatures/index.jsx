@@ -76,7 +76,7 @@ const AIFeatures = (props) => {
 
   return (
     <div id='middle-section' className='dark file-separator grain-relative'>
-      <div class='bg-grain'></div>
+      <div className='bg-grain'></div>
       <div className='gradient-spot gradient-spot-md gradient-spot-md-left gradient-spot-md-bottom teal'></div>
       <section id='section-ai' className='accordion-large pt-0 type-theme-dark'>
         <div className='fv-container'>
@@ -88,7 +88,7 @@ const AIFeatures = (props) => {
               </h2>
             </div>
             <div className='headline-cta'>
-              <a onClick={onClick} className='btn btn-primary'>
+              <a href='' onClick={onClick} className='btn btn-primary'>
                 Get a Demo
               </a>
             </div>
@@ -141,7 +141,7 @@ const AIFeatures = (props) => {
                   >
                     <figure>
                       <picture>
-                        <img className='img-fluid' src={feature.image} alt='' />
+                        <img className='img-fluid' src={feature.image} alt='product' />
                       </picture>
                     </figure>
                   </div>
@@ -173,7 +173,7 @@ const AIFeatures = (props) => {
           </div>
           <div className='fv-cards justify-content-center'>
             {problemTypes.map((problemType) => (
-              <div className='col mb-3 mb-sm-4'>
+              <div className='col mb-3 mb-sm-4' key={problemType.title}>
                 <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
                   <div className='fv-card pane pane-white-on-dark'>
                     <div className='card-body'>
@@ -188,7 +188,7 @@ const AIFeatures = (props) => {
                       <div className='card-cta arrow-button'>
                         <div className='action-text'>Learn more</div>
                         <div className='action-icon'>
-                          <img {...rightArrow} loading='lazy' />
+                          <img {...rightArrow} loading='lazy' alt='right arrow' />
                         </div>
                       </div>
                     </div>

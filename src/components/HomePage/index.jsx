@@ -9,6 +9,7 @@ import ScheduleDemo from '@/components/HomePage/ScheduleDemo';
 import HowItWorks from '@/components/HomePage/HowItWorks';
 
 import FormModal from './FormModal';
+import AvailableModules from './AvailableModules';
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -21,8 +22,9 @@ const HomePage = () => {
     <main id='main' className='home-refresh'>
       <Banner {...props} />
       <HowItWorks {...props} />
+      <AvailableModules />
       <AIFeatures {...props} />
-      <Accessibility />
+      {/* <Accessibility /> */}
       {/* <BlogPost /> */}
       <ScheduleDemo {...props} />
       <FormModal {...props} />

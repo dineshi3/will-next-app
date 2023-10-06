@@ -16,9 +16,9 @@ const Banner = (props) => {
               <a href='#' id='home-cta-demo' className='btn btn-primary' onClick={onClick}>
                 Get a Demo
               </a>
-              <a href='https://vakilsearch.com/products/libra/pricing' id='home-cta-pricing' className='btn btn-primary-outline'>
+              {/* <a href='https://vakilsearch.com/products/libra/pricing' id='home-cta-pricing' className='btn btn-primary-outline'>
                 See Our Pricing
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

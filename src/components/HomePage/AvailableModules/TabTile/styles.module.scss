@@ -1,0 +1,33 @@
+.tileContainer {
+  display: flex;
+  padding: 8px 12px;
+  gap: 0.25rem;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  border-radius: 9999px;
+
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+  }
+
+  :hover {
+    border-radius: 9999px;
+  }
+
+  &.selected {
+    font-weight: 500;
+    color: #ffffff;
+    background: #022b50;
+  }
+
+  &.notSelected {
+    color: #111827;
+
+    &:hover {
+      background: #f7f7f7;
+    }
+  }
+}

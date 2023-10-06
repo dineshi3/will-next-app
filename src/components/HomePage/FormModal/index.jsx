@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 import closeIcon from '@/assets/closeIcon.svg';
 
 import styles from './styles.module.scss';
-import { toast } from 'react-toastify';
 
 const EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -23,10 +24,26 @@ const FormModal = (props) => {
     setErrors(false);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!(email && EMAIL_PATTERN.test(email))) return setErrors(true);
+
+    const config = {
+      method: 'post',
+      url: `/api/lead`,
+      data: {
+        email: email
+      }
+    };
+  
+    try {
+      const response = await axios(config)
+      toast.success("Email submitted successfully!")
+    } catch (error) {
+      console.log(error);
+      toast.error("Internal Server Error. Please try again later!")
+    }
     setShowModal(false);
-    toast.success("Email submitted successfully!")
+
   };
 
   return (

@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "tabTitle": "Home",
+      "logo": "/homelogo.svg",
+      "image": "/home.svg",
+      "title": "User-Friendly Interface",
+      "selectedImg": "/selectedhomelogo.svg",
+      "desc": "Simplify your schedule and stay organised with real-time updates on the display board, hearings, appointments, tasks, quick access to the calendar, easy navigation to the menu, and much more."
+    },
+    {
+      "tabTitle": "My Cases",
+      "logo": "/cases.svg",
+      "image": "/mycases.svg",
+      "title": "Stay Updated on Your Legal Cases",
+      "selectedImg": "/selectedcases.svg",
+      "desc": "Simplify case management by adding all of your cases from The Supreme Court of India, High Courts, District Courts, and Tribunals, combined on a single platform, under your Vakalat name or barcode."
+    },
+    {
+      "tabTitle": "Research",
+      "logo": "/search.svg",
+      "image": "/research.svg",
+      "title": "Unlock the power of efficient legal research with our groundbreaking solution",
+      "selectedImg": "/selectedsearch.svg",
+
+      "desc": "Expand your legal expertise with in-depth knowledge of Indian laws, acts, access to over 10,000+ court formats and work flow of courts across India."
+    },
+    {
+      "tabTitle": "Documents",
+      "logo": "/document.svg",
+      "image": "/documents.svg",
+      "title": "Seamless Access to Legal Documents",
+      "selectedImg": "/selecteddocument.svg",
+
+      "desc": "Enjoy a document vault with 10GB cloud storage, ensuring safe storage of case documents without the hassle of carrying them."
+    },
+    {
+      "tabTitle": "Title Search Reports",
+      "logo": "/report.svg",
+      "image": "/titlesearch.svg",
+      "title": "Efficient Property Due-Diligence with Automation",
+      "selectedImg": "/selectedreport.svg",
+      "desc": "Expedite your property due-diligence with automated procedures, generating reports within minutes."
+    }
+  ]
+}

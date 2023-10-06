@@ -5,15 +5,18 @@ const port = process.env.PORT || 3000;
 const HOST_MAP = {
   prod: '',
   dev: `localhost:${port}`,
-  qe: ''
-}
+  qe: '',
+};
 
 const nextConfig = {
   reactStrictMode: true,
   env: {
     HOST: HOST_MAP[process.env.NODE_ENV],
-    LIBRA_HOST: 'https://libra.vakilsearch.com'
-  }
-}
+    LIBRA_HOST: 'https://libra.vakilsearch.com',
+    VAKILSEARCH_LIBRA_URL: 'https://vakilsearch.com/products/libra/',
+    ELASTICSEARCH_HOST: 'http://172.104.175.56:20149',
+    ELASTICSEARCH_AUTH: 'elastic:96iaVvXeiFEcutsY',
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,3 +1,4 @@
+import AvailableModules from '../AvailableModules';
 import Features from '../Features';
 import ProductShowcase from '../ProductShowcase';
 
@@ -15,7 +16,7 @@ const HowItWorks = (props) => {
               </h2>
             </div>
             <div className='headline-cta'>
-              <a className='btn btn-primary' onClick={onClick}>
+              <a href='' className='btn btn-primary' onClick={onClick}>
                 Schedule a Free Demo
               </a>
             </div>
@@ -23,7 +24,7 @@ const HowItWorks = (props) => {
           <Features />
         </div>
       </section>
-      <ProductShowcase />
+      {/* <ProductShowcase /> */}
     </div>
   );
 };
