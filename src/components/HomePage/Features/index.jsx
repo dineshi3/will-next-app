@@ -2,52 +2,40 @@ import { Fragment, useState } from 'react';
 
 const features = [
   {
-    title: 'Case & matter management—keep all cases on track',
+    title: 'Hearings',
     points: [
-      'Reduce redundant tasks',
-      'Draft documents with all your case data',
-      'Connect your workflow with all your contacts and documents',
-      "Customize everything to your team's legal needs",
+      'Get notification of your court items such as case number, item & room number on the go in just a click.',
     ],
     href: '/platform/case-management-software/',
     image:
       'https://vakilsearch.com/products/libra/hearings-web.svg',
   },
   {
-    title: 'Document management built specifically for legal',
+    title: 'Judgements',
     points: [
-      'Quickly find and update all your documents',
-      'Connect matters with documents and contracts',
-      'Configurable to your different users',
-      'Built by lawyers for lawyers',
+      'Gain instant access to over 5 million+ judgments by searching keywords, citations, headings, party names, or judge names, enabling quick and efficient retrieval of relevant judgments.',
     ],
     href: '/platform/document-management/',
+    image:
+      'https://vakilsearch.com/products/libra/judgements-web.svg',
+  },
+  {
+    title: 'Display Board',
+    points: [
+      'Keep track of your daily item numbers with our real-time display board.',
+    ],
+    href: '/platform/billing-and-time-keeping/',
     image:
       'https://vakilsearch.com/products/libra/display-board-web.svg',
   },
   {
-    title: 'Time and billing software that captures every minute',
+    title: 'Case Alerts',
     points: [
-      'Build and send custom invoices',
-      'Expedite timesheet review',
-      'Generate invoices alongside your legal work',
-      'Use multiple timers to track time across your entire team',
-    ],
-    href: '/platform/billing-and-time-keeping/',
-    image:
-      'https://vakilsearch.com/products/libra/alerts-web.svg',
-  },
-  {
-    title: 'Find and convert more leads',
-    points: [
-      'Track and nurture leads from every source',
-      'Optimize marketing to increase profits',
-      'Gather up-to-the-minute feedback and insight',
-      'Easily share online intake forms',
+      'Elevate your legal strategy with real-time case updates from the largest case directory in India, empowering you to stay ahead in the game.',
     ],
     href: '/platform/intake-and-lead-tracking/',
     image:
-      'https://vakilsearch.com/products/libra/judgements-web.svg',
+      'https://vakilsearch.com/products/libra/alerts-web.svg',
   },
 ];
 
@@ -95,7 +83,7 @@ const Features = () => {
                     ))}
                     </ul>
                 </div>
-                <a href={feature.href} className='link-arrow'>
+                <a className='link-arrow'>
                     Learn more&nbsp;<span>›</span>
                 </a>
                 </div>

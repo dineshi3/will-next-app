@@ -21,10 +21,10 @@ const HomePage = () => {
     <main id='main' className='home-refresh'>
       <Banner {...props} />
       <HowItWorks {...props} />
-      <AIFeatures />
+      <AIFeatures {...props} />
       <Accessibility />
       {/* <BlogPost /> */}
-      <ScheduleDemo />
+      <ScheduleDemo {...props} />
       <FormModal {...props} />
     </main>
   );

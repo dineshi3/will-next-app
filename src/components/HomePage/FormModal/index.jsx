@@ -4,6 +4,9 @@ import { Modal } from 'react-bootstrap';
 import closeIcon from '@/assets/closeIcon.svg';
 
 import styles from './styles.module.scss';
+import { toast } from 'react-toastify';
+
+const EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const FormModal = (props) => {
   const { showModal, setShowModal } = props;
@@ -21,7 +24,9 @@ const FormModal = (props) => {
   };
 
   const handleSubmit = () => {
-    if (!email) setErrors(true);
+    if (!(email && EMAIL_PATTERN.test(email))) return setErrors(true);
+    setShowModal(false);
+    toast.success("Email submitted successfully!")
   };
 
   return (

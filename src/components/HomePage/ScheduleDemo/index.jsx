@@ -1,4 +1,5 @@
-const ScheduleDemo = () => {
+const ScheduleDemo = (props) => {
+  const { onClick } = props;
   return (
     <section id='final-cta' className='cta plain'>
       <div className='container'>
@@ -7,7 +8,7 @@ const ScheduleDemo = () => {
             <div className='headline'>
               <h2 className='mb-5'>See all that Libra can do with a customized demonstration from our team</h2>
             </div>
-            <a href='/demo-request/' className='btn btn-primary'>
+            <a onClick={onClick} className='btn btn-primary'>
               Schedule a Demo
             </a>
           </div>

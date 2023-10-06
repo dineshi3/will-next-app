@@ -261,6 +261,7 @@
             justify-content: flex-start;
             // Aspect and max-height to prevent significant overflow onto section below for short accordions with tall images...
             & img {
+                border-radius: 1rem;
                 @include media-breakpoint-up(lg) {
                     align-self: flex-start;
                     // max-height: 500px;

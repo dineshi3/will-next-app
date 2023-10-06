@@ -11,7 +11,8 @@ const HOST_MAP = {
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    HOST: HOST_MAP[process.env.NODE_ENV]
+    HOST: HOST_MAP[process.env.NODE_ENV],
+    LIBRA_HOST: 'https://libra.vakilsearch.com'
   }
 }
 

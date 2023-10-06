@@ -137,7 +137,7 @@ const ProductShowcase = () => {
                   key={product.id}
                 >
                   {product.products.map((item) => (
-                    <a href={item.href} key={item.title}>
+                    <a href={'https://libra.vakilsearch.com/login'} key={item.title}>
                       <div className='fv-card product-card'>
                         <div className='card-header icon'>
                           <figure className='card-image icon'>

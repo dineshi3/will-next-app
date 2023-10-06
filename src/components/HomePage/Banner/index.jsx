@@ -16,7 +16,7 @@ const Banner = (props) => {
               <a href='#' id='home-cta-demo' className='btn btn-primary' onClick={onClick}>
                 Get a Demo
               </a>
-              <a href='/pricing/' id='home-cta-pricing' className='btn btn-primary-outline'>
+              <a href='https://vakilsearch.com/products/libra/pricing' id='home-cta-pricing' className='btn btn-primary-outline'>
                 See Our Pricing
               </a>
             </div>
@@ -33,7 +33,7 @@ const Banner = (props) => {
               <div className='carousel-item'>
                 <picture>
                   <img
-                    src='https://vakilsearch.com/products/libra/home.svg'
+                    src='https://vakilsearch.com/products/libra/thumbnail.svg'
                     className='d-block w-100'
                     alt='App Screen: Activity Tab with project updates and vitals'
                   />
@@ -41,12 +41,12 @@ const Banner = (props) => {
               </div>
               <div className='carousel-item active'>
                 <picture>
-                  <img src='https://vakilsearch.com/products/libra/home.svg' className='d-block w-100' alt='' />
+                  <img src='https://vakilsearch.com/products/libra/thumbnail.svg' className='d-block w-100' alt='' />
                 </picture>
               </div>
               <div className='carousel-item'>
                 <picture>
-                  <img src='https://vakilsearch.com/products/libra/home.svg' className='d-block w-100' alt='' />
+                  <img src='https://vakilsearch.com/products/libra/thumbnail.svg' className='d-block w-100' alt='' />
                 </picture>
               </div>
             </div>

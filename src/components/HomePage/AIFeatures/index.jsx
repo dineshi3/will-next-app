@@ -5,28 +5,22 @@ import rightArrow from '@/assets/rightArrow.svg';
 
 const features = [
   {
-    title: 'DemandsAI',
-    description: 'Generate demand letters easily and safely with our newest tool leveraging generative AI.',
-    href: '/platform/ai-prepared-demands/',
-    image: '/assets/acc-demandsai.png',
+    title: 'VakilGPT',
+    description: 'The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online',
+    href: 'https://vakilsearch.com/legalgpt',
+    image: '/assets/vakilgpt-dashboard.png',
   },
   {
-    title: 'AIFields',
-    description: 'Scan documents to generate real-time insights, summaries, and more within the security of Libra.',
-    href: '/features/ai-fields/',
-    image: '/assets/acc-aifields.png',
+    title: 'Judgment Search',
+    description: 'Discover AI-Driven legal research personalized to suit your specific requirements and preferences!',
+    href: 'https://vakilsearch.com/judgments',
+    image: '/assets/judgment-search.jpg',
   },
   {
-    title: 'ImmigrationAI',
-    description: 'Automate tasks, reduce errors, and streamline the immigration application process.',
-    href: '/platform/immigrationai/',
-    image: '/assets/acc-immigration-ai.png',
-  },
-  {
-    title: 'AIBlocks',
-    description: 'This Document Assembly tool generates summaries, charts, descriptions, and more in your documents.',
-    href: '/platform/document-assembly/',
-    image: '/assets/acc-aiblocks.png',
+    title: 'Case Search',
+    description: "India's largest case directory with real-time updates to keep you ahead in the legal game.",
+    href: 'https://vakilsearch.com/casestatus',
+    image: '/assets/case-search.jpg',
   },
 ];
 
@@ -76,7 +70,8 @@ const problemTypes = [
   },
 ];
 
-const AIFeatures = () => {
+const AIFeatures = (props) => {
+  const { onClick } = props;
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -93,7 +88,7 @@ const AIFeatures = () => {
               </h2>
             </div>
             <div className='headline-cta'>
-              <a href='/demo-request/' className='btn btn-primary'>
+              <a onClick={onClick} className='btn btn-primary'>
                 Get a Demo
               </a>
             </div>
@@ -133,7 +128,7 @@ const AIFeatures = () => {
                     >
                       <div className='card-body FdB-add'>
                         <div className='body-content'>{feature.description}</div>
-                        <a href={feature.href} className='link-arrow'>
+                        <a href={feature.href} target='blank' className='link-arrow'>
                           Learn more&nbsp;<span>›</span>
                         </a>
                       </div>
@@ -179,7 +174,7 @@ const AIFeatures = () => {
           <div className='fv-cards justify-content-center'>
             {problemTypes.map((problemType) => (
               <div className='col mb-3 mb-sm-4'>
-                <a href={problemType.href} className='card-link'>
+                <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
                   <div className='fv-card pane pane-white-on-dark'>
                     <div className='card-body'>
                       <div className='card-body-header'>
