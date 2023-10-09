@@ -1,7 +1,7 @@
 import HomePage from '@/components/HomePage';
 import MetaHead from '@/components/MetaHead';
 
-import content from './magicsign.json';
+import content from './data.json';
 
 export default function Home() {
   return (

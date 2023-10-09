@@ -1,6 +1,7 @@
 {
   "meta": {
-    "title": "Libra"
+    "title": "Libra",
+    "description": "Libra Legal Platform"
   },
   "product": {
     "id": "magicsign",
@@ -30,8 +31,8 @@
     ]
   },
   "howItWorks": {
-    "title": "HOW IT WORKS",
-    "description": "AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>",
+    "label": "HOW IT WORKS",
+    "title": "AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>",
     "features": [
       {
         "title": "Hearings",

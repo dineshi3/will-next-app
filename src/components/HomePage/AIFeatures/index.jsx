@@ -87,51 +87,53 @@ const AIFeatures = (props) => {
           </div>
         </div>
       </section>
-      <section id='solutions'>
-        <div className='gradient-spot gradient-spot-sm gradient-spot-sm-right gradient-spot-sm-top yellow'></div>
-        <div className='fv-container'>
-          <div className='action-header'>
-            <div className='headline'>
-              <div className='kicker'>{solutions.label}</div>
-              <h2>{parse(solutions.title)}</h2>
-              <div className='subheadline'>{solutions.description}</div>
+      {solutions && (
+        <section id='solutions'>
+          <div className='gradient-spot gradient-spot-sm gradient-spot-sm-right gradient-spot-sm-top yellow'></div>
+          <div className='fv-container'>
+            <div className='action-header'>
+              <div className='headline'>
+                <div className='kicker'>{solutions.label}</div>
+                <h2>{parse(solutions.title)}</h2>
+                <div className='subheadline'>{solutions.description}</div>
+              </div>
+              {solutions.link && (
+                <div className='headline-cta'>
+                  <a href={solutions.link.href} className='btn btn-primary'>
+                    {solutions.link.text}
+                  </a>
+                </div>
+              )}
             </div>
-            {solutions.link && (
-              <div className='headline-cta'>
-                <a href={solutions.link.href} className='btn btn-primary'>
-                  {solutions.link.text}
-                </a>
-              </div>
-            )}
-          </div>
-          <div className='fv-cards justify-content-center'>
-            {solutions.problemTypes.map((problemType) => (
-              <div className='col mb-3 mb-sm-4' key={problemType.title}>
-                <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
-                  <div className='fv-card pane pane-white-on-dark'>
-                    <div className='card-body'>
-                      <div className='card-body-header'>
-                        <div className='headline'>
-                          <h3>{problemType.title}</h3>
+            <div className='fv-cards justify-content-center'>
+              {solutions.problemTypes.map((problemType) => (
+                <div className='col mb-3 mb-sm-4' key={problemType.title}>
+                  <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
+                    <div className='fv-card pane pane-white-on-dark'>
+                      <div className='card-body'>
+                        <div className='card-body-header'>
+                          <div className='headline'>
+                            <h3>{problemType.title}</h3>
+                          </div>
                         </div>
+                        <div className='body'>{problemType.description}</div>
                       </div>
-                      <div className='body'>{problemType.description}</div>
-                    </div>
-                    <div className='card-footer'>
-                      <div className='card-cta arrow-button'>
-                        <div className='action-text'>Learn more</div>
-                        <div className='action-icon'>
-                          <img {...rightArrow} loading='lazy' alt='right arrow' />
+                      <div className='card-footer'>
+                        <div className='card-cta arrow-button'>
+                          <div className='action-text'>Learn more</div>
+                          <div className='action-icon'>
+                            <img {...rightArrow} loading='lazy' alt='right arrow' />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </a>
-              </div>
-            ))}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       <Testimonials {...props} />
     </div>
   );

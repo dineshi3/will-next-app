@@ -43,7 +43,7 @@ const Testimonials = (props) => {
                             <div className='kicker'>Testimonials</div>
                             <div className='quote mb-4'>“{testimonial.description}”</div>
                             <div className='customer-by-line'>
-                              <div className='customer-name'>{testimonial.customerName}</div>,
+                              <div className='customer-name'>{testimonial.customerName}</div>{', '}
                               <div className='customer-company-info'>{testimonial.companyInfo}</div>
                             </div>
                           </div>

@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Magicsign",
+    "description": "Magicsign Legal Platform"
+  },
+  "product": {
+    "id": "magicsign",
+    "name": "Magicsign"
+  },
+  "navbar": {
+    "icon": {
+      "src": "https://vakilsearch.com/products/libra/libra-logo.svg",
+      "alt": "magicsign"
+    }
+  },
+  "banner": {
+    "title": "Effortless, Secure, and <span className='highlight'>Paperless</span> Document Signing",
+    "images": [
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      }
+    ]
+  },
+  "howItWorks": {
+    "label": "HOW IT WORKS",
+    "title": "Streamline Signatures with Magicsign",
+    "features": [
+      {
+        "title": "Upload Your Document",
+        "points": ["Simply upload the document you need to be signed."],
+        "image": "https://vakilsearch.com/products/libra/hearings-web.svg"
+      },
+      {
+        "title": "Add Signers",
+        "points": ["Enter the email addresses of the signatories, and our system takes care of the rest."],
+        "image": "https://vakilsearch.com/products/libra/judgements-web.svg"
+      },
+      {
+        "title": "Sign Securely",
+        "points": ["Signers receive an email link to securely add their electronic signatures."],
+        "image": "https://vakilsearch.com/products/libra/display-board-web.svg"
+      },
+      {
+        "title": "Completion and Storage",
+        "points": ["Once all signatures are collected, the signed document is securely stored."],
+        "image": "https://vakilsearch.com/products/libra/alerts-web.svg"
+      }
+    ]
+  },
+  "products": {
+    "label": "OUR NEWEST FEATURES",
+    "title": "Add <span className='highlight'>artificial intelligence</span> into your legal toolkit",
+    "softwares": [
+      {
+        "title": "VakilGPT",
+        "description": "The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online",
+        "href": "https://vakilsearch.com/legalgpt",
+        "image": "/assets/vakilgpt-dashboard.png"
+      },
+      {
+        "title": "Judgment Search",
+        "description": "Discover AI-Driven legal research personalized to suit your specific requirements and preferences!",
+        "href": "https://vakilsearch.com/judgments",
+        "image": "/assets/judgment-search.jpg"
+      },
+      {
+        "title": "Case Search",
+        "description": "India's largest case directory with real-time updates to keep you ahead in the legal game.",
+        "href": "https://vakilsearch.com/casestatus",
+        "image": "/assets/case-search.jpg"
+      }
+    ]
+  },
+  "scheduleDemo": {
+    "title": "Start Your eSign Journey",
+    "link": {
+      "text": "Schedule a Demo"
+    }
+  },
+  "testimonials": [
+    {
+      "description": "Using Magicsign transformed how we do business. It's incredibly user-friendly and reliable.",
+      "customerName": "Dr.V.V.L.N.Sastry",
+      "companyInfo": "Legal Counsel,  Lex India Juris,  Mumbai HCB18990",
+      "profileImage": "https://vakilsearch.com/products/libra/sastry.svg",
+      "companyLogo": "/assets/customers/leopold-associates-gray.svg"
+    },
+    {
+      "description": "We've cut down on paperwork and administrative tasks, thanks to Magicsign.",
+      "customerName": "Clement Roy",
+      "companyInfo": "Bar Council of Maharashtra & Goa, MAH/160/1993",
+      "profileImage": "https://vakilsearch.com/products/libra/roy.svg",
+      "companyLogo": "/assets/customers/lyfelaw-gray.svg"
+    },
+    {
+      "description": "The security features of this platform are top-notch. Our clients feel safe signing electronically.",
+      "customerName": "S D Gadhvi",
+      "companyInfo": "Enrollment number G/257/2004 Gujarat",
+      "profileImage": "https://vakilsearch.com/products/libra/gandhvi.svg",
+      "companyLogo": "/assets/customers/grungo-colarulo-gray.svg"
+    }
+  ]
+}

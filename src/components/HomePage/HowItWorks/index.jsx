@@ -1,4 +1,5 @@
-import AvailableModules from '../AvailableModules';
+import parse from 'html-react-parser';
+
 import Features from '../Features';
 import ProductShowcase from '../ProductShowcase';
 
@@ -12,9 +13,9 @@ const HowItWorks = (props) => {
         <div className='fv-container'>
           <div className='action-header'>
             <div className='headline'>
-              <div className='kicker mb-4'>How it works</div>
+              <div className='kicker mb-4'>{howItWorks.label}</div>
               <h2>
-                AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>
+                {parse(howItWorks.title)}
               </h2>
             </div>
             <div className='headline-cta'>
@@ -26,7 +27,7 @@ const HowItWorks = (props) => {
           <Features content={howItWorks} />
         </div>
       </section>
-      {/* <ProductShowcase /> */}
+      {false && <ProductShowcase />}
     </div>
   );
 };

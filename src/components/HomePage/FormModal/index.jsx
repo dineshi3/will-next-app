@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 const EMAIL_PATTERN = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const FormModal = (props) => {
-  const { showModal, setShowModal } = props;
+  const { content, showModal, setShowModal } = props;
 
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState();
@@ -31,7 +31,8 @@ const FormModal = (props) => {
       method: 'post',
       url: `/api/lead`,
       data: {
-        email: email
+        email: email,
+        product: content.product
       }
     };
   

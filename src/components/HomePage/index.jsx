@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Modal } from 'react-bootstrap';
 
 import AIFeatures from '@/components/HomePage/AIFeatures';
 import Accessibility from '@/components/HomePage/Accessibility';
@@ -24,10 +23,10 @@ const HomePage = (props) => {
     <main id='main' className='home-refresh'>
       <Banner {...commonProps} />
       <HowItWorks {...commonProps} />
-      <AvailableModules {...commonProps} />
+      {content.modules && <AvailableModules {...commonProps} />}
       <AIFeatures {...commonProps} />
-      {/* <Accessibility /> */}
-      {/* <BlogPost /> */}
+      {false && <Accessibility />}
+      {false && <BlogPost />}
       <ScheduleDemo {...commonProps} />
       <FormModal {...commonProps} />
     </main>

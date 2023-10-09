@@ -12,7 +12,7 @@ const Features = (props) => {
             <div id={`card-${index + 1}`} className='card accordion-card'>
               <div className='card-header' id={`heading-${index + 1}`} onClick={() => setOpenTab(index)}>
                 <button
-                  className={`btn btn-link ${index == openTab ? 'expanded': 'collapsed'}`}
+                  className={`btn btn-link ${index == openTab ? 'expanded' : 'collapsed'}`}
                   data-toggle='collapse'
                   data-target={`#kGN-ai-${index + 1}`}
                   aria-expanded='true'
@@ -31,27 +31,33 @@ const Features = (props) => {
                   </div>
                 </button>
               </div>
-            <div
+              <div
                 id={`kGN-ai-${index + 1}`}
                 className={`accordion-content collapse ${openTab == index ? 'show' : ''}`}
                 aria-labelledby={`#heading-${index + 1}`}
                 data-parent='#kGN-ai-accordion'
-            >
+              >
                 <div className='card-body kGN-ai'>
-                <div className='body-content'>
+                  <div className='body-content'>
                     <ul>
-                    {feature.points.map((point) => (
+                      {feature.points.map((point) => (
                         <li key={point}>{point}</li>
-                    ))}
+                      ))}
                     </ul>
+                  </div>
+                  {feature.href && (
+                    <a className='link-arrow'>
+                      Learn more&nbsp;<span>›</span>
+                    </a>
+                  )}
                 </div>
-                <a className='link-arrow'>
-                    Learn more&nbsp;<span>›</span>
-                </a>
-                </div>
+              </div>
             </div>
-            </div>
-            <div id={`media-body-${index + 1}`} className={`accordion-media ${openTab == index ? 'show' : 'collapse'}`} data-parent={`#card-${index + 1}`}>
+            <div
+              id={`media-body-${index + 1}`}
+              className={`accordion-media ${openTab == index ? 'show' : 'collapse'}`}
+              data-parent={`#card-${index + 1}`}
+            >
               <figure>
                 <picture>
                   <img className='img-fluid' src={feature.image} alt='' />

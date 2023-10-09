@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Smart I",
+    "description": "Smart i Invoice"
+  },
+  "product": {
+    "id": "smarti",
+    "name": "Smart I"
+  },
+  "navbar": {
+    "icon": {
+      "src": "https://vakilsearch.com/products/libra/libra-logo.svg",
+      "alt": "libra"
+    }
+  },
+  "banner": {
+    "title": "Auto-extract invoices by our <span className='highlight'>AI</span> platform",
+    "images": [
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      }
+    ]
+  },
+  "howItWorks": {
+    "label": "HOW IT WORKS",
+    "title": "Focus on growing your business, let us take care of your invoicing, payment & accounting needs",
+    "features": [
+      {
+        "title": "Accurate",
+        "points": ["Relevant training data is critical for any machine learning model. Train powerful ML models on your invoices and enjoy human-level accuracy."],
+        "image": "https://vakilsearch.com/products/libra/hearings-web.svg"
+      },
+      {
+        "title": "No templates or rules",
+        "points": ["Free yourself from maintaining complex invoice templates and rules, and let our machine learning models do the job for you."],
+        "image": "https://vakilsearch.com/products/libra/judgements-web.svg"
+      },
+      {
+        "title": "Table Extraction",
+        "points": ["Train and extract line items from any document with ease."],
+        "image": "https://vakilsearch.com/products/libra/display-board-web.svg"
+      },
+      {
+        "title": "No-Code AI",
+        "points": ["Our AI platform is continually learning from each document you submit, without requiring a single line of code or training a model."],
+        "image": "https://vakilsearch.com/products/libra/alerts-web.svg"
+      }
+    ]
+  },
+  "products": {
+    "label": "OUR NEWEST FEATURES",
+    "title": "Add <span className='highlight'>artificial intelligence</span> into your legal toolkit",
+    "softwares": [
+      {
+        "title": "VakilGPT",
+        "description": "The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online",
+        "href": "https://vakilsearch.com/legalgpt",
+        "image": "/assets/vakilgpt-dashboard.png"
+      },
+      {
+        "title": "Judgment Search",
+        "description": "Discover AI-Driven legal research personalized to suit your specific requirements and preferences!",
+        "href": "https://vakilsearch.com/judgments",
+        "image": "/assets/judgment-search.jpg"
+      },
+      {
+        "title": "Case Search",
+        "description": "India's largest case directory with real-time updates to keep you ahead in the legal game.",
+        "href": "https://vakilsearch.com/casestatus",
+        "image": "/assets/case-search.jpg"
+      }
+    ]
+  },
+  "scheduleDemo": {
+    "title": "Welcome to your new way of File GSTR",
+    "link": {
+      "text": "Schedule a Demo"
+    }
+  },
+  "testimonials": [
+    {
+      "description": "The Invoice Extraction AI tool has made our financial operations incredibly smooth. It's intuitive and dependable, and our team loves it. I can't imagine going back to manual invoice processing.",
+      "customerName": "Jennifer L",
+      "companyInfo": "Operations Manager",
+      "profileImage": "https://vakilsearch.com/products/libra/sastry.svg",
+      "companyLogo": "/assets/customers/leopold-associates-gray.svg"
+    },
+    {
+      "description": "As a small business owner, managing invoices used to be a time-consuming chore. Thanks to this amazing AI tool, I can now quickly extract data from invoices, making my life so much easier.",
+      "customerName": "Sarah M",
+      "companyInfo": "Small Business Owner",
+      "profileImage": "https://vakilsearch.com/products/libra/roy.svg",
+      "companyLogo": "/assets/customers/lyfelaw-gray.svg"
+    },
+    {
+      "description": "I've used several invoice extraction tools in my career, and this one stands out. It's user-friendly, adaptable, and incredibly precise. It's a game-changer for financial professionals.",
+      "customerName": "Michael P",
+      "companyInfo": "Financial Analyst",
+      "profileImage": "https://vakilsearch.com/products/libra/gandhvi.svg",
+      "companyLogo": "/assets/customers/grungo-colarulo-gray.svg"
+    }
+  ]
+}
