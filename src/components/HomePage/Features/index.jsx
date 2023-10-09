@@ -1,51 +1,13 @@
 import { Fragment, useState } from 'react';
 
-const features = [
-  {
-    title: 'Hearings',
-    points: [
-      'Get notification of your court items such as case number, item & room number on the go in just a click.',
-    ],
-    href: '/platform/case-management-software/',
-    image:
-      'https://vakilsearch.com/products/libra/hearings-web.svg',
-  },
-  {
-    title: 'Judgements',
-    points: [
-      'Gain instant access to over 5 million+ judgments by searching keywords, citations, headings, party names, or judge names, enabling quick and efficient retrieval of relevant judgments.',
-    ],
-    href: '/platform/document-management/',
-    image:
-      'https://vakilsearch.com/products/libra/judgements-web.svg',
-  },
-  {
-    title: 'Display Board',
-    points: [
-      'Keep track of your daily item numbers with our real-time display board.',
-    ],
-    href: '/platform/billing-and-time-keeping/',
-    image:
-      'https://vakilsearch.com/products/libra/display-board-web.svg',
-  },
-  {
-    title: 'Case Alerts',
-    points: [
-      'Elevate your legal strategy with real-time case updates from the largest case directory in India, empowering you to stay ahead in the game.',
-    ],
-    href: '/platform/intake-and-lead-tracking/',
-    image:
-      'https://vakilsearch.com/products/libra/alerts-web.svg',
-  },
-];
-
-const Features = () => {
+const Features = (props) => {
+  const { content } = props;
   const [openTab, setOpenTab] = useState(0);
 
   return (
     <div className='fv-row'>
       <div className='sbs-layout' id='kGN-ai-accordion'>
-        {features.map((feature, index) => (
+        {content.features.map((feature, index) => (
           <Fragment key={index}>
             <div id={`card-${index + 1}`} className='card accordion-card'>
               <div className='card-header' id={`heading-${index + 1}`} onClick={() => setOpenTab(index)}>

@@ -1,32 +1,9 @@
 import { useState } from 'react';
 
-const testimonials = [
-  {
-    description:
-      "I like the Libra app for the reason that it's a customised information hub for legal counsels like me. Further, it’s a complete case management system",
-    customerName: 'Dr.V.V.L.N.Sastry',
-    companyInfo: 'Legal Counsel,  Lex India Juris,  Mumbai HCB18990',
-    profileImage: 'https://vakilsearch.com/products/libra/sastry.svg',
-    companyLogo: '/assets/customers/leopold-associates-gray.svg',
-  },
-  {
-    description:
-      'LIBRA is the best App for lawyer. The best part is the uploading of daily orders, judgements, and pop-up of the daily hearing notifications.',
-    customerName: 'Clement Roy',
-    companyInfo: 'Bar Council of Maharashtra & Goa, MAH/160/1993',
-    profileImage: 'https://vakilsearch.com/products/libra/roy.svg',
-    companyLogo: '/assets/customers/lyfelaw-gray.svg',
-  },
-  {
-    description:
-      "LIBRA is a unique app for advocates & it's very helpful for hearings & order updates. Experts at LIBRA are very helpful with any queries.",
-    customerName: 'S D Gadhvi',
-    companyInfo: 'Enrollment number G/257/2004 Gujarat',
-    profileImage: 'https://vakilsearch.com/products/libra/gandhvi.svg',
-    companyLogo: '/assets/customers/grungo-colarulo-gray.svg',
-  },
-];
-const Testimonials = () => {
+const Testimonials = (props) => {
+
+  const { content: { testimonials } } = props;
+
   const [activeTab, setActiveTab] = useState(0);
 
   const handleNextClick = (e) => {

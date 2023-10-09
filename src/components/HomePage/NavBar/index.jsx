@@ -1,10 +1,10 @@
 import styles from './styles.module.scss';
 
 const NavBar = (props) => {
-  const { onClick } = props;
+  const { content, onClick } = props;
   return (
     <nav className={`container ${styles.container}`}>
-      <img src='https://vakilsearch.com/products/libra/libra-logo.svg' alt='libra' />
+      <img {...content.icon} />
       <button className={`btn ${styles.btnPrimary}`} onClick={onClick}>
         Get a Demo
       </button>

@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Libra"
+  },
+  "product": {
+    "id": "magicsign",
+    "name": "Magicsign"
+  },
+  "navbar": {
+    "icon": {
+      "src": "https://vakilsearch.com/products/libra/libra-logo.svg",
+      "alt": "libra"
+    }
+  },
+  "banner": {
+    "title": "Your Complete Legal Tech Stack, <span className='highlight'>Supercharged</span> by AI",
+    "images": [
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      },
+      {
+        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
+        "alt": "App Screen: Activity Tab with project updates and vitals"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "HOW IT WORKS",
+    "description": "AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>",
+    "features": [
+      {
+        "title": "Hearings",
+        "points": [
+          "Get notification of your court items such as case number, item & room number on the go in just a click."
+        ],
+        "href": "/platform/case-management-software/",
+        "image": "https://vakilsearch.com/products/libra/hearings-web.svg"
+      },
+      {
+        "title": "Judgements",
+        "points": [
+          "Gain instant access to over 5 million+ judgments by searching keywords, citations, headings, party names, or judge names, enabling quick and efficient retrieval of relevant judgments."
+        ],
+        "href": "/platform/document-management/",
+        "image": "https://vakilsearch.com/products/libra/judgements-web.svg"
+      },
+      {
+        "title": "Display Board",
+        "points": ["Keep track of your daily item numbers with our real-time display board."],
+        "href": "/platform/billing-and-time-keeping/",
+        "image": "https://vakilsearch.com/products/libra/display-board-web.svg"
+      },
+      {
+        "title": "Case Alerts",
+        "points": [
+          "Elevate your legal strategy with real-time case updates from the largest case directory in India, empowering you to stay ahead in the game."
+        ],
+        "href": "/platform/intake-and-lead-tracking/",
+        "image": "https://vakilsearch.com/products/libra/alerts-web.svg"
+      }
+    ]
+  },
+  "modules": {
+    "features": [
+      {
+        "tabTitle": "Home",
+        "logo": "/homelogo.svg",
+        "image": "/home.svg",
+        "title": "User-Friendly Interface",
+        "selectedImg": "/selectedhomelogo.svg",
+        "desc": "Simplify your schedule and stay organised with real-time updates on the display board, hearings, appointments, tasks, quick access to the calendar, easy navigation to the menu, and much more."
+      },
+      {
+        "tabTitle": "My Cases",
+        "logo": "/cases.svg",
+        "image": "/mycases.svg",
+        "title": "Stay Updated on Your Legal Cases",
+        "selectedImg": "/selectedcases.svg",
+        "desc": "Simplify case management by adding all of your cases from The Supreme Court of India, High Courts, District Courts, and Tribunals, combined on a single platform, under your Vakalat name or barcode."
+      },
+      {
+        "tabTitle": "Research",
+        "logo": "/search.svg",
+        "image": "/research.svg",
+        "title": "Unlock the power of efficient legal research with our groundbreaking solution",
+        "selectedImg": "/selectedsearch.svg",
+
+        "desc": "Expand your legal expertise with in-depth knowledge of Indian laws, acts, access to over 10,000+ court formats and work flow of courts across India."
+      },
+      {
+        "tabTitle": "Documents",
+        "logo": "/document.svg",
+        "image": "/documents.svg",
+        "title": "Seamless Access to Legal Documents",
+        "selectedImg": "/selecteddocument.svg",
+
+        "desc": "Enjoy a document vault with 10GB cloud storage, ensuring safe storage of case documents without the hassle of carrying them."
+      },
+      {
+        "tabTitle": "Title Search Reports",
+        "logo": "/report.svg",
+        "image": "/titlesearch.svg",
+        "title": "Efficient Property Due-Diligence with Automation",
+        "selectedImg": "/selectedreport.svg",
+        "desc": "Expedite your property due-diligence with automated procedures, generating reports within minutes."
+      }
+    ]
+  },
+  "products": {
+    "label": "OUR NEWEST FEATURES",
+    "title": "Add <span className='highlight'>artificial intelligence</span> into your legal toolkit",
+    "softwares": [
+      {
+        "title": "VakilGPT",
+        "description": "The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online",
+        "href": "https://vakilsearch.com/legalgpt",
+        "image": "/assets/vakilgpt-dashboard.png"
+      },
+      {
+        "title": "Judgment Search",
+        "description": "Discover AI-Driven legal research personalized to suit your specific requirements and preferences!",
+        "href": "https://vakilsearch.com/judgments",
+        "image": "/assets/judgment-search.jpg"
+      },
+      {
+        "title": "Case Search",
+        "description": "India's largest case directory with real-time updates to keep you ahead in the legal game.",
+        "href": "https://vakilsearch.com/casestatus",
+        "image": "/assets/case-search.jpg"
+      }
+    ]
+  },
+  "solutions": {
+    "label": "Who we work with",
+    "title": "Solutions built for <span className='highlight'>all</span> practice types",
+    "description": "Empower your business to make legal work manageable from start to finish. Explore your practice type to find out what Libra can do for you.",
+    "link": {
+      "href": "/customers/",
+      "text": "Customer Successes"
+    },
+    "problemTypes": [
+      {
+        "href": "/practice-types/personal-injury/",
+        "title": "Personal Injury",
+        "description": "Convert more leads, create automated task flows, and communicate with clients and colleagues."
+      },
+      {
+        "href": "/practice-types/mass-torts/",
+        "title": "Mass Torts",
+        "description": "Automate intake, generate and store unlimited documents, and track case progress."
+      },
+      {
+        "href": "/practice-types/immigration/",
+        "title": "Immigration Law",
+        "description": "Communicate with clients via text or email, track deadlines, and create and send invoices directly from Libra."
+      },
+      {
+        "href": "/practice-types/big-law/",
+        "title": "Big Law",
+        "description": "Oversee cases and client communication, and gain more transparency into your firm’s performance."
+      },
+      {
+        "href": "/practice-types/insurance-defense/",
+        "title": "Insurance Defense",
+        "description": "Track your time accurately as you move from case to case, manage tasks, and assemble documents quickly and easily."
+      },
+      {
+        "href": "/practice-types/criminal-defense/",
+        "title": "Criminal Defense",
+        "description": "Manage deadlines and court dates, create and store documents, and communicate with law enforcement."
+      },
+      {
+        "href": "/practice-types/corporate-legal-departments/",
+        "title": "Corporate Counsel",
+        "description": "Handle more work, balance your team’s workloads, and deliver legal services and expertise faster."
+      },
+      {
+        "href": "/practice-types/prosecutors-and-public-defenders/",
+        "title": "Government",
+        "description": "Track case info for trial prep, create reports for budget negotiations, and take on more cases with fewer staff."
+      }
+    ]
+  },
+  "scheduleDemo": {
+    "title": "See all that Libra can do with a customized demonstration from our team",
+    "link": {
+      "text": "Schedule a Demo"
+    }
+  },
+  "testimonials": [
+    {
+      "description": "I like the Libra app for the reason that it's a customised information hub for legal counsels like me. Further, it’s a complete case management system",
+      "customerName": "Dr.V.V.L.N.Sastry",
+      "companyInfo": "Legal Counsel,  Lex India Juris,  Mumbai HCB18990",
+      "profileImage": "https://vakilsearch.com/products/libra/sastry.svg",
+      "companyLogo": "/assets/customers/leopold-associates-gray.svg"
+    },
+    {
+      "description": "LIBRA is the best App for lawyer. The best part is the uploading of daily orders, judgements, and pop-up of the daily hearing notifications.",
+      "customerName": "Clement Roy",
+      "companyInfo": "Bar Council of Maharashtra & Goa, MAH/160/1993",
+      "profileImage": "https://vakilsearch.com/products/libra/roy.svg",
+      "companyLogo": "/assets/customers/lyfelaw-gray.svg"
+    },
+    {
+      "description": "LIBRA is a unique app for advocates & it's very helpful for hearings & order updates. Experts at LIBRA are very helpful with any queries.",
+      "customerName": "S D Gadhvi",
+      "companyInfo": "Enrollment number G/257/2004 Gujarat",
+      "profileImage": "https://vakilsearch.com/products/libra/gandhvi.svg",
+      "companyLogo": "/assets/customers/grungo-colarulo-gray.svg"
+    }
+  ]
+}

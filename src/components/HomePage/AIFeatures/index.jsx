@@ -1,77 +1,15 @@
 import { Fragment, useState } from 'react';
+import parse from 'html-react-parser';
+
 import Testimonials from '../Testimonials';
 
 import rightArrow from '@/assets/rightArrow.svg';
 
-const features = [
-  {
-    title: 'VakilGPT',
-    description: 'The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online',
-    href: 'https://vakilsearch.com/legalgpt',
-    image: '/assets/vakilgpt-dashboard.png',
-  },
-  {
-    title: 'Judgment Search',
-    description: 'Discover AI-Driven legal research personalized to suit your specific requirements and preferences!',
-    href: 'https://vakilsearch.com/judgments',
-    image: '/assets/judgment-search.jpg',
-  },
-  {
-    title: 'Case Search',
-    description: "India's largest case directory with real-time updates to keep you ahead in the legal game.",
-    href: 'https://vakilsearch.com/casestatus',
-    image: '/assets/case-search.jpg',
-  },
-];
-
-const problemTypes = [
-  {
-    href: '/practice-types/personal-injury/',
-    title: 'Personal Injury',
-    description: 'Convert more leads, create automated task flows, and communicate with clients and colleagues.',
-  },
-  {
-    href: '/practice-types/mass-torts/',
-    title: 'Mass Torts',
-    description: 'Automate intake, generate and store unlimited documents, and track case progress.',
-  },
-  {
-    href: '/practice-types/immigration/',
-    title: 'Immigration Law',
-    description:
-      'Communicate with clients via text or email, track deadlines, and create and send invoices directly from Libra.',
-  },
-  {
-    href: '/practice-types/big-law/',
-    title: 'Big Law',
-    description: 'Oversee cases and client communication, and gain more transparency into your firm’s performance.',
-  },
-  {
-    href: '/practice-types/insurance-defense/',
-    title: 'Insurance Defense',
-    description:
-      'Track your time accurately as you move from case to case, manage tasks, and assemble documents quickly and easily.',
-  },
-  {
-    href: '/practice-types/criminal-defense/',
-    title: 'Criminal Defense',
-    description: 'Manage deadlines and court dates, create and store documents, and communicate with law enforcement.',
-  },
-  {
-    href: '/practice-types/corporate-legal-departments/',
-    title: 'Corporate Counsel',
-    description: 'Handle more work, balance your team’s workloads, and deliver legal services and expertise faster.',
-  },
-  {
-    href: '/practice-types/prosecutors-and-public-defenders/',
-    title: 'Government',
-    description:
-      'Track case info for trial prep, create reports for budget negotiations, and take on more cases with fewer staff.',
-  },
-];
-
 const AIFeatures = (props) => {
-  const { onClick } = props;
+  const {
+    content: { products, solutions },
+    onClick,
+  } = props;
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -82,10 +20,8 @@ const AIFeatures = (props) => {
         <div className='fv-container'>
           <div className='action-header'>
             <div className='headline'>
-              <div className='kicker mb-4'>Our Newest Features</div>
-              <h2>
-                Add <span className='highlight'>artificial intelligence</span> into your legal toolkit
-              </h2>
+              <div className='kicker mb-4'>{products.label}</div>
+              <h2>{parse(products.title)}</h2>
             </div>
             <div className='headline-cta'>
               <a href='' onClick={onClick} className='btn btn-primary'>
@@ -95,7 +31,7 @@ const AIFeatures = (props) => {
           </div>
           <div className='fv-row'>
             <div className='sbs-layout' id='FdB-add-accordion'>
-              {features.map((feature, index) => (
+              {products.softwares.map((product, index) => (
                 <Fragment key={index}>
                   <div id={`card-${index + 1}`} className='card accordion-card'>
                     <div className='card-header' id='heading-1'>
@@ -107,7 +43,7 @@ const AIFeatures = (props) => {
                         aria-controls={`#FdB-add-${index + 1}`}
                         onClick={() => setActiveTab(index)}
                       >
-                        <div className='btn-headline'>{feature.title}</div>
+                        <div className='btn-headline'>{product.title}</div>
                         <div className='accordion-arrow'>
                           <svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9' fill='none'>
                             <path
@@ -127,8 +63,8 @@ const AIFeatures = (props) => {
                       data-parent='#FdB-add-accordion'
                     >
                       <div className='card-body FdB-add'>
-                        <div className='body-content'>{feature.description}</div>
-                        <a href={feature.href} target='blank' className='link-arrow'>
+                        <div className='body-content'>{product.description}</div>
+                        <a href={product.href} target='blank' className='link-arrow'>
                           Learn more&nbsp;<span>›</span>
                         </a>
                       </div>
@@ -141,7 +77,7 @@ const AIFeatures = (props) => {
                   >
                     <figure>
                       <picture>
-                        <img className='img-fluid' src={feature.image} alt='product' />
+                        <img className='img-fluid' src={product.image} alt='product' />
                       </picture>
                     </figure>
                   </div>
@@ -156,23 +92,20 @@ const AIFeatures = (props) => {
         <div className='fv-container'>
           <div className='action-header'>
             <div className='headline'>
-              <div className='kicker'>Who we work with</div>
-              <h2>
-                Solutions built for <span className='highlight'>all</span> practice types
-              </h2>
-              <div className='subheadline'>
-                Empower your business to make legal work manageable from start to finish. Explore your practice type to
-                find out what Libra can do for you.
+              <div className='kicker'>{solutions.label}</div>
+              <h2>{parse(solutions.title)}</h2>
+              <div className='subheadline'>{solutions.description}</div>
+            </div>
+            {solutions.link && (
+              <div className='headline-cta'>
+                <a href={solutions.link.href} className='btn btn-primary'>
+                  {solutions.link.text}
+                </a>
               </div>
-            </div>
-            <div className='headline-cta'>
-              <a href='/customers/' className='btn btn-primary'>
-                Customer Successes
-              </a>
-            </div>
+            )}
           </div>
           <div className='fv-cards justify-content-center'>
-            {problemTypes.map((problemType) => (
+            {solutions.problemTypes.map((problemType) => (
               <div className='col mb-3 mb-sm-4' key={problemType.title}>
                 <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
                   <div className='fv-card pane pane-white-on-dark'>
@@ -199,7 +132,7 @@ const AIFeatures = (props) => {
           </div>
         </div>
       </section>
-      <Testimonials />
+      <Testimonials {...props} />
     </div>
   );
 };

@@ -11,23 +11,25 @@ import HowItWorks from '@/components/HomePage/HowItWorks';
 import FormModal from './FormModal';
 import AvailableModules from './AvailableModules';
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { content } = props;
+
   const [showModal, setShowModal] = useState(false);
 
   const onClick = () => setShowModal(true);
 
-  const props = { showModal, setShowModal, onClick };
+  const commonProps = { content, showModal, setShowModal, onClick };
 
   return (
     <main id='main' className='home-refresh'>
-      <Banner {...props} />
-      <HowItWorks {...props} />
-      <AvailableModules />
-      <AIFeatures {...props} />
+      <Banner {...commonProps} />
+      <HowItWorks {...commonProps} />
+      <AvailableModules {...commonProps} />
+      <AIFeatures {...commonProps} />
       {/* <Accessibility /> */}
       {/* <BlogPost /> */}
-      <ScheduleDemo {...props} />
-      <FormModal {...props} />
+      <ScheduleDemo {...commonProps} />
+      <FormModal {...commonProps} />
     </main>
   );
 };

@@ -3,7 +3,9 @@ import Features from '../Features';
 import ProductShowcase from '../ProductShowcase';
 
 const HowItWorks = (props) => {
-  const { onClick } = props;
+  const { content, onClick } = props;
+
+  const { howItWorks }  = content;
   return (
     <div id='top-section' className='light file-separator'>
       <section id='section-1' className='accordion-side-by-side pt-0 null'>
@@ -21,7 +23,7 @@ const HowItWorks = (props) => {
               </a>
             </div>
           </div>
-          <Features />
+          <Features content={howItWorks} />
         </div>
       </section>
       {/* <ProductShowcase /> */}

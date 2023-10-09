@@ -1,17 +1,19 @@
+import parse from 'html-react-parser';
+
 import NavBar from '../NavBar';
 
 const Banner = (props) => {
-  const { onClick } = props;
+  const { content, onClick } = props;
+
+  const { navbar, banner } = content;
 
   return (
     <header className='hero exhibition pine'>
-      <NavBar {...props} />
+      <NavBar {...props} content={navbar} />
       <div className='fv-container'>
         <div className='intro'>
           <div className='headlines'>
-            <h1>
-              Your Complete Legal Tech Stack, <span className='highlight'>Supercharged</span> by AI
-            </h1>
+            <h1>{parse(banner.title)}</h1>
             <div className='cta'>
               <a href='#' id='home-cta-demo' className='btn btn-primary' onClick={onClick}>
                 Get a Demo
@@ -30,25 +32,13 @@ const Banner = (props) => {
             data-interval='3000'
           >
             <div className='carousel-inner'>
-              <div className='carousel-item'>
-                <picture>
-                  <img
-                    src='https://vakilsearch.com/products/libra/thumbnail.svg'
-                    className='d-block w-100'
-                    alt='App Screen: Activity Tab with project updates and vitals'
-                  />
-                </picture>
-              </div>
-              <div className='carousel-item active'>
-                <picture>
-                  <img src='https://vakilsearch.com/products/libra/thumbnail.svg' className='d-block w-100' alt='' />
-                </picture>
-              </div>
-              <div className='carousel-item'>
-                <picture>
-                  <img src='https://vakilsearch.com/products/libra/thumbnail.svg' className='d-block w-100' alt='' />
-                </picture>
-              </div>
+              {banner.images.map((image, index) => (
+                <div className={`carousel-item ${index == 0 ? 'active' : 'inactive'}`} key={index}>
+                  <picture>
+                    <img className='d-block w-100' {...image} />
+                  </picture>
+                </div>
+              ))}
             </div>
           </div>
         </div>

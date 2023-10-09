@@ -3,18 +3,19 @@ import { useState } from "react";
 import TabTitle from "./TabTile";
 import TileContent from "./TileContent";
 
-import content from "./librafeatures.json";
-
 import styles from './styles.module.scss';
 
-const AvailableModules = () => {
+const AvailableModules = (props) => {
+  const { content } = props;
+  const { modules } = content;
+
   const [selected, setSelected] = useState(0);
 
   return (
     <div className={styles.mainContainer}>
       <div className={styles.tabContainer}>
         <div className={styles.tileContainer}>
-          {content.data.map((item, index) => {
+          {modules.features.map((item, index) => {
             return (
               <TabTitle
                 key={index}
@@ -28,7 +29,7 @@ const AvailableModules = () => {
         </div>
       </div>
       <div className={styles.bodyContainer}>
-        {content.data.map((item, index) => selected === index && <TileContent item={item} key={item.title} />)}
+        {modules.features.map((item, index) => selected === index && <TileContent item={item} key={item.title} />)}
       </div>
     </div>
   );
