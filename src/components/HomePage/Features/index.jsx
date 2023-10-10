@@ -45,7 +45,7 @@ const Features = (props) => {
                       ))}
                     </ul>
                   </div>
-                  {feature.href && (
+                  {false && feature.href && (
                     <a className='link-arrow'>
                       Learn more&nbsp;<span>›</span>
                     </a>

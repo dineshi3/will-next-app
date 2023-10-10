@@ -97,7 +97,7 @@ const AIFeatures = (props) => {
                 <h2>{parse(solutions.title)}</h2>
                 <div className='subheadline'>{solutions.description}</div>
               </div>
-              {solutions.link && (
+              {false && solutions.link && (
                 <div className='headline-cta'>
                   <a href={solutions.link.href} className='btn btn-primary'>
                     {solutions.link.text}
@@ -108,7 +108,7 @@ const AIFeatures = (props) => {
             <div className='fv-cards justify-content-center'>
               {solutions.problemTypes.map((problemType) => (
                 <div className='col mb-3 mb-sm-4' key={problemType.title}>
-                  <a href={`${process.env.LIBRA_HOST}/login`} target='blank' className='card-link'>
+                  <a target='blank' className='card-link'>
                     <div className='fv-card pane pane-white-on-dark'>
                       <div className='card-body'>
                         <div className='card-body-header'>
@@ -118,14 +118,16 @@ const AIFeatures = (props) => {
                         </div>
                         <div className='body'>{problemType.description}</div>
                       </div>
-                      <div className='card-footer'>
-                        <div className='card-cta arrow-button'>
-                          <div className='action-text'>Learn more</div>
-                          <div className='action-icon'>
-                            <img {...rightArrow} loading='lazy' alt='right arrow' />
+                      {false && (
+                        <div className='card-footer'>
+                          <div className='card-cta arrow-button'>
+                            <div className='action-text'>Learn more</div>
+                            <div className='action-icon'>
+                              <img {...rightArrow} loading='lazy' alt='right arrow' />
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </a>
                 </div>

@@ -19,7 +19,7 @@ const HowItWorks = (props) => {
               </h2>
             </div>
             <div className='headline-cta'>
-              <a href='' className='btn btn-primary' onClick={onClick}>
+              <a className='btn btn-primary' onClick={onClick}>
                 Schedule a Free Demo
               </a>
             </div>

@@ -32,19 +32,19 @@ const FormModal = (props) => {
       url: `/api/lead`,
       data: {
         email: email,
-        product: content.product
-      }
+        product: content.product,
+        url: window.location.href,
+      },
     };
-  
+
     try {
-      const response = await axios(config)
-      toast.success("Email submitted successfully!")
+      const response = await axios(config);
+      toast.success('Email submitted successfully!');
     } catch (error) {
       console.log(error);
-      toast.error("Internal Server Error. Please try again later!")
+      toast.error('Internal Server Error. Please try again later!');
     }
     setShowModal(false);
-
   };
 
   return (

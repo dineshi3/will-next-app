@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 const TileContent = ({ item }) => {
 
   const handleGetStartedClick = () => {
-    Router.push(`${process.env.VAKILSEARCH_LIBRA_URL}/onboarding`);
+    window.open(`${process.env.VAKILSEARCH_LIBRA_URL}/onboarding`, 'blank')
   };
 
   return (
