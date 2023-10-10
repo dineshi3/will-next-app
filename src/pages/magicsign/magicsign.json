@@ -14,99 +14,139 @@
     }
   },
   "banner": {
-    "title": "Effortless, Secure, and <span className='highlight'>Paperless</span> Document Signing",
-    "images": [
+    "title": ["Get your contracts signed", "on time, every time!"],
+    "description": "Easily collect legally binding eSignatures online from our app or yours. An enterprise-grade electronic signature application and API with all the bells and whistles at an affordable price.",
+    "points": [
       {
-        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
-        "alt": "App Screen: Activity Tab with project updates and vitals"
+        "text": "Unlimited documents"
       },
       {
-        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
-        "alt": "App Screen: Activity Tab with project updates and vitals"
-      },
-      {
-        "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
-        "alt": "App Screen: Activity Tab with project updates and vitals"
+        "text": "No credit card required"
       }
-    ]
-  },
-  "howItWorks": {
-    "label": "HOW IT WORKS",
-    "title": "Streamline Signatures with Magicsign",
-    "features": [
-      {
-        "title": "Upload Your Document",
-        "points": ["Simply upload the document you need to be signed."],
-        "image": "https://vakilsearch.com/products/libra/hearings-web.svg"
-      },
-      {
-        "title": "Add Signers",
-        "points": ["Enter the email addresses of the signatories, and our system takes care of the rest."],
-        "image": "https://vakilsearch.com/products/libra/judgements-web.svg"
-      },
-      {
-        "title": "Sign Securely",
-        "points": ["Signers receive an email link to securely add their electronic signatures."],
-        "image": "https://vakilsearch.com/products/libra/display-board-web.svg"
-      },
-      {
-        "title": "Completion and Storage",
-        "points": ["Once all signatures are collected, the signed document is securely stored."],
-        "image": "https://vakilsearch.com/products/libra/alerts-web.svg"
+    ],
+    "video": {
+      "src": "https://website-static.boldsign.com/2022/07/boldsign_video_demo.mp"
+    },
+    "customers": {
+      "title": "Syncfusion is trusted by the world's leading companies",
+      "image": {
+        "src": "https://website-static.boldsign.com/2023/02/a1fb595d-trusted-companies1.webp",
+        "alt": "companies logo"
       }
-    ]
-  },
-  "products": {
-    "label": "OUR NEWEST FEATURES",
-    "title": "Add <span className='highlight'>artificial intelligence</span> into your legal toolkit",
-    "softwares": [
-      {
-        "title": "VakilGPT",
-        "description": "The Smartest Legal AI Assistant for Lawyers. Trained on over 53,28,192 judgments. Smarter than Manupatra or SCC Online",
-        "href": "https://vakilsearch.com/legalgpt",
-        "image": "/assets/vakilgpt-dashboard.png"
-      },
-      {
-        "title": "Judgment Search",
-        "description": "Discover AI-Driven legal research personalized to suit your specific requirements and preferences!",
-        "href": "https://vakilsearch.com/judgments",
-        "image": "/assets/judgment-search.jpg"
-      },
-      {
-        "title": "Case Search",
-        "description": "India's largest case directory with real-time updates to keep you ahead in the legal game.",
-        "href": "https://vakilsearch.com/casestatus",
-        "image": "/assets/case-search.jpg"
-      }
-    ]
-  },
-  "scheduleDemo": {
-    "title": "Start Your eSign Journey",
-    "link": {
-      "text": "Schedule a Demo"
     }
   },
-  "testimonials": [
+  "register": {
+    "label": "DESIGNED FOR MERE MORTALS",
+    "title": "Send your first document for signing in less than 5 minutes",
+    "description": "We have invested a lot of effort to ensure that Magicsign is an intuitive and easy-to-use app despite offering tons of functionality. The only way to truly experience this would be to sign up for a free account and send a few signature requests yourself.",
+    "image": {
+      "decoding": "async",
+      "width": "800",
+      "height": "293",
+      "src": "https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp.webp",
+      "alt": "send-document for singing",
+      "srcset": "https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp.webp 1024w, https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp-300x110.webp 300w, https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp-768x281.webp 768w"
+    },
+    "button": {
+      "text": "Create Free Account"
+    }
+  },
+  "integration": {
+    "label": "FAST AND SCALABLE API",
+    "title": "Seamlessly integrate eSignatures into your apps",
+    "description": "We offer a comprehensive REST API that lets you initiate, track, and fulfill signature requests from within your own applications. Our APIs have been built from the ground up to be scalable to easily handle millions of documents when required.",
+    "image": {
+      "decoding": "async",
+      "src": "https://website-static.boldsign.com/2023/06/ab4b7d0d-code-window.webp",
+      "alt": "Code Window"
+    },
+    "buttons": {
+      "sandbox": {
+        "text": "Get free sandbox access"
+      },
+      "learnMore": {
+        "text": "Learn more"
+      }
+    },
+    "features": [
+      {
+        "text": "At Syncfusion, we have over 20 years of experience in building APIs for millions of developers"
+      },
+      {
+        "text": "Free developer sandbox access"
+      },
+      {
+        "text": "Average API response time is <200 milliseconds"
+      },
+      {
+        "text": "White labeling options"
+      },
+      {
+        "text": "Embedded sending"
+      },
+      {
+        "text": "Embedded signing"
+      },
+      {
+        "text": "Webhooks"
+      },
+      {
+        "text": "Integration into multitenant SasS applications"
+      },
+      {
+        "text": "Support from the same developers who built Magicsign"
+      }
+    ]
+  },
+  "features": [
     {
-      "description": "Using Magicsign transformed how we do business. It's incredibly user-friendly and reliable.",
-      "customerName": "Dr.V.V.L.N.Sastry",
-      "companyInfo": "Legal Counsel,  Lex India Juris,  Mumbai HCB18990",
-      "profileImage": "https://vakilsearch.com/products/libra/sastry.svg",
-      "companyLogo": "/assets/customers/leopold-associates-gray.svg"
+      "label": "BULK LINK OR PUBLIC SIGNING LINK​",
+      "title": "Collect signatures from multiple people with just one link.",
+      "description": "Embed signature URLs on your website or send secure URLs via email to multiple signers. This is perfect for getting documents like account applications, event registrations, and NDAs signed. No coding required: a user-friendly interface. A great alternative to DocuSign’s PowerForms. Start collecting signatures quickly!",
+      "image": {
+        "decoding": "async",
+        "src": "https://website-static.boldsign.com/2023/09/9183f96f-bulk-link-or-public-signing-link%E2%80%8B.webp",
+        "alt": ""
+      },
+      "direction": "right"
     },
     {
-      "description": "We've cut down on paperwork and administrative tasks, thanks to Magicsign.",
-      "customerName": "Clement Roy",
-      "companyInfo": "Bar Council of Maharashtra & Goa, MAH/160/1993",
-      "profileImage": "https://vakilsearch.com/products/libra/roy.svg",
-      "companyLogo": "/assets/customers/lyfelaw-gray.svg"
+      "label": "LEGALLY BINDING​",
+      "title": "Legally compliant with U.S. and international laws",
+      "description": "Magicsign is legally compliant with U.S. (ESIGN) and international (eIDAS) eSignature laws. We record all major activities that happen during the signing process and provide a downloadable copy of the complete audit trail report. The final document is also digitally signed so that any tampering in the future can be immediately detected.",
+      "image": {
+        "decoding": "async",
+        "src": "https://website-static.boldsign.com/2023/06/6d7603ac-international-law-2.webp",
+        "alt": ""
+      },
+      "direction": "left"
     },
     {
-      "description": "The security features of this platform are top-notch. Our clients feel safe signing electronically.",
-      "customerName": "S D Gadhvi",
-      "companyInfo": "Enrollment number G/257/2004 Gujarat",
-      "profileImage": "https://vakilsearch.com/products/libra/gandhvi.svg",
-      "companyLogo": "/assets/customers/grungo-colarulo-gray.svg"
+      "label": "ENTERPRISE-GRADE DATA SECURITY​",
+      "title": "Your data is protected using bank-grade security standards",
+      "description": "We take data security very seriously and have built it into every aspect of the application right from the beginning. All the data stored and transmitted is encrypted using 256-bit AES encryption standards. Your data is completely secure to the point where our own staff do not have access to it even for troubleshooting purposes.",
+      "image": {
+        "decoding": "async",
+        "src": "https://website-static.boldsign.com/2023/06/4c99b2f0-data-security.webp",
+        "alt": ""
+      },
+      "button": {
+        "text": "Learn more"
+      },
+      "direction": "right"
+    },
+    {
+      "label": "SECURITY AND COMPLIANCE​",
+      "title": "Certified with SOC 2® and GDPR compliant",
+      "description": "As a company committed to providing secure and trustworthy services to our clients, we are proud to announce that Magicsign is certified with SOC 2® and GDPR compliant. This means that we have implemented strict security measures and data protection protocols to ensure the privacy, confidentiality, and integrity of our clients’ data.",
+      "image": {
+        "decoding": "async",
+        "src": "https://website-static.boldsign.com/2023/06/596e3e8d-security-and-compliance-logo.webp",
+        "alt": "",
+        "width": "421",
+        "height": "366"
+      },
+      "direction": "left"
     }
   ]
 }
