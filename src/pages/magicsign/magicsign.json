@@ -148,5 +148,91 @@
       },
       "direction": "left"
     }
-  ]
+  ],
+  "reason": {
+    "label": "WHY BOLDSIGN?",
+    "title": "Enterprise-grade product with all the bells and whistles at an affordable price",
+    "reasons": [
+      {
+        "color": "#f6e2bb",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/d4992c8c-all-feature-included-webp.webp"
+        },
+        "title": "All features included",
+        "description": "All paid plans include access to all the available features. With BoldSign, you don’t constantly need to upgrade to get access to new features."
+      },
+      {
+        "color": "#c4df9f",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/2c9a8560-20-years-bussiness-webp.webp"
+        },
+        "title": "20 years in business",
+        "description": "Syncfusion, the company behind BoldSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
+      },
+      {
+        "title": "Absolutely no tricks",
+        "description": "We promise that you don’t have to deal with hidden document limits, feature limitations, or unexpected overage charges.",
+        "color": "#fac1d0",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/7aff2be5-absolutely-no-tricks-webp.webp"
+        }
+      },
+      {
+        "title": "Excellent customer support",
+        "description": "We strive to provide the best possible customer support experience and are always ready to assist in any way we can, even if you are on a free plan.",
+        "color": "#bccbfb",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/5f38a8b9-excellent-customer-support-webp.webp"
+        }
+      }
+    ]
+  },
+  "companyOverview": {
+    "title": "Company Overview",
+    "statistics": [
+      {
+        "label": "Developers",
+        "value": "1M+",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/a8bcecc2-counter-developers-webp.webp",
+          "alt": "counter-developers"
+        }
+      },
+      {
+        "label": "Companies",
+        "value": "30K+",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/6e8ae4e6-counter-companies-webp.webp",
+          "alt": "counter-companies"
+        }
+      },
+      {
+        "label": "Years in business",
+        "value": "22+",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/5fe51337-counter-year-in-business-webp.webp",
+          "alt": "counter-year-in-business"
+        }
+      },
+      {
+        "label": "Fortune 500 companies",
+        "value": "400+",
+        "icon": {
+          "src": "https://website-static.boldsign.com/2023/08/5fe51337-counter-fortune-companies-webp.webp",
+          "alt": "counter-fortune-companies"
+        }
+      }
+    ]
+  },
+  "finalSignup": {
+    "title": "Start your free BoldSign account today!",
+    "points": [
+      {
+        "text": "Unlimited documents"
+      },
+      {
+        "text": "No credit card required"
+      }
+    ]
+  }
 }

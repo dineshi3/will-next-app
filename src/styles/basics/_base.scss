@@ -89,7 +89,7 @@ a > div {
 	}
 }
 
-section {
+.home-refresh section {
 	position: relative;
     --section-padding: 4rem 0;
 	@include media-breakpoint-up(md) {
@@ -167,7 +167,7 @@ img.fit-proportions {
 // }
 
 @media screen and (min-width:768px) {
-	section {
+	.home-refresh section {
 		padding: 6.25rem 0;
 	}
 
