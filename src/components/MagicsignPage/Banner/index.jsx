@@ -3,7 +3,6 @@ import Button from '../modules/Button';
 import styles from './styles.module.scss';
 
 const Banner = (props) => {
-  console.log(props);
   const {
     content: { banner },
   } = props;
@@ -36,7 +35,8 @@ const Banner = (props) => {
       </div>
       <div className={styles.customerContainer}>
         <h4>{banner.customers.title}</h4>
-        <img {...banner.customers.image} />
+        <img {...banner.customers.image.desktop} className={styles.desktop} />
+        <img {...banner.customers.image.mobile} className={styles.mobile} />
       </div>
     </div>
   );

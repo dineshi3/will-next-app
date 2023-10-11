@@ -84,3 +84,42 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    margin-top: 2rem;
+    .container {
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+    .cardContainer {
+      margin: 1rem 0;
+      margin-top: 2rem;
+      grid-template-columns: 1fr;
+      .widgetContainer {
+        .left {
+          padding-left: 0;
+          .gradient {
+            width: 80px;
+            height: 100px;
+            top: -24px;
+            left: -32px;
+          }
+        }
+
+        .right {
+          h4 {
+            font-size: 16px;
+            line-height: 20px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+}

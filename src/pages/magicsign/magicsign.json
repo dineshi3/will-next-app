@@ -30,8 +30,14 @@
     "customers": {
       "title": "Syncfusion is trusted by the world's leading companies",
       "image": {
-        "src": "https://website-static.boldsign.com/2023/02/a1fb595d-trusted-companies1.webp",
-        "alt": "companies logo"
+        "desktop": {
+          "src": "https://website-static.boldsign.com/2023/02/a1fb595d-trusted-companies1.webp",
+          "alt": "companies logo"
+        },
+        "mobile": {
+          "src": "https://website-static.boldsign.com/2023/02/3ec64006-trusted-companies-mobile-v2.webp",
+          "alt": "companies logo"
+        }
       }
     }
   },

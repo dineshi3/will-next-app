@@ -24,8 +24,15 @@
 }
 
 .btnOutline {
-    color: #fe4901;
-    background: #fffFFF00;
-    border: 1px solid #fe4901;
-    border-radius: 8px;
+  color: #fe4901;
+  background: #ffffff00;
+  border: 1px solid #fe4901;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+    padding: 7px 40px;
+  }
 }
