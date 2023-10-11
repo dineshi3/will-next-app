@@ -5,6 +5,7 @@ import styles from './styles.module.scss';
 const Banner = (props) => {
   const {
     content: { banner },
+    onClick
   } = props;
   return (
     <div className={styles.container}>
@@ -14,7 +15,7 @@ const Banner = (props) => {
         ))}
       </div>
       <p>{banner.description}</p>
-      <Button text={'Sign up for free'} />
+      <Button text={'Sign up for free'} onClick={onClick} />
       <ul className={styles.points}>
         {banner.points.map((point) => (
           <li key={point.text}>{point.text}</li>

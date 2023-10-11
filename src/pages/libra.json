@@ -3,6 +3,9 @@
     "title": "Libra",
     "description": "Libra Legal Platform"
   },
+  "theme": {
+    "color": "yellow"
+  },
   "product": {
     "id": "magicsign",
     "name": "Magicsign"
@@ -36,9 +39,7 @@
     "features": [
       {
         "title": "Hearings",
-        "points": [
-          "Get notification of your court items such as case number, item & room number on the go in just a click."
-        ],
+        "points": ["Get notification of your court items such as case number, item & room number on the go in just a click."],
         "href": "/platform/case-management-software/",
         "image": "https://vakilsearch.com/products/libra/hearings-web.svg"
       },

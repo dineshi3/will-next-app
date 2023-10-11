@@ -6,6 +6,7 @@ import styles from './styles.module.scss';
 const IntegrationSection = (props) => {
   const {
     content: { integration },
+    onClick
   } = props;
 
   const { sandbox, learnMore } = integration.buttons;
@@ -18,8 +19,8 @@ const IntegrationSection = (props) => {
             <h3>{integration.title}</h3>
             <p>{integration.description}</p>
             <div className={styles.buttons}>
-                <Button text={sandbox.text} />
-                <Button text={learnMore.text} type="outline" />
+                <Button text={sandbox.text} onClick={onClick} />
+                {/* <Button text={learnMore.text} type="outline" /> */}
             </div>
             </div>
             <div className={styles.right}>

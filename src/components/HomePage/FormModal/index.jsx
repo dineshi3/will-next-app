@@ -64,7 +64,7 @@ const FormModal = (props) => {
               onChange={handleEmailChange}
             />
           </div>
-          <button className='btn btn-primary' onClick={handleSubmit}>
+          <button className={`btn ${content.theme ? styles[content.theme.color] : '' }`} onClick={handleSubmit}>
             Submit
           </button>
         </div>

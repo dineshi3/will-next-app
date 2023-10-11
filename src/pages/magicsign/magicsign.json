@@ -3,6 +3,9 @@
     "title": "Magicsign",
     "description": "Magicsign Legal Platform"
   },
+  "theme": {
+    "color": "orange"
+  },
   "product": {
     "id": "magicsign",
     "name": "Magicsign"
