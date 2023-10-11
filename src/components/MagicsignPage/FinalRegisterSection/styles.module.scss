@@ -46,13 +46,16 @@
     padding: 0 1rem;
 
     .container {
-        padding: 2rem 1rem;
+      padding: 2rem 1rem;
       h3 {
         font-size: 20px;
         line-height: 24px;
       }
       .points {
         margin: 0 10px 0 0;
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0;
         padding: 0;
         li {
           font-size: 12px;

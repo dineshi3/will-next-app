@@ -10,7 +10,7 @@ const Banner = (props) => {
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         {banner.title.map((title) => (
-          <h1>{title}</h1>
+          <h1 key={title}>{title}</h1>
         ))}
       </div>
       <p>{banner.description}</p>
@@ -22,15 +22,7 @@ const Banner = (props) => {
       </ul>
       <div className={styles.videoMainContainer}>
         <div className={styles.videoContainer}>
-          <video
-            class='elementor-video lazyloading'
-            data-src='https://website-static.boldsign.com/2022/07/boldsign_video_demo.mp4'
-            autoplay
-            loop
-            muted
-            controlslist='nodownload'
-            src='https://website-static.boldsign.com/2022/07/boldsign_video_demo.mp4'
-          ></video>
+          <video autoPlay loop muted src={banner.video.src}></video>
         </div>
       </div>
       <div className={styles.customerContainer}>

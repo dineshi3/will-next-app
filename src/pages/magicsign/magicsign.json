@@ -9,8 +9,9 @@
   },
   "navbar": {
     "icon": {
-      "src": "https://vakilsearch.com/products/libra/libra-logo.svg",
-      "alt": "magicsign"
+      "src": "/assets/magicsign/logo-no-background.svg",
+      "alt": "magicsign",
+      "width": "170"
     }
   },
   "banner": {
@@ -25,17 +26,17 @@
       }
     ],
     "video": {
-      "src": "https://website-static.boldsign.com/2022/07/boldsign_video_demo.mp"
+      "src": "/assets/magicsign/magicsign_video_demo.mp4"
     },
     "customers": {
-      "title": "Syncfusion is trusted by the world's leading companies",
+      "title": "Magicsign is trusted by the world's leading companies",
       "image": {
         "desktop": {
-          "src": "https://website-static.boldsign.com/2023/02/a1fb595d-trusted-companies1.webp",
+          "src": "/assets/magicsign/trusted-companies1.webp",
           "alt": "companies logo"
         },
         "mobile": {
-          "src": "https://website-static.boldsign.com/2023/02/3ec64006-trusted-companies-mobile-v2.webp",
+          "src": "/assets/magicsign/trusted-companies-mobile-v2.webp",
           "alt": "companies logo"
         }
       }
@@ -49,9 +50,8 @@
       "decoding": "async",
       "width": "800",
       "height": "293",
-      "src": "https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp.webp",
-      "alt": "send-document for singing",
-      "srcset": "https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp.webp 1024w, https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp-300x110.webp 300w, https://website-static.boldsign.com/2023/08/713d0cd4-send-document-webp-768x281.webp 768w"
+      "src": "/assets/magicsign/send-document-webp.webp",
+      "alt": "send-document for singing"
     },
     "button": {
       "text": "Create Free Account"
@@ -63,7 +63,7 @@
     "description": "We offer a comprehensive REST API that lets you initiate, track, and fulfill signature requests from within your own applications. Our APIs have been built from the ground up to be scalable to easily handle millions of documents when required.",
     "image": {
       "decoding": "async",
-      "src": "https://website-static.boldsign.com/2023/06/ab4b7d0d-code-window.webp",
+      "src": "/assets/magicsign/code-window.webp",
       "alt": "Code Window"
     },
     "buttons": {
@@ -76,7 +76,7 @@
     },
     "features": [
       {
-        "text": "At Syncfusion, we have over 20 years of experience in building APIs for millions of developers"
+        "text": "At Magicsign, we have over 20 years of experience in building APIs for millions of developers"
       },
       {
         "text": "Free developer sandbox access"
@@ -111,7 +111,7 @@
       "description": "Embed signature URLs on your website or send secure URLs via email to multiple signers. This is perfect for getting documents like account applications, event registrations, and NDAs signed. No coding required: a user-friendly interface. A great alternative to DocuSign’s PowerForms. Start collecting signatures quickly!",
       "image": {
         "decoding": "async",
-        "src": "https://website-static.boldsign.com/2023/09/9183f96f-bulk-link-or-public-signing-link%E2%80%8B.webp",
+        "src": "/assets/magicsign/bulk-link-or-public-signing-link.webp",
         "alt": ""
       },
       "direction": "right"
@@ -122,7 +122,7 @@
       "description": "Magicsign is legally compliant with U.S. (ESIGN) and international (eIDAS) eSignature laws. We record all major activities that happen during the signing process and provide a downloadable copy of the complete audit trail report. The final document is also digitally signed so that any tampering in the future can be immediately detected.",
       "image": {
         "decoding": "async",
-        "src": "https://website-static.boldsign.com/2023/06/6d7603ac-international-law-2.webp",
+        "src": "/assets/magicsign/international-law-2.webp",
         "alt": ""
       },
       "direction": "left"
@@ -133,7 +133,7 @@
       "description": "We take data security very seriously and have built it into every aspect of the application right from the beginning. All the data stored and transmitted is encrypted using 256-bit AES encryption standards. Your data is completely secure to the point where our own staff do not have access to it even for troubleshooting purposes.",
       "image": {
         "decoding": "async",
-        "src": "https://website-static.boldsign.com/2023/06/4c99b2f0-data-security.webp",
+        "src": "/assets/magicsign/data-security.webp",
         "alt": ""
       },
       "button": {
@@ -147,7 +147,7 @@
       "description": "As a company committed to providing secure and trustworthy services to our clients, we are proud to announce that Magicsign is certified with SOC 2® and GDPR compliant. This means that we have implemented strict security measures and data protection protocols to ensure the privacy, confidentiality, and integrity of our clients’ data.",
       "image": {
         "decoding": "async",
-        "src": "https://website-static.boldsign.com/2023/06/596e3e8d-security-and-compliance-logo.webp",
+        "src": "/assets/magicsign/security-and-compliance-logo.webp",
         "alt": "",
         "width": "421",
         "height": "366"
@@ -162,7 +162,7 @@
       {
         "color": "#f6e2bb",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/d4992c8c-all-feature-included-webp.webp"
+          "src": "/assets/magicsign/all-feature-included-webp.webp"
         },
         "title": "All features included",
         "description": "All paid plans include access to all the available features. With BoldSign, you don’t constantly need to upgrade to get access to new features."
@@ -170,17 +170,17 @@
       {
         "color": "#c4df9f",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/2c9a8560-20-years-bussiness-webp.webp"
+          "src": "/assets/magicsign/20-years-bussiness-webp.webp"
         },
         "title": "20 years in business",
-        "description": "Syncfusion, the company behind BoldSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
+        "description": "Zolvit, the company behind BoldSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
       },
       {
         "title": "Absolutely no tricks",
         "description": "We promise that you don’t have to deal with hidden document limits, feature limitations, or unexpected overage charges.",
         "color": "#fac1d0",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/7aff2be5-absolutely-no-tricks-webp.webp"
+          "src": "/assets/magicsign/absolutely-no-tricks-webp.webp"
         }
       },
       {
@@ -188,7 +188,7 @@
         "description": "We strive to provide the best possible customer support experience and are always ready to assist in any way we can, even if you are on a free plan.",
         "color": "#bccbfb",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/5f38a8b9-excellent-customer-support-webp.webp"
+          "src": "/assets/magicsign/excellent-customer-support-webp.webp"
         }
       }
     ]
@@ -200,7 +200,7 @@
         "label": "Developers",
         "value": "1M+",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/a8bcecc2-counter-developers-webp.webp",
+          "src": "/assets/magicsign/counter-developers-webp.webp",
           "alt": "counter-developers"
         }
       },
@@ -208,7 +208,7 @@
         "label": "Companies",
         "value": "30K+",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/6e8ae4e6-counter-companies-webp.webp",
+          "src": "/assets/magicsign/counter-companies-webp.webp",
           "alt": "counter-companies"
         }
       },
@@ -216,7 +216,7 @@
         "label": "Years in business",
         "value": "22+",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/5fe51337-counter-year-in-business-webp.webp",
+          "src": "/assets/magicsign/counter-year-in-business-webp.webp",
           "alt": "counter-year-in-business"
         }
       },
@@ -224,7 +224,7 @@
         "label": "Fortune 500 companies",
         "value": "400+",
         "icon": {
-          "src": "https://website-static.boldsign.com/2023/08/5fe51337-counter-fortune-companies-webp.webp",
+          "src": "/assets/magicsign/counter-fortune-companies-webp.webp",
           "alt": "counter-fortune-companies"
         }
       }

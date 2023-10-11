@@ -60,7 +60,7 @@
 
     .videoContainer {
       margin: 35px 50px 44px;
-
+      margin-bottom: 0;
       video {
         width: 100%;
         border-radius: 12px;
@@ -117,6 +117,8 @@
 
     .points {
       padding: 0 10px 0 0;
+      flex-direction: column;
+      gap: 0;
       li {
         font-size: 12px;
         line-height: 25px;

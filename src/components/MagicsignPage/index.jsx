@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Banner from './Banner';
 import FeatureSection from './FeatureSection';
 import IntegrationSection from './IntegrationSection';
@@ -5,11 +7,20 @@ import RegisterSection from './RegisterSection';
 import MagicsignReasonSection from './MagicsignReasonSection';
 import CompanyOverviewSection from './CompanyOverviewSection';
 import FinalRegisterSection from './FinalRegisterSection';
+import NavBar from './NavBar';
+import FormModal from '../HomePage/FormModal';
 
 const MagicsignPage = (props) => {
-  const commonProps = { ...props };
+
+  const [showModal, setShowModal] = useState(false);
+
+  const onClick = () => setShowModal(true);
+
+  const commonProps = { ...props, showModal, setShowModal, onClick };
+
   return (
     <main id='main'>
+      <NavBar {...commonProps} content={props.content.navbar}  />
       <Banner {...commonProps} />
       <RegisterSection {...commonProps} />
       <IntegrationSection {...commonProps} />
@@ -19,6 +30,7 @@ const MagicsignPage = (props) => {
       <MagicsignReasonSection {...commonProps} />
       <CompanyOverviewSection {...commonProps} />
       <FinalRegisterSection {...commonProps} />
+      <FormModal {...commonProps} />
     </main>
   );
 };
