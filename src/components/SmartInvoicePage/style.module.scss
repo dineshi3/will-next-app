@@ -1,0 +1,424 @@
+@import '../../styles/smart_invoice/color_palette.scss';
+
+@mixin commonButtonStyle {
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.homeContainer{
+    font-family: 'Poppins';
+    min-width: 250px;
+    white-space: pre-line;
+}
+
+.chatbot{
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.mainTitle{
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
+}
+
+.title{
+    font-weight: 600;
+    font-size: 33px;
+}
+
+.subTitle{
+    font-size: 24px;
+}
+
+.header{
+    background: url('/assets/smart-i/LandingPageIntroBG.svg') #FFFFFF no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+
+.article{
+    padding: 100px 20px 20px;
+}
+
+
+.nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 100px;
+    .buttonContainer{
+        //margin-left: auto;
+        & .tryForFree{
+            margin-right: 25px;
+        }
+    }
+    button{
+        @include commonButtonStyle();
+        width: 145px;
+        height: 42px;
+        font-size: 14px;
+    }
+    .tryForFree{
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        &:hover{
+            background: #FFFFFF;
+            color: #000000;
+        }
+    }
+    .bookDemo{
+        background: #FFFFFF;
+        color: #000000;
+        border: none;
+        &:hover{
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            background: none;
+        }
+    }
+}
+
+.navScrolled{
+    @extend .nav;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+    background: #FFFFFF;
+    button{
+        @include commonButtonStyle();
+        width: 145px;
+        height: 42px;
+        border: 1px solid #000000;
+        font-size: 14px;
+    }
+    .tryForFree{
+        border: 1px solid #000000;
+        color: #000000;
+        &:hover{
+            background: $primary_color;
+            border: none;
+            color: #FFFFFF;
+        }
+    }
+    .bookDemo{
+        background: $primary_color;
+        color: #FFFFFF;
+        border: none;
+        &:hover{
+            border: 1px solid #000000;
+            color: #000000;
+            background: #FFFFFF;
+        }
+    }
+}
+
+.about{
+    text-align: center;
+    h1{
+        padding: 7px;
+    }
+    .subIntro{
+        padding-top: 25px;
+        color: #FFFFFF;
+        font-weight: 300;
+    }
+    .navigationButtons{
+        margin: 50px 0;
+    }
+    .Video_and_Image_Conatiner{
+        position: relative;
+        position: relative;
+        .videoImageSkelton{
+            background: url('/assets/smart-i/BackgroundDots.svg') no-repeat;
+        }
+        .playbutton{
+            z-index: 1;
+            cursor: pointer !important;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('/assets/smart-i/PlayPause.svg')  no-repeat center;
+            background-size: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+        }
+    }
+    
+    .slider{
+        margin: auto;
+        width: 80%;
+        background: url('/assets/smart-i/BackgroundDots.svg') no-repeat;
+    }
+    .sliderImage{
+        width: 70%;
+    }
+}
+
+
+
+.navButtons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    button{
+        @include commonButtonStyle();
+        width: 180px;
+        height: 45px;
+        font-weight: 500;
+        margin: 0;
+    }
+    .tryFreeButton{
+        background: #FFFFFF;
+        color: #000000;
+        &:hover{
+            background: none;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+    }
+    .bookDemoBtn{
+        border: 1px solid #FFFFFF;
+        color: #FFFFFF;
+        &:hover{
+            background: #FFFFFF;
+            color: #000000;
+        }
+    }
+}
+
+
+
+.companiewListWrapper{
+    text-align: center;
+    margin: 70px 0;
+}
+
+.aboutDocumentProcess{
+    text-align: center;
+    padding: 0 20px;
+}
+
+.explainProcessing{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px 100px;
+}
+.explainProcessingItems{
+    flex: 1 1 300px;
+    margin-right: 20px;
+    text-align: start;
+    h6{
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.loginLink{
+    color: $primary_color;
+    cursor: pointer;
+    img{
+        margin-left: 2px;
+    }
+}
+
+.working{
+    text-align: center;
+    padding: 50px 20px 0;
+    &>h3:first-child{
+        font-weight: 600;
+    }
+    .workingImageGif{
+        margin-top: 25px;
+    }
+}
+
+.benefits{
+    padding: 50px 20px;
+    text-align: center;
+    //background-color: $secondary_color;
+}
+
+.benefitSubTitle{
+    font-size: 20px;
+    color: #4A4A4A;
+}
+
+.explainingBenefits{
+    margin: auto;
+    width: 100%;
+    padding: 50px 0 0;
+}
+
+.benefitsItems{
+    text-align: start;
+    width: 335px;
+    margin: 0 0 20px auto ;
+    border-bottom: 2px solid #E4E6EA;
+    h5{
+        font-weight: 600;
+    }
+    &:nth-of-type(4){
+        border-bottom: none;
+    }
+    p:last-child{
+        padding: 10px 0 20px;
+    }
+}
+
+.aiProps{
+    text-align: center;
+    padding: 50px 20px 0;
+    .aiPropsImgWrapper{
+        padding: 50px 0;
+    }
+}
+
+.footer{
+    text-align: center;
+}
+
+.footerNavigations{
+    padding: 0 20px;
+    height: 350px;
+    background: url('/assets/smart-i/LandingPageIntroBG.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        padding: 20px 0;
+    }
+}
+
+.footerResouceContainer{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Roboto';
+}
+
+.resourceDetails{
+    text-align: start;
+    margin: 25px 50px 0 25px;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        li{
+            padding-bottom: 7px;
+        }
+    }
+    b{
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    &:nth-of-type(4){
+        p{
+            margin: 0;
+            padding-bottom: 5px;
+            color:#737373;
+            font-size: 14px;
+        }
+        b{
+            margin-bottom: 10px;
+        }
+    }
+   
+    .newsLetter{
+        input{
+            width: 312px;
+            height: 40px;
+            padding: 0 10px;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+        button{
+            background: $primary_color;
+            width: 100px;
+            height: 40px;
+            outline: none;
+            border: none;
+            color: #FFFFFF;
+            border-radius: 4px;
+            font-family: 500;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .benefitsItems{
+        width: auto;
+        margin: auto;
+    }
+    .mainTitle{
+        font-size: 28px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .subTitle{
+        font-size: 16px;
+    }
+    .videoContainer{
+        width: 90% !important;
+        background: none !important;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .header{
+        background-position: center;
+        background-size: cover;
+    }
+    .aboutVideo{
+        background: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav{
+        padding: 25px;
+    }
+    .videoContainer{
+        height: auto !important; 
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .explainProcessing{
+        padding: 25px 0;
+    }
+    .aiPropsItemsContainer{
+        padding: 25px 0 !important;
+    }
+    .benefitSubTitle{
+        font-size: 16px;
+    }
+    .footerResouceContainer{
+        justify-content: flex-start;
+    }
+    .resourceDetails:nth-of-type(2){
+        margin: 25px 20px;
+    }
+    .newsLetter{
+        input{
+            width: 100% !important;
+        }
+    }
+
+}

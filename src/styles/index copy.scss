@@ -1,0 +1,122 @@
+
+@import 'mixins';
+@import 'colors';
+@import '/node_modules/bootstrap-scss/bootstrap.scss';
+
+.mainContainer {
+  padding: 32px 0px;
+  background-color: $bg-gray;
+}
+
+.flexCenter {
+  @include flexCenter;
+}
+
+.mantine-TextInput-label {
+  margin-bottom: 8px;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import 'tools/_font.scss';
+@import '_aspect.scss';
+@import '_borders.scss';
+@import '_buttons.scss';
+@import '_fv-mixins.scss';
+@import '_fv-shadows.scss';
+@import '_fv-size.scss';
+@import '_fv-typography.scss';
+@import '_spacing.scss';
+@import '_textures.scss';
+@import 'basics/_base.scss';
+@import 'basics/_buttons.scss';
+@import 'basics/_chips.scss';
+@import 'basics/_icons.scss';
+@import 'basics/_inputs.scss';
+@import 'basics/_list-group.scss';
+@import 'basics/_tables.scss';
+@import 'basics/_type.scss';
+@import 'smart_invoice/custom_bootstrap_theme.scss';
+@import 'colors.scss';
+@import 'components/_accordions.scss';
+@import 'components/_awards.scss';
+@import 'components/_bars.scss';
+@import 'components/_bf-cards.scss';
+@import 'components/_bg-elements.scss';
+@import 'components/_brag-tabs.scss';
+@import 'components/_breadcrumbs.scss';
+@import 'components/_buttons.scss';
+@import 'components/_cta-banners.scss';
+@import 'components/_faq.scss';
+@import 'components/_filters.scss';
+@import 'components/_glass.scss';
+@import 'components/_logo-ticker.scss';
+@import 'components/_media.scss';
+@import 'components/_messages.scss';
+@import 'components/_modals.scss';
+@import 'components/_person-cards.scss';
+@import 'components/_pricing-cards.scss';
+@import 'components/_product-cards.scss';
+@import 'components/_resource-cards.scss';
+@import 'components/_results-cards.scss';
+@import 'components/_spotlight-cards.scss';
+@import 'components/_themes.scss';
+@import 'components/_tokens.scss';
+@import 'layout/_alerts.scss';
+@import 'layout/_article.scss';
+@import 'layout/_background.scss';
+@import 'layout/_blades.scss';
+@import 'layout/_callouts.scss';
+@import 'layout/_cookie-banner.scss';
+@import 'layout/_encyclopedia.scss';
+@import 'layout/_grids.scss';
+@import 'layout/_sections.scss';
+@import 'layout/_side-by-sides.scss';
+@import 'mixins.scss';
+@import 'modules/_cards.scss';
+@import 'modules/_carousels.scss';
+@import 'modules/_containers.scss';
+@import 'modules/_cta-sections.scss';
+@import 'modules/_design-elements.scss';
+@import 'modules/_hero.scss';
+@import 'modules/_hubspot-forms.scss';
+@import 'modules/_navs.scss';
+@import 'modules/_panels.scss';
+@import 'modules/_quotes.scss';
+@import 'modules/_sub-navs.scss';
+@import 'pages/_about.scss';
+@import 'pages/_blog.scss';
+@import 'pages/_case-study.scss';
+@import 'pages/_community.scss';
+@import 'pages/_comparison.scss';
+@import 'pages/_contact.scss';
+@import 'pages/_customers.scss';
+@import 'pages/_demo-request.scss';
+@import 'pages/_event.scss';
+@import 'pages/_features.scss';
+@import 'pages/home.scss';
+@import 'pages/_industry.scss';
+@import 'pages/_insiders.scss';
+@import 'pages/_instagram.scss';
+@import 'pages/_integrations.scss';
+@import 'pages/_jobs.scss';
+@import 'pages/_landing-page.scss';
+@import 'pages/_partners.scss';
+@import 'pages/_podcasts.scss';
+@import 'pages/_ppc-video.scss';
+@import 'pages/_pricing.scss';
+@import 'pages/_product.scss';
+@import 'pages/_resources.scss';
+@import 'pages/_reviews.scss';
+@import 'pages/_security.scss';
+@import 'pages/_services.scss';
+@import 'pages/_thank-you.scss';
+@import 'pages/_use-case.scss';
+@import 'pages/_webinar.scss';

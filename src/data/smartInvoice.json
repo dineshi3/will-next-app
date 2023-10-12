@@ -1,0 +1,48 @@
+{
+    "mainTitle1": "Auto-extract invoices by our AI platform",
+    "mainTitle2": " File GSTR and do payments on the go",
+    "subTitle": "Focus on growing your business, let us take care of your invoicing, \n payment & accounting needs",
+    "processingTitle": "Benefits of Smart i",
+    "processingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
+    "processingItems": [
+        {
+            "image": "/assets/smart-i/DocumentProcessing1.png",
+            "title": "Accurate data entry",
+            "content": "ESmart i is an AI-driven data entry solution that guarantees accuracy while reducing the time and effort required to enter data. "
+        },
+        {
+            "image": "/assets/smart-i/DocumentProcessing2.png",
+            "title": "GST Complaint",
+            "content": "Smart i takes the hassle out of GST Returns. We automate the entire process, so you can focus on what you're good at - running your business!"
+        },
+        {
+            "image": "/assets/smart-i/DocumentProcessing3.png",
+            "title": "Seamless Integration",
+            "content": "Smart i is an app that seamlessly integrates all of your devices and platforms into one easy-to-use interface."
+        }
+    ],
+    "workingTitle": "How does Smart i Invoice Automation work?",
+    "workingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
+    "benefitsTitle": "Why Use Smart i Automated Invoice Extarction?",
+    "benefitsSubTitle": "Invex helps you to organize and automatically process all your incoming document \n traffic. Whether you receive invoices, purchase orders, packing",
+    "benefitsItems": [
+        {
+            "title": "Accurate",
+            "content": "Relevant training data is critical for any machine learning model. Train powerful ML models on your invoices and enjoy human-level accuracy."
+        },
+        {
+            "title": "No templates or rules",
+            "content": "Free yourself from maintaining complex invoice templates and rules, and let our machine learning models do the job for you."
+        },
+        {
+            "title": "Table Extraction",
+            "content": "Train and extract line items from any document with ease."
+        },
+        {
+            "title": "No-Code AI",
+            "content": "Our AI platform is continually learning from each document you submit, without requiring a single line of code or training a model."
+        }
+    ],
+    "aiPros": {"title": "What do you get", "images": ["/assets/smart-i/profit1.svg","/assets/smart-i/profit2.svg","/assets/smart-i/profit3.svg"]},
+    "footerTitle": "Welcome to your new way of File GSTR"
+}   
