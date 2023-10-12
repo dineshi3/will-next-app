@@ -34,7 +34,7 @@ const DocumentProcess = () => {
               />
               <h6 className="pb-4">{items.title}</h6>
               <p>{items.content}</p>
-              {getLoginLink()}
+              {false && getLoginLink()}
             </div>
           );
         })}

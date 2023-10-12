@@ -242,6 +242,13 @@
     }
     .workingImageGif{
         margin-top: 25px;
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
     }
 }
 
@@ -395,6 +402,16 @@
     }
     .videoContainer{
         height: auto !important; 
+    }
+
+    .working .workingImageGif {
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: block;
+        }
     }
 }
 
