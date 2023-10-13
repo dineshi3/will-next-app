@@ -26,7 +26,7 @@ const DocumentProcess = () => {
         {content.processingItems.map((items, index) => {
           return (
             <div className={style.explainProcessingItems} key={index}>
-              <Image
+              <img
                 src={items.image}
                 width={60}
                 height={60}

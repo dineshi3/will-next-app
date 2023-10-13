@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Logo = () => {
   return (
     <div>
-      <Image
+      <img
         src="/assets/smart-i/SMARTILOGO.svg"
         width={110}
         height={40}
