@@ -26,11 +26,11 @@ const Banner = (props) => {
           <video autoPlay loop muted src={banner.video.src}></video>
         </div>
       </div>
-      <div className={styles.customerContainer}>
+      {/* <div className={styles.customerContainer}>
         <h4>{banner.customers.title}</h4>
         <img {...banner.customers.image.desktop} className={styles.desktop} />
         <img {...banner.customers.image.mobile} className={styles.mobile} />
-      </div>
+      </div> */}
     </div>
   );
 };

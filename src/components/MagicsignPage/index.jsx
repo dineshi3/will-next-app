@@ -28,7 +28,7 @@ const MagicsignPage = (props) => {
         props.content.features.map(feature => <FeatureSection key={feature.title} content={feature} />) 
       }
       <MagicsignReasonSection {...commonProps} />
-      <CompanyOverviewSection {...commonProps} />
+      {false && <CompanyOverviewSection {...commonProps} />}
       <FinalRegisterSection {...commonProps} />
       <FormModal {...commonProps} />
     </main>
