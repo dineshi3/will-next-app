@@ -12,7 +12,7 @@ const About = (props) => {
   return (
     <div className={style.about}>
       <h1 className={style.mainTitle}>{content.mainTitle1}</h1>
-      <h1 className={style.mainTitle}>{content.mainTitle2}</h1>
+      {false && <h1 className={style.mainTitle}>{content.mainTitle2}</h1>}
       <div className={style.subIntro}>{content.subTitle}</div>
       <div className={style.navigationButtons}>
         <NavigationButtons {...props} />
