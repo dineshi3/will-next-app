@@ -156,7 +156,7 @@
     }
   ],
   "reason": {
-    "label": "WHY BOLDSIGN?",
+    "label": "WHY MAGICSIGN?",
     "title": "Enterprise-grade product with all the bells and whistles at an affordable price",
     "reasons": [
       {
@@ -165,7 +165,7 @@
           "src": "/assets/magicsign/all-feature-included-webp.webp"
         },
         "title": "All features included",
-        "description": "All paid plans include access to all the available features. With BoldSign, you don’t constantly need to upgrade to get access to new features."
+        "description": "All paid plans include access to all the available features. With MagicSign, you don’t constantly need to upgrade to get access to new features."
       },
       {
         "color": "#c4df9f",
@@ -173,7 +173,7 @@
           "src": "/assets/magicsign/20-years-bussiness-webp.webp"
         },
         "title": "20 years in business",
-        "description": "Zolvit, the company behind BoldSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
+        "description": "Zolvit, the company behind MagicSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
       },
       {
         "title": "Absolutely no tricks",
@@ -231,7 +231,7 @@
     ]
   },
   "finalSignup": {
-    "title": "Start your free BoldSign account today!",
+    "title": "Start your free MagicSign account today!",
     "points": [
       {
         "text": "Unlimited documents"
