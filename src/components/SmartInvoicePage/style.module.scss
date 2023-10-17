@@ -208,6 +208,18 @@
 .aboutDocumentProcess{
     text-align: center;
     padding: 0 20px;
+
+    .title {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            width: 10rem;
+        }
+    }
 }
 
 .explainProcessing{

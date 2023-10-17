@@ -1,8 +1,9 @@
 import { useState } from 'react';
 
 const Testimonials = (props) => {
-
-  const { content: { testimonials } } = props;
+  const {
+    content: { testimonials },
+  } = props;
 
   const [activeTab, setActiveTab] = useState(0);
 
@@ -43,8 +44,12 @@ const Testimonials = (props) => {
                             <div className='kicker'>Testimonials</div>
                             <div className='quote mb-4'>“{testimonial.description}”</div>
                             <div className='customer-by-line'>
-                              <div className='customer-name'>{testimonial.customerName}</div>{', '}
-                              <div className='customer-company-info'>{testimonial.companyInfo}</div>
+                              <div className='customer-name'>{testimonial.customerName}</div>
+                              {false && (
+                                <>
+                                  {', '} <div className='customer-company-info'>{testimonial.companyInfo}</div>
+                                </>
+                              )}
                             </div>
                           </div>
                           <div className='panel-headshot'>

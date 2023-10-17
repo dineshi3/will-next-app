@@ -37,7 +37,7 @@ const FooterResourceDetails = () => {
       </div>
       <div className={style.resourceDetails}>
         <b>Newsletter</b>
-        <p>Get smart i news & product updates</p>
+        <p>Get Smart I news & product updates</p>
         <div className={style.newsLetter}>
           <input type="text" />
           <button type="button">GO</button>

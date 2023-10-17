@@ -21,7 +21,7 @@ const DocumentProcess = () => {
   };
   return (
     <div className={style.aboutDocumentProcess}>
-      <h3 className={style.title}>{content.processingTitle}</h3>
+      <h3 className={style.title}>{content.processingTitle} <img src='/assets/smart-i/SmartILogoBlue.svg' alt='Smart I' /></h3>
       <div className={style.explainProcessing}>
         {content.processingItems.map((items, index) => {
           return (

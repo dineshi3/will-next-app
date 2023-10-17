@@ -2,28 +2,28 @@
     "mainTitle1": "Auto-extract invoices by our AI platform",
     "mainTitle2": " File GSTR and do payments on the go",
     "subTitle": "Focus on growing your business, let us take care of your invoicing, \n payment & accounting needs",
-    "processingTitle": "Benefits of Smart i",
+    "processingTitle": "Benefits of",
     "processingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
     "processingItems": [
         {
             "image": "/assets/smart-i/DocumentProcessing1.png",
             "title": "Accurate data entry",
-            "content": "ESmart i is an AI-driven data entry solution that guarantees accuracy while reducing the time and effort required to enter data. "
+            "content": "ESmart I is an AI-driven data entry solution that guarantees accuracy while reducing the time and effort required to enter data. "
         },
         {
             "image": "/assets/smart-i/DocumentProcessing2.png",
             "title": "GST Complaint",
-            "content": "Smart i takes the hassle out of GST Returns. We automate the entire process, so you can focus on what you're good at - running your business!"
+            "content": "Smart I takes the hassle out of GST Returns. We automate the entire process, so you can focus on what you're good at - running your business!"
         },
         {
             "image": "/assets/smart-i/DocumentProcessing3.png",
             "title": "Seamless Integration",
-            "content": "Smart i is an app that seamlessly integrates all of your devices and platforms into one easy-to-use interface."
+            "content": "Smart I is an app that seamlessly integrates all of your devices and platforms into one easy-to-use interface."
         }
     ],
-    "workingTitle": "How does Smart i Invoice Automation work?",
+    "workingTitle": "How does Smart I Invoice Automation work?",
     "workingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
-    "benefitsTitle": "Why Use Smart i Automated Invoice Extarction?",
+    "benefitsTitle": "Why Use Smart I Automated Invoice Extarction?",
     "benefitsSubTitle": "Invex helps you to organize and automatically process all your incoming document \n traffic. Whether you receive invoices, purchase orders, packing",
     "benefitsItems": [
         {
