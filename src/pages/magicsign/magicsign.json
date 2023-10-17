@@ -18,8 +18,8 @@
     }
   },
   "banner": {
-    "title": ["Get your contracts signed", "on time, every time!"],
-    "description": "Easily collect legally binding eSignatures online from our app or yours. An enterprise-grade electronic signature application and API with all the bells and whistles at an affordable price.",
+    "title": ["Prepare, send and e-sign documents", "without leaving your inbox!"],
+    "description": "Join 1000+ global businesses that save 12 minutes per agreement by using MagicSign to magically send and sign documents.",
     "points": [
       {
         "text": "Unlimited documents"
@@ -47,8 +47,8 @@
   },
   "register": {
     "label": "DESIGNED FOR MERE MORTALS",
-    "title": "Send your first document for signing in less than 5 minutes",
-    "description": "We have invested a lot of effort to ensure that Magicsign is an intuitive and easy-to-use app despite offering tons of functionality. The only way to truly experience this would be to sign up for a free account and send a few signature requests yourself.",
+    "title": "Send your first document for signing in less than a minute!",
+    "description": "MagicSign simplifies signing for everyone, tech-savvy or not. Getting an agreement signed is as simple as attaching the document to an email and adding the stakeholders in CC. Our advanced AI workflows magically take care of all the heavy lifting - from defining signature surfaces to getting them signed right from the comfort of your inbox. it's magic all the way!",
     "image": {
       "decoding": "async",
       "width": "800",
