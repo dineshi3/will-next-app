@@ -25,7 +25,7 @@ const products = [
       },
       {
         title: 'eSignature Software for Legal Firms',
-        description: 'Create, manage, and e-Sign docs easily with Libra.',
+        description: 'Create, manage, and e-Sign docs easily with LIBRA.',
         href: '/platform/esignature/',
         img: {
           src: '/assets/120-esignatures.svg',

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Libra",
-    "description": "Libra Legal Platform"
+    "title": "LIBRA",
+    "description": "LIBRA Legal Platform"
   },
   "theme": {
     "color": "yellow"
@@ -141,7 +141,7 @@
   "solutions": {
     "label": "Who do we work with",
     "title": "Solutions Built for <span className='highlight'>All</span> Practice Types",
-    "description": "Empower your business to make legal work manageable from start to finish. Explore your practice type to find out what Libra can do for you.",
+    "description": "Empower your business to make legal work manageable from start to finish. Explore your practice type to find out what LIBRA can do for you.",
     "link": {
       "href": "/customers/",
       "text": "Customer Successes"
@@ -160,7 +160,7 @@
       {
         "href": "/practice-types/immigration/",
         "title": "Immigration Law",
-        "description": "Communicate with clients via text or email, track deadlines, and create and send invoices directly from Libra."
+        "description": "Communicate with clients via text or email, track deadlines, and create and send invoices directly from LIBRA."
       },
       {
         "href": "/practice-types/big-law/",
@@ -197,7 +197,7 @@
   },
   "testimonials": [
     {
-      "description": "I like the Libra app for the reason that it's a customised information hub for legal counsels like me. Further, it’s a complete case management system",
+      "description": "I like the LIBRA app for the reason that it's a customised information hub for legal counsels like me. Further, it’s a complete case management system",
       "customerName": "Dr.V.V.L.N.Sastry",
       "companyInfo": "Legal Counsel,  Lex India Juris,  Mumbai HCB18990",
       "profileImage": "https://vakilsearch.com/products/libra/sastry.svg",

@@ -3,7 +3,7 @@ import { Fragment, useState } from 'react';
 const items = [
   {
     title: 'Integrations',
-    description: 'Libra integrates with all of your favorite apps and existing technology.',
+    description: 'LIBRA integrates with all of your favorite apps and existing technology.',
     href: '/integrations/',
     image:
       '/assets/brag-integrations.png',
@@ -18,7 +18,7 @@ const items = [
   {
     title: 'Awards and Reviews',
     description:
-      'Thousands of attorneys, administrators, and paralegals trust Libra to manage their legal work from start to finish.',
+      'Thousands of attorneys, administrators, and paralegals trust LIBRA to manage their legal work from start to finish.',
     image:
       '/assets/brag-best-in-class.png',
   },
