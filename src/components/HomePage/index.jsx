@@ -6,6 +6,7 @@ import Banner from '@/components/HomePage/Banner';
 import BlogPost from '@/components/HomePage/BlogPost';
 import ScheduleDemo from '@/components/HomePage/ScheduleDemo';
 import HowItWorks from '@/components/HomePage/HowItWorks';
+import EssentialIndicators from './EssentialIndicators';
 
 import FormModal from './FormModal';
 import AvailableModules from './AvailableModules';
@@ -23,6 +24,7 @@ const HomePage = (props) => {
     <main id='main' className='home-refresh'>
       <Banner {...commonProps} />
       <HowItWorks {...commonProps} />
+      <EssentialIndicators />
       {content.modules && <AvailableModules {...commonProps} />}
       <AIFeatures {...commonProps} />
       {false && <Accessibility />}

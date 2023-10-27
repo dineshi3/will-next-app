@@ -24,6 +24,7 @@ const Banner = (props) => {
             </div>
           </div>
         </div>
+        <h3 className='text-center'>{banner.trustedBy}</h3>
         <div className='exhibition-media'>
           <div
             id='exhibition-carousel'

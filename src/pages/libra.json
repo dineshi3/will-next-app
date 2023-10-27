@@ -18,6 +18,7 @@
   },
   "banner": {
     "title": "India's Largest <span className='highlight'>AI Legal Assistant</span> is Now in Singapore",
+    "trustedBy": "Trusted by 62,000+ Law Firms",
     "images": [
       {
         "src": "https://vakilsearch.com/products/libra/thumbnail.svg",
@@ -35,7 +36,7 @@
   },
   "howItWorks": {
     "label": "HOW IT WORKS",
-    "title": "AI powered legal technology that <span className='highlight'>accelerates your entire firm</span>",
+    "title": "AI Powered Legal Technology That <span className='highlight'>Accelerates Your Entire Firm</span>",
     "features": [
       {
         "title": "Hearings",
@@ -83,16 +84,16 @@
         "image": "/mycases.svg",
         "title": "Stay Updated on Your Legal Cases",
         "selectedImg": "/selectedcases.svg",
-        "desc": "Simplify case management by adding all of your cases from The Supreme Court of India, High Courts, District Courts, and Tribunals, combined on a single platform, under your Vakalat name or barcode."
+        "desc": "Simplify case management by adding all of your cases from the Supreme Court of Singapore, High Courts, District Courts, and Tribunals, combined on a single platform, under your Singapore Lawyers Association (SLA) membership number or barcode."
       },
       {
         "tabTitle": "Research",
         "logo": "/search.svg",
         "image": "/research.svg",
-        "title": "Unlock the power of efficient legal research with our groundbreaking solution",
+        "title": "Unlock the Power of Efficient Legal Research With Our Groundbreaking Solution",
         "selectedImg": "/selectedsearch.svg",
 
-        "desc": "Expand your legal expertise with in-depth knowledge of Indian laws, acts, access to over 10,000+ court formats and work flow of courts across India."
+        "desc": "Expand your legal expertise with in-depth knowledge of laws, acts, access to over 10,000+ court formats and work flow of courts across India/Singapore."
       },
       {
         "tabTitle": "Documents",
@@ -115,7 +116,7 @@
   },
   "products": {
     "label": "OUR NEWEST FEATURES",
-    "title": "Add <span className='highlight'>artificial intelligence</span> into your legal toolkit",
+    "title": "Add <span className='highlight'>Artificial Intelligence</span> Into Your Legal Toolkit",
     "softwares": [
       {
         "title": "VakilGPT",
@@ -139,7 +140,7 @@
   },
   "solutions": {
     "label": "Who do we work with",
-    "title": "Solutions built for <span className='highlight'>all</span> practice types",
+    "title": "Solutions Built for <span className='highlight'>All</span> Practice Types",
     "description": "Empower your business to make legal work manageable from start to finish. Explore your practice type to find out what Libra can do for you.",
     "link": {
       "href": "/customers/",
@@ -189,7 +190,7 @@
     ]
   },
   "scheduleDemo": {
-    "title": "See all that Libra can do with a customized demonstration from our team",
+    "title": "See All That LIBRA Can Do With a Customized Demonstration From Our Team",
     "link": {
       "text": "Schedule a Demo"
     }
