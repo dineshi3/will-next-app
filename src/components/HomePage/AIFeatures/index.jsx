@@ -24,7 +24,7 @@ const AIFeatures = (props) => {
               <h2>{parse(products.title)}</h2>
             </div>
             <div className='headline-cta'>
-              <a href='' onClick={onClick} className='btn btn-primary'>
+              <a onClick={onClick} className='btn btn-primary'>
                 Get a Demo
               </a>
             </div>
