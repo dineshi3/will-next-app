@@ -4,7 +4,11 @@ export default function handler(req, res) {
   const config = {
     method: 'post',
     url: `${process.env.ELASTICSEARCH_HOST}/libra_lead/_doc`,
-    data: req.body,
+    data: {
+      ...req.body,
+      timestamp: new Date().getTime(),
+      createdAt: new Date().toLocaleString()
+    },
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Basic ${Buffer.from(process.env.ELASTICSEARCH_AUTH).toString('base64')}`,
