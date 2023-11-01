@@ -10,6 +10,8 @@ import FinalRegisterSection from './FinalRegisterSection';
 import NavBar from './NavBar';
 import FormModal from '../HomePage/FormModal';
 
+import styles from './styles.module.scss';
+
 const MagicsignPage = (props) => {
 
   const [showModal, setShowModal] = useState(false);
@@ -19,7 +21,7 @@ const MagicsignPage = (props) => {
   const commonProps = { ...props, showModal, setShowModal, onClick };
 
   return (
-    <main id='main'>
+    <main id='main' className={styles.mainContainer}>
       <NavBar {...commonProps} content={props.content.navbar}  />
       <Banner {...commonProps} />
       <RegisterSection {...commonProps} />
