@@ -11,6 +11,14 @@
     margin-right: auto;
     margin-left: auto;
     position: relative;
+
+    h3 {
+      color: #333;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 44px;
+      text-align: center;
+    }
     .flexContainer {
       display: flex;
       gap: 1rem;
@@ -19,12 +27,6 @@
         width: 50%;
       }
       .left {
-        h3 {
-          color: #333;
-          font-size: 32px;
-          font-weight: 600;
-          line-height: 44px;
-        }
         p {
           padding: 0 0 26px;
           text-align: left;

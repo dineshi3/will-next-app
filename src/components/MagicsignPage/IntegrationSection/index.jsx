@@ -29,8 +29,10 @@ const IntegrationSection = (props) => {
             </div>
           </div>
         )}
+        <h3>{integration.feature.title}</h3>
+        <p>{integration.feature.description}</p>
         <ul className={styles.features}>
-          {integration.features.map((feature) => (
+          {integration.feature.features.map((feature) => (
             <li key={feature.text}>{feature.text}</li>
           ))}
         </ul>

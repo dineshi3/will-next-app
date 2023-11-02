@@ -15,7 +15,7 @@ const Banner = (props) => {
         ))}
       </div>
       <p>{banner.description}</p>
-      <Button text={'Sign up for free'} onClick={onClick} />
+      <Button text={'Free Sign up'} onClick={onClick} />
       <ul className={styles.points}>
         {banner.points.map((point) => (
           <li key={point.text}>{point.text}</li>

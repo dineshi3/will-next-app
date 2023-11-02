@@ -7,6 +7,7 @@ import RegisterSection from './RegisterSection';
 import MagicsignReasonSection from './MagicsignReasonSection';
 import CompanyOverviewSection from './CompanyOverviewSection';
 import FinalRegisterSection from './FinalRegisterSection';
+import GetStartedSteps from './GetStartedSteps';
 import NavBar from './NavBar';
 import FormModal from '../HomePage/FormModal';
 
@@ -25,6 +26,7 @@ const MagicsignPage = (props) => {
       <NavBar {...commonProps} content={props.content.navbar}  />
       <Banner {...commonProps} />
       <RegisterSection {...commonProps} />
+      <GetStartedSteps {...commonProps} />
       <IntegrationSection {...commonProps} />
       {
         props.content.features.map(feature => <FeatureSection key={feature.title} content={feature} />) 

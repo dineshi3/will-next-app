@@ -18,8 +18,8 @@
     }
   },
   "banner": {
-    "title": ["Prepare, send and e-sign documents", "without leaving your inbox!"],
-    "description": "Join 1000+ global businesses that save 12 minutes per agreement by using MagicSign to magically send and sign documents.",
+    "title": ["Prepare, Send, and E-Sign Docs", "Right from Your Inbox"],
+    "description": "Join 10,000+ Global Businesses, Save 12 Minutes per Agreement with MagicSign!",
     "points": [
       {
         "text": "Unlimited documents"
@@ -46,9 +46,9 @@
     }
   },
   "register": {
-    "label": "DESIGNED FOR MERE MORTALS",
-    "title": "Send your first document for signing in less than a minute!",
-    "description": "MagicSign simplifies signing for everyone, tech-savvy or not. Getting an agreement signed is as simple as attaching the document to an email and adding the stakeholders in CC. Our advanced AI workflows magically take care of all the heavy lifting - from defining signature surfaces to getting them signed right from the comfort of your inbox. it's magic all the way!",
+    "label": "Made for Everyday People",
+    "title": "Send Your Document for Signing in Less Than a Minute",
+    "description": "MagicSign simplifies signing. Attach your document to an email, add stakeholders in CC, and let us handle the rest, enabling signing from your inbox.",
     "image": {
       "decoding": "async",
       "width": "800",
@@ -59,6 +59,14 @@
     "button": {
       "text": "Create Free Account"
     }
+  },
+  "steps": {
+    "title": "How to Get Started",
+    "steps": [
+      "Send your document to support@magicsign.vakilsearch.com.",
+      "Both the signer and the owner will receive email notifications, and you can track the document's progress.",
+      "Magicsign will send copies to both individuals."
+    ]
   },
   "integration": {
     "label": "FAST AND SCALABLE API",
@@ -77,41 +85,39 @@
         "text": "Learn more"
       }
     },
-    "features": [
-      {
-        "text": "At Magicsign, we have over 20 years of experience in building APIs for millions of developers"
-      },
-      {
-        "text": "Free developer sandbox access"
-      },
-      {
-        "text": "Average API response time is <200 milliseconds"
-      },
-      {
-        "text": "White labeling options"
-      },
-      {
-        "text": "Embedded sending"
-      },
-      {
-        "text": "Embedded signing"
-      },
-      {
-        "text": "Webhooks"
-      },
-      {
-        "text": "Integration into multitenant SaaS applications"
-      },
-      {
-        "text": "Support from the same developers who built Magicsign"
-      }
-    ]
+    "feature": {
+      "title": "Easily Add eSignatures",
+      "description": "We have an API that lets you start, track, and complete signature requests from your own apps. It can handle millions of documents.",
+      "features": [
+        {
+          "text": "Over 12 years of API development expertise at Magicsign"
+        },
+        {
+          "text": "Free developer sandbox access"
+        },
+        {
+          "text": "Fast API response time (<200 milliseconds)"
+        },
+        {
+          "text": "White labeling options"
+        },
+        {
+          "text": "Embedded sending and signing"
+        },
+        {
+          "text": "Webhooks support"
+        },
+        {
+          "text": "Integration into multi-tenant SaaS applications"
+        }
+      ]
+    }
   },
   "features": [
     {
-      "label": "BULK LINK OR PUBLIC SIGNING LINK​",
-      "title": "Collect signatures from multiple people with just one link.",
-      "description": "Embed signature URLs on your website or send secure URLs via email to multiple signers. This is perfect for getting documents like account applications, event registrations, and NDAs signed. No coding required: a user-friendly interface. A great alternative to DocuSign’s PowerForms. Start collecting signatures quickly!",
+      "label": "Multiple Link for Bulk Signing or Public Signing Link",
+      "title": "Secure Multiple Signatures with One Magicsign Link",
+      "description": "Integrate signature links seamlessly into your website or send them securely via email to multiple individuals for documents like account applications and event registrations. No technical expertise is necessary. It's a user-friendly solution for collecting signatures quickly and efficiently",
       "image": {
         "decoding": "async",
         "src": "/assets/magicsign/bulk-link-or-public-signing-link.webp",
@@ -120,9 +126,9 @@
       "direction": "right"
     },
     {
-      "label": "LEGALLY BINDING​",
-      "title": "Legally compliant with U.S. and international laws",
-      "description": "Magicsign is legally compliant with U.S. (ESIGN) and international (eIDAS) eSignature laws. We record all major activities that happen during the signing process and provide a downloadable copy of the complete audit trail report. The final document is also digitally signed so that any tampering in the future can be immediately detected.",
+      "label": "Secured & Protected​",
+      "title": "Magicsign Follows U.S. and International eSignature Laws",
+      "description": "We keep track of important actions during the signing process and offer an easily accessible audit trail report. The final document is digitally signed to safeguard against any alterations in the future.",
       "image": {
         "decoding": "async",
         "src": "/assets/magicsign/international-law-2.webp",
@@ -131,9 +137,8 @@
       "direction": "left"
     },
     {
-      "label": "ENTERPRISE-GRADE DATA SECURITY​",
-      "title": "Your data is protected using bank-grade security standards",
-      "description": "We take data security very seriously and have built it into every aspect of the application right from the beginning. All the data stored and transmitted is encrypted using 256-bit AES encryption standards. Your data is completely secure to the point where our own staff do not have access to it even for troubleshooting purposes.",
+      "title": "Strong Data Security for Businesses",
+      "description": "We took data security seriously and made it a core design part. Your data is protected with strong encryption. It's so secure that even our staff can't access it for troubleshooting.",
       "image": {
         "decoding": "async",
         "src": "/assets/magicsign/data-security.webp",
@@ -142,21 +147,18 @@
       "direction": "right"
     },
     {
-      "label": "SECURITY AND COMPLIANCE​",
-      "title": "Certified with SOC 2® and GDPR compliant",
-      "description": "As a company committed to providing secure and trustworthy services to our clients, we are proud to announce that Magicsign is certified with SOC 2® and GDPR compliant. This means that we have implemented strict security measures and data protection protocols to ensure the privacy, confidentiality, and integrity of our clients’ data.",
+      "title": "Securing Your Data and Meeting Regulations",
+      "description": "We're certified with SOC 2® and GDPR compliant, showing our dedication to protecting your data's privacy, confidentiality, and integrity",
       "image": {
         "decoding": "async",
         "src": "/assets/magicsign/security-and-compliance-logo.webp",
-        "alt": "",
-        "width": "421",
-        "height": "366"
+        "alt": ""
       },
       "direction": "left"
     }
   ],
   "reason": {
-    "label": "WHY MAGICSIGN?",
+    "label": "Why Choose Magicsign?",
     "title": "Enterprise-grade product with all the bells and whistles at an affordable price",
     "reasons": [
       {
@@ -164,28 +166,28 @@
         "icon": {
           "src": "/assets/magicsign/all-feature-included-webp.webp"
         },
-        "title": "All features included",
-        "description": "All paid plans include access to all the available features. With MagicSign, you don’t constantly need to upgrade to get access to new features."
+        "title": "All-in-One Solution",
+        "description": "Access all features on every plan without constant upgrades."
       },
       {
         "color": "#c4df9f",
         "icon": {
           "src": "/assets/magicsign/20-years-bussiness-webp.webp"
         },
-        "title": "20 years in business",
-        "description": "Zolvit, the company behind MagicSign, has been building enterprise-grade software for over 20 years. We are committed to making market-leading electronic signature software."
+        "title": "12 Years of Expertise",
+        "description": "Backed by 12+ years of experience in enterprise-grade software."
       },
       {
-        "title": "Absolutely no tricks",
-        "description": "We promise that you don’t have to deal with hidden document limits, feature limitations, or unexpected overage charges.",
+        "title": "No Hidden Surprises",
+        "description": "No hidden limits, feature restrictions, or unexpected charges.",
         "color": "#fac1d0",
         "icon": {
           "src": "/assets/magicsign/absolutely-no-tricks-webp.webp"
         }
       },
       {
-        "title": "Excellent customer support",
-        "description": "We strive to provide the best possible customer support experience and are always ready to assist in any way we can, even if you are on a free plan.",
+        "title": "Outstanding Support",
+        "description": "Exceptional customer assistance, even on free plans.",
         "color": "#bccbfb",
         "icon": {
           "src": "/assets/magicsign/excellent-customer-support-webp.webp"
@@ -231,7 +233,7 @@
     ]
   },
   "finalSignup": {
-    "title": "Start your free MagicSign account today!",
+    "title": "Get Your Free MagicSign Account Now!",
     "points": [
       {
         "text": "Unlimited documents"
