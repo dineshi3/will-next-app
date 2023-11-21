@@ -7,8 +7,14 @@ const AIpros = () => {
     <div className={style.aiProps}>
       <h3 className={style.title}>{content.aiPros.title}</h3>
       <div className={style.aiPropsImgWrapper}>
-        {content.aiPros.images.map((src, index) => (
-          <img src={src} key={index} alt="AI-PROS" width={343} height={360} />
+        {content.aiPros.items.map((item, index) => (
+          <div className={style.card}>
+            <img src={item.img} key={index} alt='AI-PROS' />
+            <div className={style.details}>
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>

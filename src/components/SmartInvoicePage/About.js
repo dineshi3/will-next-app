@@ -2,6 +2,8 @@ import style from './style.module.scss';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import parse from 'html-react-parser';
+
 //import { Tutorial } from './tutorial';
 import { AboutSmartIVideo } from './AboutSmartIVideo';
 import content from '../../data/smartInvoice.json';
@@ -11,8 +13,8 @@ const About = (props) => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <div className={style.about}>
-      <h1 className={style.mainTitle}>{content.mainTitle1}</h1>
-      {false && <h1 className={style.mainTitle}>{content.mainTitle2}</h1>}
+      <h1 className={style.mainTitle}>{parse(content.mainTitle1)}</h1>
+      {<h1 className={style.mainTitle}>{content.mainTitle2}</h1>}
       <div className={style.subIntro}>{content.subTitle}</div>
       <div className={style.navigationButtons}>
         <NavigationButtons {...props} />

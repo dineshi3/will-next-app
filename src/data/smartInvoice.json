@@ -1,48 +1,83 @@
 {
-    "mainTitle1": "Auto-extract invoices by our AI platform",
-    "mainTitle2": " File GSTR and do payments on the go",
-    "subTitle": "Focus on growing your business, let us take care of your invoicing, \n payment & accounting needs",
-    "processingTitle": "Benefits of",
-    "processingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
-    "processingItems": [
+  "mainTitle1": "Transform Your Workflow with <span >Smarti</span>",
+  "mainTitle2": "AI-Driven Invoice Extraction and GSTR Filing",
+  "subTitle": "Cut manual work, boost accuracy, deploy your workforce wisely",
+  "processingTitle": "Benefits of",
+  "processingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
+  "processingItems": [
+    {
+      "image": "/assets/smart-i/DocumentProcessing1.png",
+      "title": "Accurate data entry",
+      "content": "Minimize the risk of manual errors with Smart i's automated data entry solutions."
+    },
+    {
+      "image": "/assets/smart-i/DocumentProcessing2.png",
+      "title": "GST Complaint",
+      "content": "Smart i streamlines GST Returns with automation, enabling you to focus on business strengths and entrepreneurial success."
+    },
+    {
+      "image": "/assets/smart-i/DocumentProcessing3.png",
+      "title": "Seamless Integration",
+      "content": "Streamline your work balance with one interface, countless possibilities."
+    }
+  ],
+  "workingTitle": "How does Smart I Invoice Automation work?",
+  "workingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
+  "steps": {
+    "steps": [
         {
-            "image": "/assets/smart-i/DocumentProcessing1.png",
-            "title": "Accurate data entry",
-            "content": "ESmart I is an AI-driven data entry solution that guarantees accuracy while reducing the time and effort required to enter data. "
+            "title": "Step 01: Streamlined Document Integration",
+            "description": "Enable a smooth document integration process by seamlessly uploading PDFs or images via email, API, desktop, Drive, Dropbox, RPA, or cloud storage."
         },
         {
-            "image": "/assets/smart-i/DocumentProcessing2.png",
-            "title": "GST Complaint",
-            "content": "Smart I takes the hassle out of GST Returns. We automate the entire process, so you can focus on what you're good at - running your business!"
+            "title": "Step 02: Advanced Document Analysis",
+            "description": "Employ intelligent document analysis to capture vital information with precision. Easily review and validate data for optimal accuracy through our intuitive interface."
         },
         {
-            "image": "/assets/smart-i/DocumentProcessing3.png",
-            "title": "Seamless Integration",
-            "content": "Smart I is an app that seamlessly integrates all of your devices and platforms into one easy-to-use interface."
+            "title": "Step 03: Seamless Data Connectivity",
+            "description": "Ensure efficient connectivity with your current systems and applications, guaranteeing a frictionless transition to our platform."
         }
-    ],
-    "workingTitle": "How does Smart I Invoice Automation work?",
-    "workingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
-    "benefitsTitle": "Why Use Smart I Automated Invoice Extarction?",
-    "benefitsSubTitle": "Invex helps you to organize and automatically process all your incoming document \n traffic. Whether you receive invoices, purchase orders, packing",
-    "benefitsItems": [
+    ]
+  },
+  "benefitsTitle": "Why Use Smart I Automated Invoice Extarction?",
+  "benefitsSubTitle": "Retrieve information from unstructured invoices, breaking it down to SKU-level line items, and transform it into standardized file format.",
+  "benefitsItems": [
+    {
+      "title": "Accuracy Assurance",
+      "content": "Rely on Smart i for precise data extraction"
+    },
+    {
+      "title": "Template and Rule-Free Operation",
+      "content": "Enjoy flexibility without the constraints of templates or rules."
+    },
+    {
+      "title": "Table Extraction Proficiency",
+      "content": "Smart i excels in extracting data from tables efficiently."
+    },
+    {
+      "title": "No-Code AI Integration",
+      "content": "Seamlessly integrate Smart i's capabilities without coding complexities"
+    }
+  ],
+  "aiPros": {
+    "title": "What Do You Get",
+    "items": [
         {
-            "title": "Accurate",
-            "content": "Relevant training data is critical for any machine learning model. Train powerful ML models on your invoices and enjoy human-level accuracy."
+            "img": "/assets/smart-i/profit1.png",
+            "title": "Optimize Tax Credits",
+            "description": "Unleash the power of our advanced algorithm to optimize tax credits."
         },
         {
-            "title": "No templates or rules",
-            "content": "Free yourself from maintaining complex invoice templates and rules, and let our machine learning models do the job for you."
+            "img": "/assets/smart-i/profit2.png",
+            "title": "90% Faster Invoice Processing",
+            "description": "Dramatically reduce processing time for invoices, boosting efficiency."
         },
         {
-            "title": "Table Extraction",
-            "content": "Train and extract line items from any document with ease."
-        },
-        {
-            "title": "No-Code AI",
-            "content": "Our AI platform is continually learning from each document you submit, without requiring a single line of code or training a model."
+            "img": "/assets/smart-i/profit3.png",
+            "title": "Error-Proof Validation",
+            "description": "Ensure accuracy with easy validation, eliminating manual errors effortlessly."
         }
-    ],
-    "aiPros": {"title": "What do you get", "images": ["/assets/smart-i/profit1.svg","/assets/smart-i/profit2.svg","/assets/smart-i/profit3.svg"]},
-    "footerTitle": "Welcome to the smartest AI assistant to extract your invoices!"
-}   
+    ]
+  },
+  "footerTitle": "Step into the future of GSTR filing with our innovation"
+}

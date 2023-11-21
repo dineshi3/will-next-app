@@ -10,6 +10,10 @@ import { Benefits } from './Benefits';
 import { HomeFooter } from './Footer';
 import { AIpros } from './AI_pros';
 import FormModal from '../HomePage/FormModal';
+import StepsSection from './StepsSection';
+
+import data from '../../data/smartInvoice.json';
+
 
 const content = {
   product: {
@@ -38,7 +42,8 @@ const SmartInvoicePage = () => {
       </div>
       <DocumentProcess />
       <Working />
-      <Benefits />
+      <StepsSection content={data} />
+      <Benefits  />
       <AIpros />
       <HomeFooter {...commonProps} />
       <FormModal {...commonProps} />
