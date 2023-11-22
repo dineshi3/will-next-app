@@ -78,13 +78,12 @@
         }
     }
     .bookDemo{
-        background: #FFFFFF;
+        background: #ffd000;
         color: #000000;
         border: none;
         &:hover{
-            border: 1px solid #FFFFFF;
-            color: #FFFFFF;
-            background: none;
+            transition: all .2s;
+            transform: scale(1.05);
         }
     }
 }
@@ -107,16 +106,6 @@
             background: $primary_color;
             border: none;
             color: #FFFFFF;
-        }
-    }
-    .bookDemo{
-        background: $primary_color;
-        color: #FFFFFF;
-        border: none;
-        &:hover{
-            border: 1px solid #000000;
-            color: #000000;
-            background: #FFFFFF;
         }
     }
 }
@@ -189,11 +178,12 @@
         }
     }
     .bookDemoBtn{
-        border: 1px solid #FFFFFF;
-        color: #FFFFFF;
+        color: #000;
+        background-color: #ffd000;
+        transition: all .3s;
         &:hover{
-            background: #FFFFFF;
             color: #000000;
+            transform: scale(1.05);
         }
     }
 }

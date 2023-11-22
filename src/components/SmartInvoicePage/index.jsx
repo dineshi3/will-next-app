@@ -14,14 +14,13 @@ import StepsSection from './StepsSection';
 
 import data from '../../data/smartInvoice.json';
 
-
 const content = {
   product: {
     id: 'smarti',
     name: 'Smart I',
   },
   theme: {
-    color: 'blue',
+    color: 'yellow',
   },
 };
 const SmartInvoicePage = () => {

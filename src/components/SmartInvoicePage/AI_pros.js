@@ -9,7 +9,7 @@ const AIpros = () => {
       <div className={style.aiPropsImgWrapper}>
         {content.aiPros.items.map((item, index) => (
           <div className={style.card} key={index}>
-            <img src={item.img} alt='AI-PROS' />
+            <img src={item.img} alt='AI-PROS' width="320" />
             <div className={style.details}>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
