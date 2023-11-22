@@ -37,7 +37,7 @@
 }
 
 .header{
-    background: url('/assets/smart-i/LandingPageIntroBG.svg') #FFFFFF no-repeat;
+    background: #022b50 no-repeat;
     background-position: top left;
     background-size: contain;
 }
@@ -200,6 +200,7 @@
     padding: 0 20px;
 
     .title {
+        margin-top: 2rem;
         margin-bottom: 0;
         display: flex;
         justify-content: center;
@@ -318,7 +319,7 @@
 .footerNavigations{
     padding: 0 20px;
     height: 350px;
-    background: url('/assets/smart-i/LandingPageIntroBG.svg');
+    background: #022b50;
     display: flex;
     flex-direction: column;
     align-items: center;
