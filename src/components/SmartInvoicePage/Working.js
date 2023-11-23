@@ -5,7 +5,7 @@ const Working = () => {
 
   return (
     <div className={style.working}>
-      <h3 className={style.title}>How does Smart I Invoice Automation work?</h3>
+      <h3 className={style.title}>How does <span>Smart</span> <i style={{fontFamily: 'serif'}}>i</i> Invoice Automation work?</h3>
       <div className={style.workingImageGif}>
         <img
           src="/assets/smart-i/Invex_gif_web.gif"

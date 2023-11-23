@@ -1,13 +1,14 @@
 import style from './style.module.scss';
 import { Row, Col } from 'react-bootstrap';
 import { Accordion } from 'react-bootstrap';
+import parse from 'html-react-parser';
 import Image from 'next/image';
 import content from '../../data/smartInvoice.json';
 
 const Benefits = () => {
   return (
     <div className={style.benefits}>
-      <h3 className={style.title}>{content.benefitsTitle}</h3>
+      <h3 className={style.title}>{parse(content.benefitsTitle)}</h3>
       <p className={`pt-4 ${style.benefitSubTitle}`}>
         {content.benefitsSubTitle}
       </p>
@@ -25,7 +26,7 @@ const Benefits = () => {
                     <h5>{items.title}</h5>
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p>{items.content}</p>
+                    <p>{parse(items.content)}</p>
                   </Accordion.Body>
                 </Accordion.Item>
               );

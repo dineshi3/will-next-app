@@ -11,6 +11,7 @@ import { HomeFooter } from './Footer';
 import { AIpros } from './AI_pros';
 import FormModal from '../HomePage/FormModal';
 import StepsSection from './StepsSection';
+import ExtractFields from './ExtractFields';
 
 import data from '../../data/smartInvoice.json';
 
@@ -28,7 +29,7 @@ const SmartInvoicePage = () => {
 
   const onClick = () => setShowModal(true);
 
-  const commonProps = { content, showModal, setShowModal, onClick };
+  const commonProps = { content, data, showModal, setShowModal, onClick };
 
   return (
     <Container className={`p-0 ${style.homeContainer}`} id='homePage' fluid>
@@ -43,6 +44,7 @@ const SmartInvoicePage = () => {
       <Working />
       <StepsSection content={data} />
       <Benefits  />
+      <ExtractFields {...commonProps} />
       <AIpros />
       <HomeFooter {...commonProps} />
       <FormModal {...commonProps} />

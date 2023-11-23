@@ -1,5 +1,5 @@
 {
-  "mainTitle1": "Transform Your Workflow with <span >Smarti</span>",
+  "mainTitle1": "Transform Your Workflow with <span>Smart</span> <i style='font-family: serif;'>i</i>",
   "mainTitle2": "AI-Driven Invoice Extraction and GSTR Filing",
   "subTitle": "Cut manual work, boost accuracy, deploy your workforce wisely",
   "processingTitle": "Benefits of",
@@ -8,12 +8,12 @@
     {
       "image": "/assets/smart-i/DocumentProcessing1.png",
       "title": "Accurate data entry",
-      "content": "Minimize the risk of manual errors with Smart i's automated data entry solutions."
+      "content": "Minimize the risk of manual errors with <span>Smart</span> <i style='font-family: serif;font-weight: 600;'>i</i>'s automated data entry solutions."
     },
     {
       "image": "/assets/smart-i/DocumentProcessing2.png",
       "title": "GST Complaint",
-      "content": "Smart i streamlines GST Returns with automation, enabling you to focus on business strengths and entrepreneurial success."
+      "content": "<span>Smart</span> <i style='font-family: serif;font-weight: 600;'>i</i> streamlines GST Returns with automation, enabling you to focus on business strengths and entrepreneurial success."
     },
     {
       "image": "/assets/smart-i/DocumentProcessing3.png",
@@ -21,7 +21,7 @@
       "content": "Streamline your work balance with one interface, countless possibilities."
     }
   ],
-  "workingTitle": "How does Smart I Invoice Automation work?",
+  "workingTitle": "How does <span>Smart</span> <i style='font-family: serif;font-weight: 600;'>i</i> Invoice Automation work?",
   "workingSubTitle": "Upload from Computer | Review Extracted Data | Integrate API",
   "steps": {
     "steps": [
@@ -39,12 +39,12 @@
         }
     ]
   },
-  "benefitsTitle": "Why Use Smart I Automated Invoice Extarction?",
+  "benefitsTitle": "Why Use <span>Smart</span> <i style='font-family: serif;'>i</i> Automated Invoice Extraction?",
   "benefitsSubTitle": "Retrieve information from unstructured invoices, breaking it down to SKU-level line items, and transform it into standardized file format.",
   "benefitsItems": [
     {
       "title": "Accuracy Assurance",
-      "content": "Rely on Smart i for precise data extraction"
+      "content": "Rely on <span>Smart</span> <i style='font-family: serif; font-weight: 600;'>i</i> for precise data extraction"
     },
     {
       "title": "Template and Rule-Free Operation",
@@ -52,13 +52,22 @@
     },
     {
       "title": "Table Extraction Proficiency",
-      "content": "Smart i excels in extracting data from tables efficiently."
+      "content": "<span>Smart</span> <i style='font-family: serif; font-weight: 600;'>i</i> excels in extracting data from tables efficiently."
     },
     {
       "title": "No-Code AI Integration",
-      "content": "Seamlessly integrate Smart i's capabilities without coding complexities"
+      "content": "Seamlessly integrate <span>Smart</span> <i style='font-family: serif; font-weight: 600;'>i</i>'s capabilities without coding complexities"
     }
   ],
+  "extract": {
+    "title": "Extractable fields",
+    "description": "Save time by avoiding the need to train an invoice OCR model from the beginning; our solution already identifies a broad range of invoice fields.",
+    "img": {
+      "src": "assets/smart-i/extract-fields.png",
+      "alt": "extract fields",
+      "width": "100%"
+    }
+  },
   "aiPros": {
     "title": "What Do You Get",
     "items": [

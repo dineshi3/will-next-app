@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import style from './style.module.scss';
 import Link from 'next/link';
+import parse from 'html-react-parser';
+
 import content from '../../data/smartInvoice.json';
 
 const DocumentProcess = () => {
@@ -33,7 +35,7 @@ const DocumentProcess = () => {
                 alt="proceesing-docs"
               />
               <h6 className="pb-4">{items.title}</h6>
-              <p>{items.content}</p>
+              <p>{parse(items.content)}</p>
               {false && getLoginLink()}
             </div>
           );
